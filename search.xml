@@ -1,26 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>用Django实现Github</title>
-    <url>/uncategorized/%E7%94%A8Django%E5%AE%9E%E7%8E%B0Github/</url>
+    <title>Pycharm 远端同步设置（SSH Interpreter）</title>
+    <url>/Python/pycharm-remote-synchronization-settings-ssh-interpreter.html</url>
+    <content><![CDATA[<h2 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h2><p><img src="http://mweb-tangjiuyang-com.oss-cn-beijing.aliyuncs.com/2019/12/30/sshinterpreter1.png" alt="SSHInterpreter1"></p>
+<a id="more"></a>
+
+<h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><p>设置本地项目路径1，设置SSH编译器2，设置远端项目路径3（会自动与本地映射）<br><img src="http://mweb-tangjiuyang-com.oss-cn-beijing.aliyuncs.com/2019/12/30/sshinterpreter2.png" alt="SSHInterpreter2"><br>interpreter 点击 “….”，选择<code>SSH interpreter</code><br><img src="http://mweb-tangjiuyang-com.oss-cn-beijing.aliyuncs.com/2019/12/30/ssh4interpreter3.png" alt="SSHInterpreter3"><br><img src="http://mweb-tangjiuyang-com.oss-cn-beijing.aliyuncs.com/2019/12/30/sshinterpreter4.png" alt="SSHInterpreter4"><br>最后设置一下 自动同步。<br><img src="http://mweb-tangjiuyang-com.oss-cn-beijing.aliyuncs.com/2019/12/30/sshinterpreter5.png" alt="SSHInterpreter5"></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>pycharm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用Django实现Github Webhook</title>
+    <url>/Python/github-webhook-with-django.html</url>
     <content><![CDATA[<blockquote>
 <p>Webhooks 用中文翻译即网络钩子，以 GitHub 为例，当你向 Github 向发送 push 或 pull 等请求事件时，会触发指定的 URL，一般是向 URL 发送 POST 请求，我们收到 POST 请求就可以根据不同的事件进行相应的处理。</p>
 </blockquote>
+<a id="more"></a>
+
 <p>下面我们的例子演示了利用 <code>Github Webhooks</code> 将 <code>Hexo</code> 部署到 VPS。</p>
-<p>创建 Webhook<br>创建 webhook 项目</p>
-<p>$ django-admin startproject webhook<br>创建 core app</p>
-<p>$ django-admin startapp core<br>项目 urls.py</p>
-<p>from django.contrib import admin<br>from django.urls import path, include</p>
-<p>urlpatterns = [<br>    path(‘admin/‘, admin.site.urls),<br>    path(‘’, include(‘core.urls’)),<br>]<br>core/urls.py</p>
-<p>from django.urls import path<br>from . import views</p>
-<p>urlpatterns = [<br>    path(‘webhook’, views.webhook, name=’webhook’),<br>]<br>在 Github 项目右侧的 Settings 中找到 Webhooks，填入你上面定义的外网链接，Secret 暂时留空，其他设置见下图，然后点击 Add Webhook。</p>
-<p>1553420653042<br>1553420653042</p>
-<p>core/views.py 先写一个简单的小例子。</p>
-<p>csrf_exempt 装饰器表示不需要 csrf 认证，我们这里使用的密钥认证，稍后再说。</p>
-<p>from django.http import HttpResponse<br>from django.views.decorators.csrf import csrf_exempt</p>
-<p>@csrf_exempt<br>def webhook(request):<br>    return HttpResponse(‘pong’)<br>将服务端在 VPS 上运行起来，这里推荐使用 Pycharm 的 SSH Interpreter 的，方便远程调试。</p>
-<p>注意：需要将运行 IP 改成 0.0.0.0，同时要向 settings.py 中的 ALLOWED_HOSTS 列表添加你的 VPS 主机名。</p>
-<p>我们在 Github Webhook 上主动发送请求测试下，查看响应，得到的是预期的 pong。</p>
+<h1 id="创建-Webhook"><a href="#创建-Webhook" class="headerlink" title="创建 Webhook"></a>创建 Webhook</h1><p>创建 webhook 项目</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> django-admin startproject webhook</span></span><br></pre></td></tr></table></figure>
+<p>创建 core app</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> django-admin startapp core</span></span><br></pre></td></tr></table></figure>
+<p>项目 urls.py</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> path, include</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">'admin/'</span>, admin.site.urls),</span><br><span class="line">    path(<span class="string">''</span>, include(<span class="string">'core.urls'</span>)),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<p>core/urls.py</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> path</span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> views</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">'webhook'</span>, views.webhook, name=<span class="string">'webhook'</span>),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>在 Github 项目右侧的 <code>Settings</code> 中找到 <code>Webhooks</code>，填入你上面定义的外网链接，Secret 暂时留空，其他设置见下图，然后点击 Add Webhook。</p>
+<p><img src="http://mweb-tangjiuyang-com.oss-cn-beijing.aliyuncs.com/2019/12/30/15776407068706.jpg" alt=""></p>
+<p><code>core/views.py</code> 先写一个简单的小例子。</p>
+<p><code>csrf_exempt</code> 装饰器表示不需要 csrf 认证，我们这里使用的密钥认证，稍后再说。</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse</span><br><span class="line"><span class="keyword">from</span> django.views.decorators.csrf <span class="keyword">import</span> csrf_exempt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@csrf_exempt</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">webhook</span><span class="params">(request)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">'pong'</span>)</span><br></pre></td></tr></table></figure>
+<p>将服务端在 VPS 上运行起来，这里推荐使用 Pycharm 的 SSH Interpreter 的，方便远程调试。</p>
+<p>注意：需要将运行 IP 改成 <code>0.0.0.0</code>，同时要向 settings.py 中的 <code>ALLOWED_HOSTS</code> 列表添加你的 VPS 主机名。</p>
+<p>我们在 Github Webhook 上主动发送请求测试下，查看响应，得到的是预期的 <code>pong</code>。</p>
 <p>1553421210497<br>1553421210497</p>
 <p>保证 Webhook 的安全<br>IP 白名单<br>此刻任何人在浏览器或者其他地方都可以直接访问该链接</p>
 <p>1553421448360<br>1553421448360</p>
@@ -128,26 +149,13 @@ if event == &apos;push&apos;:
 return HttpResponse(status=204)</code></pre><p>以后每次在本地推送博客到 Github 后，VPS 的内容也跟着更新。</p>
 <p>$ hexo d</p>
 ]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
       <tags>
-        <tag>python,github,django</tag>
+        <tag>python</tag>
+        <tag>github</tag>
+        <tag>django</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/uncategorized/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
   </entry>
 </search>

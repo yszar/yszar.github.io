@@ -79,17 +79,21 @@
 
 
 
-<meta name="description" content="Webhooks 用中文翻译即网络钩子，以 GitHub 为例，当你向 Github 向发送 push 或 pull 等请求事件时，会触发指定的 URL，一般是向 URL 发送 POST 请求，我们收到 POST 请求就可以根据不同的事件进行相应的处理。  下面我们的例子演示了利用 Github Webhooks 将 Hexo 部署到 VPS。 创建 Webhook创建 webhook 项目 $">
+<meta name="description" content="Webhooks 用中文翻译即网络钩子，以 GitHub 为例，当你向 Github 向发送 push 或 pull 等请求事件时，会触发指定的 URL，一般是向 URL 发送 POST 请求，我们收到 POST 请求就可以根据不同的事件进行相应的处理。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用Django实现Github">
-<meta property="og:url" content="https://tangjiuyang.com/uncategorized/%E7%94%A8Django%E5%AE%9E%E7%8E%B0Github/index.html">
+<meta property="og:title" content="用Django实现Github Webhook">
+<meta property="og:url" content="https://tangjiuyang.com/Python/github-webhook-with-django.html">
 <meta property="og:site_name" content="九阳的博客">
-<meta property="og:description" content="Webhooks 用中文翻译即网络钩子，以 GitHub 为例，当你向 Github 向发送 push 或 pull 等请求事件时，会触发指定的 URL，一般是向 URL 发送 POST 请求，我们收到 POST 请求就可以根据不同的事件进行相应的处理。  下面我们的例子演示了利用 Github Webhooks 将 Hexo 部署到 VPS。 创建 Webhook创建 webhook 项目 $">
+<meta property="og:description" content="Webhooks 用中文翻译即网络钩子，以 GitHub 为例，当你向 Github 向发送 push 或 pull 等请求事件时，会触发指定的 URL，一般是向 URL 发送 POST 请求，我们收到 POST 请求就可以根据不同的事件进行相应的处理。">
+<meta property="og:image" content="http://mweb-tangjiuyang-com.oss-cn-beijing.aliyuncs.com/2019/12/30/15776407068706.jpg">
 <meta property="article:published_time" content="2019-12-28T16:25:49.000Z">
-<meta property="article:modified_time" content="2019-12-28T16:32:28.554Z">
+<meta property="article:modified_time" content="2019-12-29T17:56:35.799Z">
 <meta property="article:author" content="九阳">
-<meta property="article:tag" content="python,github,django">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="github">
+<meta property="article:tag" content="django">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://mweb-tangjiuyang-com.oss-cn-beijing.aliyuncs.com/2019/12/30/15776407068706.jpg">
 
 
 
@@ -119,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="https://tangjiuyang.com/uncategorized/用Django实现Github/"/>
+  <link rel="canonical" href="https://tangjiuyang.com/Python/github-webhook-with-django.html"/>
 
 
 
 
 
-  <title>用Django实现Github | 九阳的博客</title>
+  <title>用Django实现Github Webhook | 九阳的博客</title>
   
 
 
@@ -160,7 +164,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">记录一切！</p>
+        <p class="site-subtitle">前路漫漫</p>
       
   </div>
 
@@ -272,7 +276,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tangjiuyang.com/uncategorized/%E7%94%A8Django%E5%AE%9E%E7%8E%B0Github/">
+    <link itemprop="mainEntityOfPage" href="https://tangjiuyang.com/Python/github-webhook-with-django.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="九阳">
@@ -289,7 +293,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">用Django实现Github</h1>
+          <h1 class="post-title" itemprop="name headline">用Django实现Github Webhook</h1>
         
 
         <div class="post-meta">
@@ -312,6 +316,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -320,8 +346,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/uncategorized/%E7%94%A8Django%E5%AE%9E%E7%8E%B0Github/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/uncategorized/%E7%94%A8Django%E5%AE%9E%E7%8E%B0Github/" itemprop="commentsCount"></span>
+                <a href="/Python/github-webhook-with-django.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/Python/github-webhook-with-django.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -352,21 +378,26 @@
         <blockquote>
 <p>Webhooks 用中文翻译即网络钩子，以 GitHub 为例，当你向 Github 向发送 push 或 pull 等请求事件时，会触发指定的 URL，一般是向 URL 发送 POST 请求，我们收到 POST 请求就可以根据不同的事件进行相应的处理。</p>
 </blockquote>
+<a id="more"></a>
+
 <p>下面我们的例子演示了利用 <code>Github Webhooks</code> 将 <code>Hexo</code> 部署到 VPS。</p>
-<p>创建 Webhook<br>创建 webhook 项目</p>
-<p>$ django-admin startproject webhook<br>创建 core app</p>
-<p>$ django-admin startapp core<br>项目 urls.py</p>
-<p>from django.contrib import admin<br>from django.urls import path, include</p>
-<p>urlpatterns = [<br>    path(‘admin/‘, admin.site.urls),<br>    path(‘’, include(‘core.urls’)),<br>]<br>core/urls.py</p>
-<p>from django.urls import path<br>from . import views</p>
-<p>urlpatterns = [<br>    path(‘webhook’, views.webhook, name=’webhook’),<br>]<br>在 Github 项目右侧的 Settings 中找到 Webhooks，填入你上面定义的外网链接，Secret 暂时留空，其他设置见下图，然后点击 Add Webhook。</p>
-<p>1553420653042<br>1553420653042</p>
-<p>core/views.py 先写一个简单的小例子。</p>
-<p>csrf_exempt 装饰器表示不需要 csrf 认证，我们这里使用的密钥认证，稍后再说。</p>
-<p>from django.http import HttpResponse<br>from django.views.decorators.csrf import csrf_exempt</p>
-<p>@csrf_exempt<br>def webhook(request):<br>    return HttpResponse(‘pong’)<br>将服务端在 VPS 上运行起来，这里推荐使用 Pycharm 的 SSH Interpreter 的，方便远程调试。</p>
-<p>注意：需要将运行 IP 改成 0.0.0.0，同时要向 settings.py 中的 ALLOWED_HOSTS 列表添加你的 VPS 主机名。</p>
-<p>我们在 Github Webhook 上主动发送请求测试下，查看响应，得到的是预期的 pong。</p>
+<h1 id="创建-Webhook"><a href="#创建-Webhook" class="headerlink" title="创建 Webhook"></a>创建 Webhook</h1><p>创建 webhook 项目</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> django-admin startproject webhook</span></span><br></pre></td></tr></table></figure>
+<p>创建 core app</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> django-admin startapp core</span></span><br></pre></td></tr></table></figure>
+<p>项目 urls.py</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> path, include</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">'admin/'</span>, admin.site.urls),</span><br><span class="line">    path(<span class="string">''</span>, include(<span class="string">'core.urls'</span>)),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<p>core/urls.py</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> path</span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> views</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">'webhook'</span>, views.webhook, name=<span class="string">'webhook'</span>),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>在 Github 项目右侧的 <code>Settings</code> 中找到 <code>Webhooks</code>，填入你上面定义的外网链接，Secret 暂时留空，其他设置见下图，然后点击 Add Webhook。</p>
+<p><img src="http://mweb-tangjiuyang-com.oss-cn-beijing.aliyuncs.com/2019/12/30/15776407068706.jpg" alt=""></p>
+<p><code>core/views.py</code> 先写一个简单的小例子。</p>
+<p><code>csrf_exempt</code> 装饰器表示不需要 csrf 认证，我们这里使用的密钥认证，稍后再说。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse</span><br><span class="line"><span class="keyword">from</span> django.views.decorators.csrf <span class="keyword">import</span> csrf_exempt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@csrf_exempt</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">webhook</span><span class="params">(request)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">'pong'</span>)</span><br></pre></td></tr></table></figure>
+<p>将服务端在 VPS 上运行起来，这里推荐使用 Pycharm 的 SSH Interpreter 的，方便远程调试。</p>
+<p>注意：需要将运行 IP 改成 <code>0.0.0.0</code>，同时要向 settings.py 中的 <code>ALLOWED_HOSTS</code> 列表添加你的 VPS 主机名。</p>
+<p>我们在 Github Webhook 上主动发送请求测试下，查看响应，得到的是预期的 <code>pong</code>。</p>
 <p>1553421210497<br>1553421210497</p>
 <p>保证 Webhook 的安全<br>IP 白名单<br>此刻任何人在浏览器或者其他地方都可以直接访问该链接</p>
 <p>1553421448360<br>1553421448360</p>
@@ -519,7 +550,11 @@ return HttpResponse(status=204)</code></pre><p>以后每次在本地推送博客
       
         <div class="post-tags">
           
-            <a href="/tags/python-github-django/" rel="tag"># python,github,django</a>
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+            <a href="/tags/github/" rel="tag"># github</a>
+          
+            <a href="/tags/django/" rel="tag"># django</a>
           
         </div>
       
@@ -532,15 +567,15 @@ return HttpResponse(status=204)</code></pre><p>以后每次在本地推送博客
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/uncategorized/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Python/pycharm-remote-synchronization-settings-ssh-interpreter.html" rel="prev" title="Pycharm 远端同步设置（SSH Interpreter）">
+                Pycharm 远端同步设置（SSH Interpreter） <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -599,8 +634,17 @@ return HttpResponse(status=204)</code></pre><p>以后每次在本地推送博客
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -609,7 +653,7 @@ return HttpResponse(status=204)</code></pre><p>以后每次在本地推送博客
                 alt="九阳" />
             
               <p class="site-author-name" itemprop="name">九阳</p>
-              <p class="site-description motion-element" itemprop="description">记录一切，帮助自己，帮助他人！</p>
+              <p class="site-description motion-element" itemprop="description">心有猛虎，细嗅蔷薇。</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -626,13 +670,22 @@ return HttpResponse(status=204)</code></pre><p>以后每次在本地推送博客
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
             
               
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -683,6 +736,22 @@ return HttpResponse(status=204)</code></pre><p>以后每次在本地推送博客
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#创建-Webhook"><span class="nav-number">1.</span> <span class="nav-text">创建 Webhook</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
