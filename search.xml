@@ -1,17 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>利用gulp对Hexo博客压缩并一键之部署</title>
-    <url>/Hexo/use-gulp-to-compress-and-deploy-hexo-blog-with-one-click.html</url>
-    <content><![CDATA[<p>说在前面<br>压缩页面无非就是减小页面大小加快博客访问时间</p>
+    <title>本博客服务器所有配置</title>
+    <url>/uncategorized/all-configuration-of-this-blog-server.html</url>
+    <content><![CDATA[<blockquote>
+<p>之前的博客种种原因下线了，最终还是打算重新建立博客，记录一些东西，帮助自己的同时，也希望能帮助到他人。</p>
+</blockquote>
 <a id="more"></a>
 
-<p>实现<br>安装依赖<br>npm i gulp gulp-htmlclean gulp-htmlmin gulp-minify-css gulp-uglify -s<br>gulp配置<br>在根目录下创建gulpfile.js文件</p>
-<p>gulpfile.js</p>
-<p>var gulp = require(‘gulp’);<br>var minifycss = require(‘gulp-minify-css’);<br>var uglify = require(‘gulp-uglify’);<br>var htmlmin = require(‘gulp-htmlmin’);<br>var htmlclean = require(‘gulp-htmlclean’);<br>// 压缩 public 目录 css<br>gulp.task(‘minify-css’, function () {<br>    return gulp.src(‘./public/<strong>/*.css’)<br>        .pipe(minifycss())<br>        .pipe(gulp.dest(‘./public’));<br>});<br>// 压缩 public 目录 html<br>gulp.task(‘minify-html’, function () {<br>    return gulp.src(‘./public/</strong>/<em>.html’)<br>        .pipe(htmlclean())<br>        .pipe(htmlmin({<br>            removeComments: true,<br>            minifyJS: true,<br>            minifyCSS: true,<br>            minifyURLs: true,<br>        }))<br>        .pipe(gulp.dest(‘./public’))<br>});<br>// 压缩 public/js 目录 js<br>gulp.task(‘minify-js’, function () {<br>    return gulp.src(‘./public/**/</em>.js’)<br>        .pipe(uglify())<br>        .pipe(gulp.dest(‘./public’));<br>});<br>// 执行 gulp 命令时执行的任务<br>gulp.task(‘default’, [<br>    ‘minify-html’, ‘minify-css’, ‘minify-js’<br>]);<br>一键部署<br>在package.json中加入如下script</p>
-<p>“scripts”: {<br>  “push”: “hexo cl &amp;&amp; hexo g &amp;&amp; gulp &amp;&amp; hexo d”<br>}</p>
-<p>然后在部署的时候只需要运行<br>npm run push</p>
+<h2 id="服务器相关信息"><a href="#服务器相关信息" class="headerlink" title="服务器相关信息"></a>服务器相关信息</h2><ul>
+<li>系统：<code>Ubuntu 18.04.3 LTS</code></li>
+<li>服务商：阿里云-香港</li>
+</ul>
+<h2 id="安装ZSH"><a href="#安装ZSH" class="headerlink" title="安装ZSH"></a>安装ZSH</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>ZSH 已经被收录到了 Ubuntu 18.04 LTS 的官方软件包存储库中，安装起来也非常容易。使用如下命令就可以直接安装：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt install zsh</span><br><span class="line">wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh</span><br><span class="line">chsh -s /bin/zsh #将默认的shell从bash改为zsh</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+
+<h3 id="为ZSH安装Powerline和Powerline字体"><a href="#为ZSH安装Powerline和Powerline字体" class="headerlink" title="为ZSH安装Powerline和Powerline字体"></a>为ZSH安装Powerline和Powerline字体</h3><p>「Powerline」是 ZSH Shell 的状态行插件，「Powerline 字体」也允许 ZSH 在 Shell 中使用不同的图标和符号。而「Powerline」和「Powerline 字体」也可以在 Ubuntu 18.04 LTS 的官方软件包存储库中找到。</p>
+<p>您可以运行以下命令在 Ubuntu 18.04 LTS 上安装「Powerline」和「Powerline 字体」：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt install powerline fonts-powerline</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装ZSH-Powerlevel9k美化主题"><a href="#安装ZSH-Powerlevel9k美化主题" class="headerlink" title="安装ZSH Powerlevel9k美化主题"></a>安装ZSH Powerlevel9k美化主题</h3><p>Powerlevel9k 是用于 ZSH 美化的一个非常酷的主题，您可以运行以下命令在 Ubuntu 18.04 LTS 系统中安装 Powerlevel9k ZSH 主题：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt install zsh-theme-powerlevel9k</span><br></pre></td></tr></table></figure>
+<p>装好之后执行以下命令在 Ubuntu 18.04 LTS 上启用 Powerlevel9k ZSH 主题：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo "source /usr/share/powerlevel9k/powerlevel9k.zsh-theme" &gt;&gt; ~/.zshrc</span><br></pre></td></tr></table></figure>
+<p><img src="media/15772914852653/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-12-26%20%E4%B8%8A%E5%8D%881.08.31.png" alt="Powerlevel9k样式"></p>
+<h4 id="powerlevel9k配置"><a href="#powerlevel9k配置" class="headerlink" title="powerlevel9k配置"></a>powerlevel9k配置</h4><p>默认配置参考官方说明：<br><a href="https://github.com/bhilburn/powerlevel9k/wiki/Stylizing-Your-Prompt" target="_blank" rel="noopener">https://github.com/bhilburn/powerlevel9k/wiki/Stylizing-Your-Prompt</a><br>官方推荐的各种用户配置（带各种截图）：<br><a href="https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config" target="_blank" rel="noopener">https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config</a></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> ==== Theme Settings ====</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> PowerLevel9k</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 左侧栏目显示的要素（指定的关键字参考官网）</span></span><br><span class="line">POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs)</span><br><span class="line"><span class="meta">#</span><span class="bash"> 右侧栏目显示的要素</span></span><br><span class="line">POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time virtualenv)</span><br><span class="line"><span class="meta">#</span><span class="bash">新起一行显示命令 (推荐！极其方便）</span></span><br><span class="line">POWERLEVEL9K_PROMPT_ON_NEWLINE=true</span><br><span class="line"><span class="meta">#</span><span class="bash">右侧状态栏与命令在同一行</span></span><br><span class="line">POWERLEVEL9K_RPROMPT_ON_NEWLINE=true</span><br><span class="line"><span class="meta">#</span><span class="bash">缩短目录层级</span></span><br><span class="line">POWERLEVEL9K_SHORTEN_DIR_LENGTH=1</span><br><span class="line"><span class="meta">#</span><span class="bash">缩短目录策略：隐藏上层目录中间的字</span></span><br><span class="line"><span class="meta">#</span><span class="bash">POWERLEVEL9K_SHORTEN_STRATEGY=<span class="string">"truncate_middle"</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">添加连接上下连接箭头更方便查看</span></span><br><span class="line">POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="↱"</span><br><span class="line">POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="↳ "</span><br><span class="line"><span class="meta">#</span><span class="bash"> 新的命令与上面的命令隔开一行</span></span><br><span class="line"><span class="meta">#</span><span class="bash">POWERLEVEL9K_PROMPT_ADD_NEWLINE=<span class="literal">true</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Git仓库状态的色彩指定</span></span><br><span class="line">POWERLEVEL9K_VCS_CLEAN_FOREGROUND='blue'</span><br><span class="line">POWERLEVEL9K_VCS_CLEAN_BACKGROUND='black'</span><br><span class="line">POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='yellow'</span><br><span class="line">POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='black'</span><br><span class="line">POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='red'</span><br><span class="line">POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='black'</span><br></pre></td></tr></table></figure>
+<h4 id="Python的Virtualenv和Pipenv虚拟环境显示问题"><a href="#Python的Virtualenv和Pipenv虚拟环境显示问题" class="headerlink" title="Python的Virtualenv和Pipenv虚拟环境显示问题"></a>Python的Virtualenv和Pipenv虚拟环境显示问题</h4><p>一般命令行里，进入虚拟环境的shell时会显示如(venv) ~$这样的。<br>但是安装这个主题后，默认是没有的。<br>你必须手动设置添加才行。</p>
+<p>方法是：<br>在<code>POWERLEVEL9K_LEFT_PROMPT_ELEMENTS</code>或者<code>POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS</code>中添加<code>virtualenv</code>要素，就能够显示了。<br>如：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs virtualenv)</span><br></pre></td></tr></table></figure>
+<p><img src="media/15772914852653/15772944514627.jpg" alt=""></p>
+<p>显示主机型号图标问题<br>像这种显示当前主机（如Mac）图标和Git图标的问题，是需要字体支持的。</p>
+<p><img src="media/15772914852653/15772946318224.jpg" alt=""></p>
+<p>默认是不开启的，必须要在~/.zshrc中指定使用这种方式显示：</p>
+<h4 id="字体设定-注意，字体设定必须放在主题之前）"><a href="#字体设定-注意，字体设定必须放在主题之前）" class="headerlink" title="字体设定 (注意，字体设定必须放在主题之前）"></a>字体设定 (注意，字体设定必须放在主题之前）</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">POWERLEVEL9K_MODE='nerdfont-complete'</span><br></pre></td></tr></table></figure>
+<h4 id="主题设定"><a href="#主题设定" class="headerlink" title="主题设定"></a>主题设定</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ZSH_THEME="powerlevel9k/powerlevel9k"</span><br></pre></td></tr></table></figure>
+<p>上面的字体模式可选的有：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nerdfont-complete</span><br><span class="line">awesome-fontconfig</span><br><span class="line">awesome-patched</span><br></pre></td></tr></table></figure>
+<p>根据你的情况来尝试，因为不是每个都能完美无乱码显示出来。</p>
+<h3 id="在ZSH-Shell上启用语法高亮显示"><a href="#在ZSH-Shell上启用语法高亮显示" class="headerlink" title="在ZSH Shell上启用语法高亮显示"></a>在ZSH Shell上启用语法高亮显示</h3><p>ZSH 有一个名为 ZSH Syntax Highlighting 的语法高亮显示插件，使用它可以突出显示 ZSH Shell 中的命令。 您可以使用如下命令进行安装：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt install zsh-syntax-highlighting</span><br></pre></td></tr></table></figure>
+<p>安装好之后使用如下命令以启用 ZSH Syntax Highlighting 插件：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" &gt;&gt; ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h2><h3 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h3><p>我的 VPS 系统是 Ubuntu 18.04.3 LTS，如果你使用的是其它发行版，与包管理有关的命令请自行调整。</p>
+<p>首先安装依赖库和编译要用到的工具：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt-get install build-essential libpcre3 libpcre3-dev zlib1g-dev unzip git</span><br></pre></td></tr></table></figure>
+
+<h3 id="获取必要组件"><a href="#获取必要组件" class="headerlink" title="获取必要组件"></a>获取必要组件</h3><h4 id="nginx-ct"><a href="#nginx-ct" class="headerlink" title="nginx-ct"></a>nginx-ct</h4><p><code>nginx-ct</code> 模块用于启用 <code>Certificate Transparency</code> 功能。直接从 <code>github</code> 上获取源码：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget -O nginx-ct.zip -c https://github.com/grahamedgecombe/nginx-ct/archive/v1.3.2.zip</span><br><span class="line">unzip nginx-ct.zip</span><br></pre></td></tr></table></figure>
+
+<h4 id="ngx-brotli"><a href="#ngx-brotli" class="headerlink" title="ngx_brotli"></a>ngx_brotli</h4><p>本站支持 Google 开发的 <code>Brotli</code> 压缩格式，它通过内置分析大量网页得出的字典，实现了更高的压缩比率，同时几乎不影响压缩 / 解压速度。</p>
+<p>获取 <code>ngx_brotli</code> 源码：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/google/ngx_brotli.git</span><br><span class="line"><span class="built_in">cd</span> ngx_brotli</span><br><span class="line"></span><br><span class="line">git submodule update --init</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> ../</span><br></pre></td></tr></table></figure>
+
+<h4 id="OpenSSL"><a href="#OpenSSL" class="headerlink" title="OpenSSL"></a>OpenSSL</h4><p>为了支持 <code>TLS 1.3 final</code>，需要使用 <code>OpenSSL 1.1.1</code> 正式版：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget -c  https://github.com/openssl/openssl/archive/OpenSSL_1_1_1.tar.gz</span><br><span class="line">tar xzf OpenSSL_1_1_1.tar.gz</span><br><span class="line">mv openssl-OpenSSL_1_1_1 openssl</span><br></pre></td></tr></table></figure>
+
+<h3 id="编译并安装-Nginx"><a href="#编译并安装-Nginx" class="headerlink" title="编译并安装 Nginx"></a>编译并安装 Nginx</h3><p>接着就可以获取 <code>Nginx</code> 源码，编译并安装：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget -c http://nginx.org/download/nginx-1.15.2.tar.gz</span><br><span class="line">tar zxf nginx-1.15.2.tar.gz</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> nginx-1.15.2</span><br><span class="line"></span><br><span class="line">./configure --add-module=../ngx_brotli --with-openssl=../openssl --with-openssl-opt=<span class="string">'enable-tls1_3 enable-weak-ssl-ciphers'</span> --with-http_v2_module --with-http_ssl_module --with-http_gzip_static_module</span><br><span class="line"></span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<p><code>enable-tls1_3</code> 是让 OpenSSL 支持 TLS 1.3 的关键选项；而 <code>enable-weak-ssl-ciphers</code> 的作用是让 OpenSSL 继续支持 3DES 等不安全的 Cipher Suite，如果你打算继续支持 IE8，才需要加上这个选项。</p>
+<p>除了 <code>http_v2</code> 和 <code>http_ssl</code> 这两个 HTTP/2 必备模块之外，我还额外启用了 <code>http_gzip_static</code>，需要启用哪些模块需要根据自己实际情况来决定。</p>
+<p>以上步骤会把 Nginx 装到 <code>/usr/local/nginx/</code> 目录，如需更改路径可以在 configure 时指定。</p>
+<h3 id="WEB-站点配置"><a href="#WEB-站点配置" class="headerlink" title="WEB 站点配置"></a>WEB 站点配置</h3><p>在 Nginx 的站点配置中，以下两个参数需要修改：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssl_protocols              TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # 增加 TLSv1.3</span><br><span class="line">ssl_ciphers                TLS13-AES-256-GCM-SHA384:TLS13-CHACHA20-POLY1305-SHA256:TLS13-AES-128-GCM-SHA256:TLS13-AES-128-CCM-8-SHA256:TLS13-AES-128-CCM-SHA256:EECDH+CHACHA20:EECDH+CHACHA20-draft:EECDH+ECDSA+AES128:EECDH+aRSA+AES128:RSA+AES128:EECDH+ECDSA+AES256:EECDH+aRSA+AES256:RSA+AES256:EECDH+ECDSA+3DES:EECDH+aRSA+3DES:RSA+3DES:!MD5;</span><br></pre></td></tr></table></figure>
+<p>包含 <code>TLS13</code> 是 TLS 1.3 新增的 Cipher Suite，加在最前面即可；如果你不打算继续支持 IE8，可以去掉包含 <code>3DES</code> 的 Cipher Suite。</p>
+<p>本博客完整的 Nginx 配置，请点击这里查看。</p>
+<h3 id="验证是否支持-TLS-1-3"><a href="#验证是否支持-TLS-1-3" class="headerlink" title="验证是否支持 TLS 1.3"></a>验证是否支持 TLS 1.3</h3><p>目前最新版 Chrome 和 Firefox 都支持 TLS 1.3，但需要手动开启：</p>
+<p>Chrome，将 <code>chrome://flags/</code> 中的 <code>Maximum TLS version enabled</code> 改为 <code>TLS 1.3</code>（Chrome 62 中需要将 TLS 1.3 改为 <code>Enabled (Draft)</code>；<br>Firefox，将 <code>about:config</code> 中的 <code>security.tls.version.max</code> 改为 <code>4</code>；</p>
+<blockquote>
+<p> <a href="https://www.ssllabs.com/ssltest/index.html" target="_blank" rel="noopener">Qualys SSL Labs’s SSL Server Test</a> 也支持验证服务端是否支持 TLS 1.3，非常方便，继续推荐。</p>
+</blockquote>
+<h3 id="管理脚本与自启动"><a href="#管理脚本与自启动" class="headerlink" title="管理脚本与自启动"></a>管理脚本与自启动</h3><p>为了方便管理 Nginx 服务，再创建一个管理脚本：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim /etc/init.d/nginx</span><br></pre></td></tr></table></figure>
+<p>输入以下内容：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#! /bin/sh</span></span><br><span class="line"></span><br><span class="line"><span class="comment">### BEGIN INIT INFO</span></span><br><span class="line"><span class="comment"># Provides:          nginx</span></span><br><span class="line"><span class="comment"># Required-Start:    $all</span></span><br><span class="line"><span class="comment"># Required-Stop:     $all</span></span><br><span class="line"><span class="comment"># Default-Start:     2 3 4 5</span></span><br><span class="line"><span class="comment"># Default-Stop:      0 1 6</span></span><br><span class="line"><span class="comment"># Short-Description: starts the nginx web server</span></span><br><span class="line"><span class="comment"># Description:       starts nginx using start-stop-daemon</span></span><br><span class="line"><span class="comment">### END INIT INFO</span></span><br><span class="line"></span><br><span class="line">PATH=/usr/<span class="built_in">local</span>/sbin:/usr/<span class="built_in">local</span>/bin:/sbin:/bin:/usr/sbin:/usr/bin</span><br><span class="line">DAEMON=/usr/<span class="built_in">local</span>/nginx/sbin/nginx</span><br><span class="line">NAME=nginx</span><br><span class="line">DESC=nginx</span><br><span class="line"></span><br><span class="line"><span class="built_in">test</span> -x <span class="variable">$DAEMON</span> || <span class="built_in">exit</span> 0</span><br><span class="line"></span><br><span class="line"><span class="comment"># Include nginx defaults if available</span></span><br><span class="line"><span class="keyword">if</span> [ -f /etc/default/nginx ] ; <span class="keyword">then</span></span><br><span class="line">  . /etc/default/nginx</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> -e</span><br><span class="line"></span><br><span class="line">. /lib/lsb/init-functions</span><br><span class="line"></span><br><span class="line"><span class="keyword">case</span> <span class="string">"<span class="variable">$1</span>"</span> <span class="keyword">in</span></span><br><span class="line">  start)</span><br><span class="line">    <span class="built_in">echo</span> -n <span class="string">"Starting <span class="variable">$DESC</span>: "</span></span><br><span class="line">    start-stop-daemon --start --quiet --pidfile /usr/<span class="built_in">local</span>/nginx/logs/<span class="variable">$NAME</span>.pid \</span><br><span class="line">        --<span class="built_in">exec</span> <span class="variable">$DAEMON</span> -- <span class="variable">$DAEMON_OPTS</span> || <span class="literal">true</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"<span class="variable">$NAME</span>."</span></span><br><span class="line">    ;;</span><br><span class="line">  stop)</span><br><span class="line">    <span class="built_in">echo</span> -n <span class="string">"Stopping <span class="variable">$DESC</span>: "</span></span><br><span class="line">    start-stop-daemon --stop --quiet --pidfile /usr/<span class="built_in">local</span>/nginx/logs/<span class="variable">$NAME</span>.pid \</span><br><span class="line">        --<span class="built_in">exec</span> <span class="variable">$DAEMON</span> || <span class="literal">true</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"<span class="variable">$NAME</span>."</span></span><br><span class="line">    ;;</span><br><span class="line">  restart|force-reload)</span><br><span class="line">    <span class="built_in">echo</span> -n <span class="string">"Restarting <span class="variable">$DESC</span>: "</span></span><br><span class="line">    start-stop-daemon --stop --quiet --pidfile \</span><br><span class="line">        /usr/<span class="built_in">local</span>/nginx/logs/<span class="variable">$NAME</span>.pid --<span class="built_in">exec</span> <span class="variable">$DAEMON</span> || <span class="literal">true</span></span><br><span class="line">    sleep 1</span><br><span class="line">    start-stop-daemon --start --quiet --pidfile \</span><br><span class="line">        /usr/<span class="built_in">local</span>/nginx/logs/<span class="variable">$NAME</span>.pid --<span class="built_in">exec</span> <span class="variable">$DAEMON</span> -- <span class="variable">$DAEMON_OPTS</span> || <span class="literal">true</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"<span class="variable">$NAME</span>."</span></span><br><span class="line">    ;;</span><br><span class="line">  reload)</span><br><span class="line">    <span class="built_in">echo</span> -n <span class="string">"Reloading <span class="variable">$DESC</span> configuration: "</span></span><br><span class="line">    start-stop-daemon --stop --signal HUP --quiet --pidfile /usr/<span class="built_in">local</span>/nginx/logs/<span class="variable">$NAME</span>.pid \</span><br><span class="line">        --<span class="built_in">exec</span> <span class="variable">$DAEMON</span> || <span class="literal">true</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"<span class="variable">$NAME</span>."</span></span><br><span class="line">    ;;</span><br><span class="line">  status)</span><br><span class="line">    status_of_proc -p /usr/<span class="built_in">local</span>/nginx/logs/<span class="variable">$NAME</span>.pid <span class="string">"<span class="variable">$DAEMON</span>"</span> nginx &amp;&amp; <span class="built_in">exit</span> 0 || <span class="built_in">exit</span> $?</span><br><span class="line">    ;;</span><br><span class="line">  *)</span><br><span class="line">    N=/etc/init.d/<span class="variable">$NAME</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"Usage: <span class="variable">$N</span> &#123;start|stop|restart|reload|force-reload|status&#125;"</span> &gt;&amp;2</span><br><span class="line">    <span class="built_in">exit</span> 1</span><br><span class="line">    ;;</span><br><span class="line"><span class="keyword">esac</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span> 0</span><br></pre></td></tr></table></figure>
+<p>增加执行权限：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">chmod a+x /etc/init.d/nginx</span><br></pre></td></tr></table></figure>
+
+<p>现在管理 Nginx 只需使用以下命令即可：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">service nginx start|stop|restart|reload</span><br></pre></td></tr></table></figure>
+<p>如果遇到以下错误</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Failed to start nginx.service: Unit nginx.service not found.</span><br></pre></td></tr></table></figure>
+<p>解决方法：<br>在<code>/lib/systemd/system</code>创建<code>nginx.service</code><br>内容如下：</p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[Unit]</span></span><br><span class="line"><span class="attr">Description</span>=The NGINX HTTP and reverse proxy server</span><br><span class="line"><span class="attr">After</span>=syslog.target network.target remote-fs.target nss-lookup.target</span><br><span class="line"></span><br><span class="line"><span class="section">[Service]</span></span><br><span class="line"><span class="attr">Type</span>=forking</span><br><span class="line"><span class="attr">PIDFile</span>=/usr/local/nginx/logs/nginx.pid</span><br><span class="line"><span class="attr">ExecStartPre</span>=/usr/bin/nginx -t</span><br><span class="line"><span class="attr">ExecStart</span>=/usr/bin/nginx</span><br><span class="line"><span class="attr">ExecReload</span>=/bin/kill -s HUP <span class="variable">$MAINPID</span></span><br><span class="line"><span class="attr">ExecStop</span>=/bin/kill -s QUIT <span class="variable">$MAINPID</span></span><br><span class="line"><span class="attr">PrivateTmp</span>=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="section">[Install]</span></span><br><span class="line"><span class="attr">WantedBy</span>=multi-user.target</span><br></pre></td></tr></table></figure>
+<p>并将nginx可执行文件拷贝至<code>/usr/bin/</code>。</p>
+<p>如果要开机自动启动 Nginx，请执行以下命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">update-rc.d -f nginx defaults</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>Ubuntu编译安装Python3.8.0</title>
+    <url>/Linux/Python/compile-and-install-python-380-on-ubuntu.html</url>
+    <content><![CDATA[<blockquote>
+<p>如果你想体验一下，请用虚拟机（感受一下就行，别当真。<br>仅测试Ubuntu</p>
+</blockquote>
+<a id="more"></a>
+
+
+<p>##新特性<br>整体来说，有三点特别需要注意一下</p>
+<p>##海象运算符</p>
+<h3 id="python3-7"><a href="#python3-7" class="headerlink" title="python3.7"></a>python3.7</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = <span class="string">'123'</span></span><br><span class="line"><span class="keyword">if</span> len(a):</span><br><span class="line">print(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="python3-8"><a href="#python3-8" class="headerlink" title="python3.8"></a>python3.8</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (b := len(a)):</span><br><span class="line">print(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>整体这样理解</strong></p>
+</blockquote>
+<blockquote>
+<p>优先执行短赋值（借鉴golang）右边的代码<br>将右边的代码执行结果赋值给左边变量<br>再执行if判断</p>
+</blockquote>
+<p>展示张图片<br><img src="https://img-blog.csdnimg.cn/20190517190032161.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzQ2NDE0,size_16,color_FFFFFF,t_70" alt=""></p>
+<h3 id="编译字节码可以单独指定存放位置"><a href="#编译字节码可以单独指定存放位置" class="headerlink" title="编译字节码可以单独指定存放位置"></a>编译字节码可以单独指定存放位置</h3><p>说白了可以通过设置环境变量 <code>PYTHONPYCACHEPREFIX</code>来指定这个生成路径，你也可以在代码中使用 <code>sys.pycache_prefix</code>来获取这个生成路径</p>
+<p>最直接的作用就是分发Python代码的时候可以只分发编译字节码包，从而一定程度上提高了Python的安全性（可能）</p>
+<p>在Python3.8之前，<code>finally</code> 中加 <code>continue</code> 语句是不合法的。<br><img src="http://mweb-tangjiuyang-com.oss-cn-beijing.aliyuncs.com/2019/12/25/15772765508044.jpg" alt=""></p>
+<p>Python3.8之后这个限制被移除了。<br><img src="http://mweb-tangjiuyang-com.oss-cn-beijing.aliyuncs.com/2019/12/25/15772765993531.jpg" alt=""></p>
+<p>执行结果如下<br><img src="http://mweb-tangjiuyang-com.oss-cn-beijing.aliyuncs.com/2019/12/25/15772766129872.jpg" alt=""></p>
+<p>更多细节，<a href="https://docs.python.org/3.8/whatsnew/3.8.html" target="_blank" rel="noopener">Python3.8.0a4官方文档</a></p>
+<p>在ubuntu1804之后python3.7存在，暂不替换（不设置软连接）。<br>python3.8下载（支持Linux，Windows，Mac）</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.8.0/Python-3.8.0a4.tar.xz</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="先决条件（这样可以避免两个个报错）"><a href="#先决条件（这样可以避免两个个报错）" class="headerlink" title="先决条件（这样可以避免两个个报错）"></a>先决条件（这样可以避免两个个报错）</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt-get install zlib* -y</span><br><span class="line">apt-get install libffi-dev -y</span><br><span class="line">unxz Python-3.8.0a4.tar.xz</span><br><span class="line">tar -zxvf Python-3.8.0a4</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 解压Python-3.8.0a4.tar.xz包时，这里推荐手动提取，这样可以省去两条命令。如果python是在一个文件夹下，请确认非root用户拥有该文件夹的全县（递归）</span></span><br><span class="line">chown -R [非root]:[非root] Python-3.8.0a4</span><br><span class="line"></span><br><span class="line">./configure --prefix=/usr/local/python3 --with-ssl</span><br></pre></td></tr></table></figure>
+
+<p>如果是Centos系统，安装报错均可在网上查阅到</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">zipimport.ZipImportError: can't decompress data; zlib not available</span><br><span class="line">...</span><br><span class="line">make: *** [Makefile:1168：install] 错误 </span><br><span class="line"><span class="meta">#</span><span class="bash">权限问题，需要非root用户拥有解压好的python文件夹权限。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt-get install libffi-dev -y</span><br><span class="line"><span class="meta">#</span><span class="bash"> 这条命令在解决 ModuleNotFoundError: No module named <span class="string">'_ctypes'</span>无模块问题</span></span><br></pre></td></tr></table></figure>
+<p>出现以下，便是安装完成了！</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Collecting setuptools</span><br><span class="line">Collecting pip</span><br><span class="line">Installing collected packages: setuptools, pip</span><br><span class="line">Successfully installed pip-19.0.3 setuptools-40.8.0</span><br></pre></td></tr></table></figure>
+
+<p>最后，可以自己编写代码来感受一下<code>python3.8</code>的一些特别之处！</p>
 ]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>利用gulp对Hexo博客压缩并一键之部署</title>
+    <url>/Hexo/use-gulp-to-compress-and-deploy-hexo-blog-with-one-click.html</url>
+    <content><![CDATA[<h1 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h1><p>压缩页面无非就是减小页面大小加快博客访问时间</p>
+<a id="more"></a>
+
+<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm i gulp gulp-htmlclean gulp-htmlmin gulp-minify-css gulp-uglify -s</span><br></pre></td></tr></table></figure>
+
+<h2 id="gulp配置"><a href="#gulp配置" class="headerlink" title="gulp配置"></a>gulp配置</h2><p>在根目录下创建<code>gulpfile.js</code>文件</p>
+<p><code>gulpfile.js</code></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</span><br><span class="line"><span class="keyword">var</span> minifycss = <span class="built_in">require</span>(<span class="string">'gulp-minify-css'</span>);</span><br><span class="line"><span class="keyword">var</span> uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>);</span><br><span class="line"><span class="keyword">var</span> htmlmin = <span class="built_in">require</span>(<span class="string">'gulp-htmlmin'</span>);</span><br><span class="line"><span class="keyword">var</span> htmlclean = <span class="built_in">require</span>(<span class="string">'gulp-htmlclean'</span>);</span><br><span class="line"><span class="comment">// 压缩 public 目录 css</span></span><br><span class="line">gulp.task(<span class="string">'minify-css'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.src(<span class="string">'./public/**/*.css'</span>)</span><br><span class="line">        .pipe(minifycss())</span><br><span class="line">        .pipe(gulp.dest(<span class="string">'./public'</span>));</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 压缩 public 目录 html</span></span><br><span class="line">gulp.task(<span class="string">'minify-html'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.src(<span class="string">'./public/**/*.html'</span>)</span><br><span class="line">        .pipe(htmlclean())</span><br><span class="line">        .pipe(htmlmin(&#123;</span><br><span class="line">            removeComments: <span class="literal">true</span>,</span><br><span class="line">            minifyJS: <span class="literal">true</span>,</span><br><span class="line">            minifyCSS: <span class="literal">true</span>,</span><br><span class="line">            minifyURLs: <span class="literal">true</span>,</span><br><span class="line">        &#125;))</span><br><span class="line">        .pipe(gulp.dest(<span class="string">'./public'</span>))</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 压缩 public/js 目录 js</span></span><br><span class="line">gulp.task(<span class="string">'minify-js'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.src(<span class="string">'./public/**/*.js'</span>)</span><br><span class="line">        .pipe(uglify())</span><br><span class="line">        .pipe(gulp.dest(<span class="string">'./public'</span>));</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 执行 gulp 命令时执行的任务</span></span><br><span class="line">gulp.task(<span class="string">'default'</span>, [</span><br><span class="line">    <span class="string">'minify-html'</span>, <span class="string">'minify-css'</span>, <span class="string">'minify-js'</span></span><br><span class="line">]);</span><br></pre></td></tr></table></figure>
+
+<h1 id="一键部署"><a href="#一键部署" class="headerlink" title="一键部署"></a>一键部署</h1><p>在<code>package.json</code>中加入如下script</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">  "push": "hexo cl &amp;&amp; hexo g &amp;&amp; gulp &amp;&amp; hexo d"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后在部署的时候只需要运行</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm run push</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Hexo</category>
       </categories>

@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="九阳的博客">
 <meta property="og:description" content="说在前面压缩页面无非就是减小页面大小加快博客访问时间">
 <meta property="article:published_time" content="2019-12-30T08:32:18.000Z">
-<meta property="article:modified_time" content="2019-12-30T08:32:54.305Z">
+<meta property="article:modified_time" content="2019-12-30T08:35:02.009Z">
 <meta property="article:author" content="九阳">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
@@ -371,15 +371,19 @@
       
 
       
-        <p>说在前面<br>压缩页面无非就是减小页面大小加快博客访问时间</p>
+        <h1 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h1><p>压缩页面无非就是减小页面大小加快博客访问时间</p>
 <a id="more"></a>
 
-<p>实现<br>安装依赖<br>npm i gulp gulp-htmlclean gulp-htmlmin gulp-minify-css gulp-uglify -s<br>gulp配置<br>在根目录下创建gulpfile.js文件</p>
-<p>gulpfile.js</p>
-<p>var gulp = require(‘gulp’);<br>var minifycss = require(‘gulp-minify-css’);<br>var uglify = require(‘gulp-uglify’);<br>var htmlmin = require(‘gulp-htmlmin’);<br>var htmlclean = require(‘gulp-htmlclean’);<br>// 压缩 public 目录 css<br>gulp.task(‘minify-css’, function () {<br>    return gulp.src(‘./public/<strong>/*.css’)<br>        .pipe(minifycss())<br>        .pipe(gulp.dest(‘./public’));<br>});<br>// 压缩 public 目录 html<br>gulp.task(‘minify-html’, function () {<br>    return gulp.src(‘./public/</strong>/<em>.html’)<br>        .pipe(htmlclean())<br>        .pipe(htmlmin({<br>            removeComments: true,<br>            minifyJS: true,<br>            minifyCSS: true,<br>            minifyURLs: true,<br>        }))<br>        .pipe(gulp.dest(‘./public’))<br>});<br>// 压缩 public/js 目录 js<br>gulp.task(‘minify-js’, function () {<br>    return gulp.src(‘./public/**/</em>.js’)<br>        .pipe(uglify())<br>        .pipe(gulp.dest(‘./public’));<br>});<br>// 执行 gulp 命令时执行的任务<br>gulp.task(‘default’, [<br>    ‘minify-html’, ‘minify-css’, ‘minify-js’<br>]);<br>一键部署<br>在package.json中加入如下script</p>
-<p>“scripts”: {<br>  “push”: “hexo cl &amp;&amp; hexo g &amp;&amp; gulp &amp;&amp; hexo d”<br>}</p>
-<p>然后在部署的时候只需要运行<br>npm run push</p>
+<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i gulp gulp-htmlclean gulp-htmlmin gulp-minify-css gulp-uglify -s</span><br></pre></td></tr></table></figure>
 
+<h2 id="gulp配置"><a href="#gulp配置" class="headerlink" title="gulp配置"></a>gulp配置</h2><p>在根目录下创建<code>gulpfile.js</code>文件</p>
+<p><code>gulpfile.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</span><br><span class="line"><span class="keyword">var</span> minifycss = <span class="built_in">require</span>(<span class="string">'gulp-minify-css'</span>);</span><br><span class="line"><span class="keyword">var</span> uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>);</span><br><span class="line"><span class="keyword">var</span> htmlmin = <span class="built_in">require</span>(<span class="string">'gulp-htmlmin'</span>);</span><br><span class="line"><span class="keyword">var</span> htmlclean = <span class="built_in">require</span>(<span class="string">'gulp-htmlclean'</span>);</span><br><span class="line"><span class="comment">// 压缩 public 目录 css</span></span><br><span class="line">gulp.task(<span class="string">'minify-css'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.src(<span class="string">'./public/**/*.css'</span>)</span><br><span class="line">        .pipe(minifycss())</span><br><span class="line">        .pipe(gulp.dest(<span class="string">'./public'</span>));</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 压缩 public 目录 html</span></span><br><span class="line">gulp.task(<span class="string">'minify-html'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.src(<span class="string">'./public/**/*.html'</span>)</span><br><span class="line">        .pipe(htmlclean())</span><br><span class="line">        .pipe(htmlmin(&#123;</span><br><span class="line">            removeComments: <span class="literal">true</span>,</span><br><span class="line">            minifyJS: <span class="literal">true</span>,</span><br><span class="line">            minifyCSS: <span class="literal">true</span>,</span><br><span class="line">            minifyURLs: <span class="literal">true</span>,</span><br><span class="line">        &#125;))</span><br><span class="line">        .pipe(gulp.dest(<span class="string">'./public'</span>))</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 压缩 public/js 目录 js</span></span><br><span class="line">gulp.task(<span class="string">'minify-js'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.src(<span class="string">'./public/**/*.js'</span>)</span><br><span class="line">        .pipe(uglify())</span><br><span class="line">        .pipe(gulp.dest(<span class="string">'./public'</span>));</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 执行 gulp 命令时执行的任务</span></span><br><span class="line">gulp.task(<span class="string">'default'</span>, [</span><br><span class="line">    <span class="string">'minify-html'</span>, <span class="string">'minify-css'</span>, <span class="string">'minify-js'</span></span><br><span class="line">]);</span><br></pre></td></tr></table></figure>
+
+<h1 id="一键部署"><a href="#一键部署" class="headerlink" title="一键部署"></a>一键部署</h1><p>在<code>package.json</code>中加入如下script</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">  "push": "hexo cl &amp;&amp; hexo g &amp;&amp; gulp &amp;&amp; hexo d"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后在部署的时候只需要运行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run push</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -448,6 +452,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/Linux/Python/compile-and-install-python-380-on-ubuntu.html" rel="prev" title="Ubuntu编译安装Python3.8.0">
+                Ubuntu编译安装Python3.8.0 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -505,8 +513,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -525,7 +542,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -536,7 +553,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -598,6 +615,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#说在前面"><span class="nav-number">1.</span> <span class="nav-text">说在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实现"><span class="nav-number">2.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装依赖"><span class="nav-number">2.1.</span> <span class="nav-text">安装依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gulp配置"><span class="nav-number">2.2.</span> <span class="nav-text">gulp配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一键部署"><span class="nav-number">3.</span> <span class="nav-text">一键部署</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
