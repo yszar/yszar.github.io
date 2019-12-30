@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>本博客服务器所有配置</title>
-    <url>/uncategorized/all-configuration-of-this-blog-server.html</url>
+    <url>/Linux/all-configuration-of-this-blog-server.html</url>
     <content><![CDATA[<blockquote>
 <p>之前的博客种种原因下线了，最终还是打算重新建立博客，记录一些东西，帮助自己的同时，也希望能帮助到他人。</p>
 </blockquote>
@@ -88,6 +88,13 @@
 <p>并将nginx可执行文件拷贝至<code>/usr/bin/</code>。</p>
 <p>如果要开机自动启动 Nginx，请执行以下命令：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">update-rc.d -f nginx defaults</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>服务器</tag>
+      </tags>
   </entry>
   <entry>
     <title>Ubuntu编译安装Python3.8.0</title>
