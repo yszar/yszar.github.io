@@ -4,14 +4,14 @@
   <url>
     <loc>https://tangjiuyang.com/Hexo/hexo-adds-addthis-sharing-function.html</loc>
     
-    <lastmod>2019-12-30T15:17:21.959Z</lastmod>
+    <lastmod>2019-12-30T15:27:25.667Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://tangjiuyang.com/about/index.html</loc>
     
-    <lastmod>2019-12-30T15:05:13.010Z</lastmod>
+    <lastmod>2019-12-30T15:21:44.916Z</lastmod>
     
   </url>
   
