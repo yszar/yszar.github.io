@@ -1,6 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>利用gulp对Hexo博客压缩并一键之部署</title>
+    <url>/Hexo/use-gulp-to-compress-and-deploy-hexo-blog-with-one-click.html</url>
+    <content><![CDATA[<p>说在前面<br>压缩页面无非就是减小页面大小加快博客访问时间</p>
+<a id="more"></a>
+
+<p>实现<br>安装依赖<br>npm i gulp gulp-htmlclean gulp-htmlmin gulp-minify-css gulp-uglify -s<br>gulp配置<br>在根目录下创建gulpfile.js文件</p>
+<p>gulpfile.js</p>
+<p>var gulp = require(‘gulp’);<br>var minifycss = require(‘gulp-minify-css’);<br>var uglify = require(‘gulp-uglify’);<br>var htmlmin = require(‘gulp-htmlmin’);<br>var htmlclean = require(‘gulp-htmlclean’);<br>// 压缩 public 目录 css<br>gulp.task(‘minify-css’, function () {<br>    return gulp.src(‘./public/<strong>/*.css’)<br>        .pipe(minifycss())<br>        .pipe(gulp.dest(‘./public’));<br>});<br>// 压缩 public 目录 html<br>gulp.task(‘minify-html’, function () {<br>    return gulp.src(‘./public/</strong>/<em>.html’)<br>        .pipe(htmlclean())<br>        .pipe(htmlmin({<br>            removeComments: true,<br>            minifyJS: true,<br>            minifyCSS: true,<br>            minifyURLs: true,<br>        }))<br>        .pipe(gulp.dest(‘./public’))<br>});<br>// 压缩 public/js 目录 js<br>gulp.task(‘minify-js’, function () {<br>    return gulp.src(‘./public/**/</em>.js’)<br>        .pipe(uglify())<br>        .pipe(gulp.dest(‘./public’));<br>});<br>// 执行 gulp 命令时执行的任务<br>gulp.task(‘default’, [<br>    ‘minify-html’, ‘minify-css’, ‘minify-js’<br>]);<br>一键部署<br>在package.json中加入如下script</p>
+<p>“scripts”: {<br>  “push”: “hexo cl &amp;&amp; hexo g &amp;&amp; gulp &amp;&amp; hexo d”<br>}</p>
+<p>然后在部署的时候只需要运行<br>npm run push</p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>通过acme.sh申请Let&#39;s</title>
+    <url>/%E5%BB%BA%E7%AB%99%E7%9B%B8%E5%85%B3/apply-for-lets-via-acmesh.html</url>
+    <content><![CDATA[<p>Let’s Encrypt 已经可以申请通配符证书了，详细通过 acme.sh 申请 Let’s Encrypt 证书的请移步《Linux 下使用 acme.sh 申请和管理 Let’s Encrypt 证书》，我是已经有了 Let’s Encrypt 证书的情况下删除证书重新申请通配符证书的，不过方法都大同小异。在这次申请 Let’s Encrypt 通配符证书的时候也遇到一些问题，现在将申请的过程及问题解决办法记录下来分享给大家，以便大家参考。</p>
+<a id="more"></a>
+
+<h1 id="申请-Let’s-Encrypt通配符证书步骤"><a href="#申请-Let’s-Encrypt通配符证书步骤" class="headerlink" title="申请 Let’s Encrypt通配符证书步骤"></a>申请 Let’s Encrypt通配符证书步骤</h1><h2 id="升级-acme-sh"><a href="#升级-acme-sh" class="headerlink" title="升级 acme.sh"></a>升级 acme.sh</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">acme.sh –upgrade</span><br></pre></td></tr></table></figure>
+<p>PS：我升级总是失败，但是升级失败的情况好像也能申请到通配符证书，如果到第 5 步失败的话，就是升级 acme.sh 失败导致，实在不行就放弃通配符证书，改回原来的域名证书。所以想要申请通配符证书需要慎重。</p>
+<p>如何通过<code>acme.sh</code>申请Let’s Encrypt通配符证书？ - 第2张 - boke112联盟(boke112.com)</p>
+<p>2、查看证书列表</p>
+<p>acme.sh –list<br>3、删除证书</p>
+<p>acme.sh remove Main_Domain(证书的主域名，上述证书列表中可看见)<br>4、获取 Aliyun 域名 API 的密钥，在阿里云官网登录的情况下点击<a href="https://ak-console.aliyun.com/#/accesskey即可看到自己的密钥，没有就直接创建一个即可。非阿里云的请移步《如何使用" target="_blank" rel="noopener">https://ak-console.aliyun.com/#/accesskey即可看到自己的密钥，没有就直接创建一个即可。非阿里云的请移步《如何使用</a> DNS API》查阅相对应的 API 的办法。</p>
+<p>5、获得密钥之后分别输入以下命令</p>
+<p>export Ali_Key=”sdfsdfsdfljlbjkljlkjsdfoiwje”<br>export Ali_Secret=”jlsdflanljkljlfdsaklkjflsa”<br>acme.sh –issue –dns dns_ali -d yigujin.cn -d *.yigujin.cn –force<br>记得修改以上的域名为自己的域名哦<br>6、获取通配符证书之后，把证书复制到另一个地方待用</p>
+<p>acme.sh –installcert -d yigujin.cn -d *.yigujin.cn <br>–key-file  /etc/nginx/ssl/yigujin.cn.key  <br>–fullchain-file /etc/nginx/ssl/yigujin.cn.cer <br>–reloadcmd  “service nginx force-reload”<br>记得修改以上的域名为自己的域名，存放证书的路径也要自行修改哦。<br>申请 Let’s Encrypt通配符证书遇到一个问题<br>不知道是不是因为升级 acme.sh 失败的缘故还是什么问题，我申请得到的通配符证书复制到指定位置存放之后，.cer 文件只有域名的证书内容，而无 ca 证书的内容，所以就会出现两个问题：</p>
+<p>1、在服务器显示：nginx：[warn] “ssl_stapling” ignored,issuer certificate not found 的警告信息。</p>
+<p>如何通过acme.sh申请Let’s Encrypt通配符证书？ - 第3张 - boke112联盟(boke112.com)</p>
+<p>2、在<a href="https://myssl.com/检测得到的等级从" target="_blank" rel="noopener">https://myssl.com/检测得到的等级从</a> A+变成了 B。</p>
+<p>其实以上两个问题都是同一个原因导致的，就是我们通过以下命令：</p>
+<p>–fullchain-file /etc/nginx/ssl/yigujin.cn.cer <br>所得到的 yigujin.cn.cer 证书里面根本就没有 CA 的证书的，而同样的方法申请非通配符的证书，cer 文件里面都含有 CA 证书，这个目前还不知道是什么原因导致。</p>
+<p>既然知道了原因，那么解决办法就有两个，一个是放弃通配符证书，另一个就是人工添加 CA 证书。这里重点介绍人工添加 CA 证书的办法。</p>
+<p>1、复制 CA 证书到位置</p>
+<p>acme.sh –installcert -d yigujin.cn -d *.yigujin.cn <br>–key-file  /etc/nginx/ssl /yigujin.cn.key  <br>–fullchain-file /etc/nginx/ssl /yigujin.cn.cer <br>–ca-file /etc/nginx/ssl/yigujin.cn.ca.cer <br>–reloadcmd  “service nginx force-reload”<br>2、在服务器配置文件中找到以下代码：</p>
+<p>ssl_certificate /etc/nginx/ssl/yigujin.cn.cer;<br>ssl_certificate_key  /etc/nginx/ssl/yigujin.cn.key;<br>在下方添加 CA 证书</p>
+<p>ssl_trusted_certificate /etc/nginx/ssl/yigujin.cn.ca.cer;<br>不想在配置文件中添加一天 CA 证书命令的户，好像是可以直接把 CA 证书的内容添加到 yigujin.cn.cer 证书的后面保存也能解决问题。</p>
+<p>3、平滑重启 nginx 后，警告信息 nginx：[warn] “ssl_stapling” ignored,issuer certificate not found 已经消失不见了。</p>
+<p>4、将 yigujin.cn.cer 和 yigujin.cn.ca.cer 的内容合二为一，其实就是以前的 cer 证书，我们需要将这些内容添加到相应的 CDN 证书中，要不然会说证书链不完整。360 网站卫士的就是把这两个内容合成一个 CRT 文件上传。</p>
+<p>总结<br>我申请 Let’s Encrypt 通配符证书所遇到的问题不知道是个案还是什么，不过本文所列举的问题及解决办法都是真实发生的，目前我的懿古今和 boke112 导航已经使用上了 Let’s Encrypt 通配符证书，运行一切良好。如果你在申请 Let’s Encrypt 通配符证书也遇到相类似的问题，你可以试着按照我的办法去解决看看。申请 Let’s Encrypt 证书（非通配符证书）不会遇到证书链不完整的情况，也不需要人工合成证书。</p>
+]]></content>
+      <categories>
+        <category>建站相关</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>服务器</tag>
+        <tag>ssl</tag>
+        <tag>nginx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo，添加标题翻译插件</title>
+    <url>/Hexo/hexo-add-title-translation-plugin.html</url>
+    <content><![CDATA[<h1 id="文章背景"><a href="#文章背景" class="headerlink" title="文章背景"></a>文章背景</h1><p>  hexo生成的默认文章链接格式是这样的：<a href="https://blog.mariojd.cn/2013/07/14/" target="_blank" rel="noopener">https://blog.mariojd.cn/2013/07/14/</a><Markdown file name>/，这个配置在hexo根目录下的_config.yml里面：permalink: :year/:month/:day/:title/，这种默认的配置缺点很明显，当文件名是中文的时候url链接里就有中文出现，看起来low的同时也非常不利于seo优化，下面介绍两种解决方案。</p>
+<a id="more"></a>
+
+<h2 id="方案一：添加urlname属性-手动"><a href="#方案一：添加urlname属性-手动" class="headerlink" title="方案一：添加urlname属性(手动)"></a>方案一：添加urlname属性(手动)</h2><p>  在md文件的<code>Front-matter</code>区域新增<code>urlname</code>属性，可以是文章的英文Title也可以是其它自定义标识，所以每次编写Markdown你都得这么做，参考如下：
+  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 解决百度蜘蛛无法爬取Hexo博客的问题</span><br><span class="line">urlname: solve-the-problem-that-baidu-spider-cannot-crawl-hexo-blog</span><br><span class="line">date: 2018-6-28 </span><br><span class="line">categories: hexo</span><br><span class="line">author: jiuyang</span><br><span class="line">tags: hexo</span><br><span class="line">cover_picture: http:&#x2F;&#x2F;xxx.xx&#x2F;xxx.jpg</span><br><span class="line">top: 1</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h2 id="方案二：利用hexo插件-自动"><a href="#方案二：利用hexo插件-自动" class="headerlink" title="方案二：利用hexo插件(自动)"></a>方案二：利用hexo插件(自动)</h2><p>  在hexo plugins搜索<code>link</code>，已经有几个插件可以将url转换成不同的格式(如下)，我这里选用了<code>hexo-translate-title</code>，也是觉得这个比较适合自身风格。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo-translate-title: Translate the chinese title of Hexo blog to english words automatially</span><br><span class="line">hexo-permalink-pinyin: A Hexo plugin which convert Chinese title to transliterate permalink.</span><br><span class="line">hexo-abbrlink: Auto create one and only link for every post for hexo</span><br><span class="line">hexo-number-title: The hexo blog post url is displayed as a number.</span><br></pre></td></tr></table></figure>
+
+<p>  下面简单介绍一下安装操作过程。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">// 用cnpm会比较好</span><br><span class="line">npm install hexo-translate-title --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>  修改hexo根项目下的<code>_config.yml</code>，建议用google翻译毕竟贴地气，但实测并不稳定，所以也可以用<code>baidu_no_appid</code>，这样也不需要额外的认证配置。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">translate_title:</span></span><br><span class="line">  <span class="attr">translate_way:</span> <span class="string">google</span>  <span class="comment"># google,youdao,baidu_with_appid,baidu_no_appid</span></span><br><span class="line">  <span class="attr">is_need_proxy:</span> <span class="literal">false</span>     <span class="comment"># true | false</span></span><br><span class="line">  <span class="comment"># proxy_url: http://localhost:50018 # Your proxy_url</span></span><br><span class="line">  <span class="comment"># youdao_api_key: '' # Your youdao_api_key</span></span><br><span class="line">  <span class="comment"># youdao_keyfrom: xxxx-blog # Your youdao_keyfrom</span></span><br><span class="line">  <span class="comment"># baidu_appid: '' # Your baidu_appid</span></span><br><span class="line">  <span class="comment"># baidu_appkey: '' # Your baidu_appkey</span></span><br></pre></td></tr></table></figure>
+<h3 id="修改原链接格式："><a href="#修改原链接格式：" class="headerlink" title="修改原链接格式："></a>修改原链接格式：</h3><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year:month:day/:translate_title.html</span></span><br></pre></td></tr></table></figure>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>  用<code>hexo d</code>重新生成，留意控制台输出以及public目录下是否有生成相应的<code>&lt;hexo-translate-title&gt;.html</code>文件，如果有代表成功了，再用<code>hexo d</code>部署即可。</p>
+<h3 id="记坑"><a href="#记坑" class="headerlink" title="记坑"></a>记坑</h3><p>  按上述流程安装、配置和部署，但生成的链接都是<code>undefined.html</code>，随后给作者提issue，回复后留意<code>hexo g</code>输出，并且看了源码，用<code>hexo config</code>查看配置信息后未发现问题，最终定位为Google翻译服务的不稳定。</p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Pycharm 远端同步设置（SSH Interpreter）</title>
     <url>/Python/pycharm-remote-synchronization-settings-ssh-interpreter.html</url>
     <content><![CDATA[<h2 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h2><p><img src="http://mweb-tangjiuyang-com.oss-cn-beijing.aliyuncs.com/2019/12/30/sshinterpreter1.png" alt="SSHInterpreter1"></p>

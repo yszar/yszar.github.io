@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="python,pycharm," />
+  <meta name="keywords" content="linux,服务器,ssl,nginx," />
 
 
 
@@ -79,24 +79,20 @@
 
 
 
-<meta name="description" content="新建项目">
+<meta name="description" content="Let’s Encrypt 已经可以申请通配符证书了，详细通过 acme.sh 申请 Let’s Encrypt 证书的请移步《Linux 下使用 acme.sh 申请和管理 Let’s Encrypt 证书》，我是已经有了 Let’s Encrypt 证书的情况下删除证书重新申请通配符证书的，不过方法都大同小异。在这次申请 Let’s Encrypt 通配符证书的时候也遇到一些问题，现在将申请的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Pycharm 远端同步设置（SSH Interpreter）">
-<meta property="og:url" content="https://tangjiuyang.com/Python/pycharm-remote-synchronization-settings-ssh-interpreter.html">
+<meta property="og:title" content="通过acme.sh申请Let&#39;s">
+<meta property="og:url" content="https://tangjiuyang.com/%E5%BB%BA%E7%AB%99%E7%9B%B8%E5%85%B3/apply-for-lets-via-acmesh.html">
 <meta property="og:site_name" content="九阳的博客">
-<meta property="og:description" content="新建项目">
-<meta property="og:image" content="http://mweb-tangjiuyang-com.oss-cn-beijing.aliyuncs.com/2019/12/30/sshinterpreter1.png">
-<meta property="og:image" content="http://mweb-tangjiuyang-com.oss-cn-beijing.aliyuncs.com/2019/12/30/sshinterpreter2.png">
-<meta property="og:image" content="http://mweb-tangjiuyang-com.oss-cn-beijing.aliyuncs.com/2019/12/30/ssh4interpreter3.png">
-<meta property="og:image" content="http://mweb-tangjiuyang-com.oss-cn-beijing.aliyuncs.com/2019/12/30/sshinterpreter4.png">
-<meta property="og:image" content="http://mweb-tangjiuyang-com.oss-cn-beijing.aliyuncs.com/2019/12/30/sshinterpreter5.png">
-<meta property="article:published_time" content="2019-12-29T17:38:20.000Z">
-<meta property="article:modified_time" content="2019-12-29T17:58:36.140Z">
+<meta property="og:description" content="Let’s Encrypt 已经可以申请通配符证书了，详细通过 acme.sh 申请 Let’s Encrypt 证书的请移步《Linux 下使用 acme.sh 申请和管理 Let’s Encrypt 证书》，我是已经有了 Let’s Encrypt 证书的情况下删除证书重新申请通配符证书的，不过方法都大同小异。在这次申请 Let’s Encrypt 通配符证书的时候也遇到一些问题，现在将申请的">
+<meta property="article:published_time" content="2019-12-29T18:44:05.000Z">
+<meta property="article:modified_time" content="2019-12-29T18:48:19.153Z">
 <meta property="article:author" content="九阳">
-<meta property="article:tag" content="python">
-<meta property="article:tag" content="pycharm">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="服务器">
+<meta property="article:tag" content="ssl">
+<meta property="article:tag" content="nginx">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://mweb-tangjiuyang-com.oss-cn-beijing.aliyuncs.com/2019/12/30/sshinterpreter1.png">
 
 
 
@@ -126,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://tangjiuyang.com/Python/pycharm-remote-synchronization-settings-ssh-interpreter.html"/>
+  <link rel="canonical" href="https://tangjiuyang.com/建站相关/apply-for-lets-via-acmesh.html"/>
 
 
 
 
 
-  <title>Pycharm 远端同步设置（SSH Interpreter） | 九阳的博客</title>
+  <title>通过acme.sh申请Let's | 九阳的博客</title>
   
 
 
@@ -279,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tangjiuyang.com/Python/pycharm-remote-synchronization-settings-ssh-interpreter.html">
+    <link itemprop="mainEntityOfPage" href="https://tangjiuyang.com/%E5%BB%BA%E7%AB%99%E7%9B%B8%E5%85%B3/apply-for-lets-via-acmesh.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="九阳">
@@ -296,7 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Pycharm 远端同步设置（SSH Interpreter）</h1>
+          <h1 class="post-title" itemprop="name headline">通过acme.sh申请Let's</h1>
         
 
         <div class="post-meta">
@@ -308,7 +304,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-30T01:38:20+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-30T02:44:05+08:00">
                 2019-12-30
               </time>
             
@@ -331,8 +327,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
+                  <a href="/categories/%E5%BB%BA%E7%AB%99%E7%9B%B8%E5%85%B3/" itemprop="url" rel="index">
+                    <span itemprop="name">建站相关</span>
                   </a>
                 </span>
 
@@ -349,8 +345,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/Python/pycharm-remote-synchronization-settings-ssh-interpreter.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/Python/pycharm-remote-synchronization-settings-ssh-interpreter.html" itemprop="commentsCount"></span>
+                <a href="/%E5%BB%BA%E7%AB%99%E7%9B%B8%E5%85%B3/apply-for-lets-via-acmesh.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/%E5%BB%BA%E7%AB%99%E7%9B%B8%E5%85%B3/apply-for-lets-via-acmesh.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -378,10 +374,31 @@
       
 
       
-        <h2 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h2><p><img src="http://mweb-tangjiuyang-com.oss-cn-beijing.aliyuncs.com/2019/12/30/sshinterpreter1.png" alt="SSHInterpreter1"></p>
+        <p>Let’s Encrypt 已经可以申请通配符证书了，详细通过 acme.sh 申请 Let’s Encrypt 证书的请移步《Linux 下使用 acme.sh 申请和管理 Let’s Encrypt 证书》，我是已经有了 Let’s Encrypt 证书的情况下删除证书重新申请通配符证书的，不过方法都大同小异。在这次申请 Let’s Encrypt 通配符证书的时候也遇到一些问题，现在将申请的过程及问题解决办法记录下来分享给大家，以便大家参考。</p>
 <a id="more"></a>
 
-<h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><p>设置本地项目路径1，设置SSH编译器2，设置远端项目路径3（会自动与本地映射）<br><img src="http://mweb-tangjiuyang-com.oss-cn-beijing.aliyuncs.com/2019/12/30/sshinterpreter2.png" alt="SSHInterpreter2"><br>interpreter 点击 “….”，选择<code>SSH interpreter</code><br><img src="http://mweb-tangjiuyang-com.oss-cn-beijing.aliyuncs.com/2019/12/30/ssh4interpreter3.png" alt="SSHInterpreter3"><br><img src="http://mweb-tangjiuyang-com.oss-cn-beijing.aliyuncs.com/2019/12/30/sshinterpreter4.png" alt="SSHInterpreter4"><br>最后设置一下 自动同步。<br><img src="http://mweb-tangjiuyang-com.oss-cn-beijing.aliyuncs.com/2019/12/30/sshinterpreter5.png" alt="SSHInterpreter5"></p>
+<h1 id="申请-Let’s-Encrypt通配符证书步骤"><a href="#申请-Let’s-Encrypt通配符证书步骤" class="headerlink" title="申请 Let’s Encrypt通配符证书步骤"></a>申请 Let’s Encrypt通配符证书步骤</h1><h2 id="升级-acme-sh"><a href="#升级-acme-sh" class="headerlink" title="升级 acme.sh"></a>升级 acme.sh</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">acme.sh –upgrade</span><br></pre></td></tr></table></figure>
+<p>PS：我升级总是失败，但是升级失败的情况好像也能申请到通配符证书，如果到第 5 步失败的话，就是升级 acme.sh 失败导致，实在不行就放弃通配符证书，改回原来的域名证书。所以想要申请通配符证书需要慎重。</p>
+<p>如何通过<code>acme.sh</code>申请Let’s Encrypt通配符证书？ - 第2张 - boke112联盟(boke112.com)</p>
+<p>2、查看证书列表</p>
+<p>acme.sh –list<br>3、删除证书</p>
+<p>acme.sh remove Main_Domain(证书的主域名，上述证书列表中可看见)<br>4、获取 Aliyun 域名 API 的密钥，在阿里云官网登录的情况下点击<a href="https://ak-console.aliyun.com/#/accesskey即可看到自己的密钥，没有就直接创建一个即可。非阿里云的请移步《如何使用" target="_blank" rel="noopener">https://ak-console.aliyun.com/#/accesskey即可看到自己的密钥，没有就直接创建一个即可。非阿里云的请移步《如何使用</a> DNS API》查阅相对应的 API 的办法。</p>
+<p>5、获得密钥之后分别输入以下命令</p>
+<p>export Ali_Key=”sdfsdfsdfljlbjkljlkjsdfoiwje”<br>export Ali_Secret=”jlsdflanljkljlfdsaklkjflsa”<br>acme.sh –issue –dns dns_ali -d yigujin.cn -d *.yigujin.cn –force<br>记得修改以上的域名为自己的域名哦<br>6、获取通配符证书之后，把证书复制到另一个地方待用</p>
+<p>acme.sh –installcert -d yigujin.cn -d *.yigujin.cn <br>–key-file  /etc/nginx/ssl/yigujin.cn.key  <br>–fullchain-file /etc/nginx/ssl/yigujin.cn.cer <br>–reloadcmd  “service nginx force-reload”<br>记得修改以上的域名为自己的域名，存放证书的路径也要自行修改哦。<br>申请 Let’s Encrypt通配符证书遇到一个问题<br>不知道是不是因为升级 acme.sh 失败的缘故还是什么问题，我申请得到的通配符证书复制到指定位置存放之后，.cer 文件只有域名的证书内容，而无 ca 证书的内容，所以就会出现两个问题：</p>
+<p>1、在服务器显示：nginx：[warn] “ssl_stapling” ignored,issuer certificate not found 的警告信息。</p>
+<p>如何通过acme.sh申请Let’s Encrypt通配符证书？ - 第3张 - boke112联盟(boke112.com)</p>
+<p>2、在<a href="https://myssl.com/检测得到的等级从" target="_blank" rel="noopener">https://myssl.com/检测得到的等级从</a> A+变成了 B。</p>
+<p>其实以上两个问题都是同一个原因导致的，就是我们通过以下命令：</p>
+<p>–fullchain-file /etc/nginx/ssl/yigujin.cn.cer <br>所得到的 yigujin.cn.cer 证书里面根本就没有 CA 的证书的，而同样的方法申请非通配符的证书，cer 文件里面都含有 CA 证书，这个目前还不知道是什么原因导致。</p>
+<p>既然知道了原因，那么解决办法就有两个，一个是放弃通配符证书，另一个就是人工添加 CA 证书。这里重点介绍人工添加 CA 证书的办法。</p>
+<p>1、复制 CA 证书到位置</p>
+<p>acme.sh –installcert -d yigujin.cn -d *.yigujin.cn <br>–key-file  /etc/nginx/ssl /yigujin.cn.key  <br>–fullchain-file /etc/nginx/ssl /yigujin.cn.cer <br>–ca-file /etc/nginx/ssl/yigujin.cn.ca.cer <br>–reloadcmd  “service nginx force-reload”<br>2、在服务器配置文件中找到以下代码：</p>
+<p>ssl_certificate /etc/nginx/ssl/yigujin.cn.cer;<br>ssl_certificate_key  /etc/nginx/ssl/yigujin.cn.key;<br>在下方添加 CA 证书</p>
+<p>ssl_trusted_certificate /etc/nginx/ssl/yigujin.cn.ca.cer;<br>不想在配置文件中添加一天 CA 证书命令的户，好像是可以直接把 CA 证书的内容添加到 yigujin.cn.cer 证书的后面保存也能解决问题。</p>
+<p>3、平滑重启 nginx 后，警告信息 nginx：[warn] “ssl_stapling” ignored,issuer certificate not found 已经消失不见了。</p>
+<p>4、将 yigujin.cn.cer 和 yigujin.cn.ca.cer 的内容合二为一，其实就是以前的 cer 证书，我们需要将这些内容添加到相应的 CDN 证书中，要不然会说证书链不完整。360 网站卫士的就是把这两个内容合成一个 CRT 文件上传。</p>
+<p>总结<br>我申请 Let’s Encrypt 通配符证书所遇到的问题不知道是个案还是什么，不过本文所列举的问题及解决办法都是真实发生的，目前我的懿古今和 boke112 导航已经使用上了 Let’s Encrypt 通配符证书，运行一切良好。如果你在申请 Let’s Encrypt 通配符证书也遇到相类似的问题，你可以试着按照我的办法去解决看看。申请 Let’s Encrypt 证书（非通配符证书）不会遇到证书链不完整的情况，也不需要人工合成证书。</p>
 
       
     </div>
@@ -428,9 +445,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/python/" rel="tag"># python</a>
+            <a href="/tags/linux/" rel="tag"># linux</a>
           
-            <a href="/tags/pycharm/" rel="tag"># pycharm</a>
+            <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag"># 服务器</a>
+          
+            <a href="/tags/ssl/" rel="tag"># ssl</a>
+          
+            <a href="/tags/nginx/" rel="tag"># nginx</a>
           
         </div>
       
@@ -443,8 +464,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Python/github-webhook-with-django.html" rel="next" title="用Django实现Github Webhook">
-                <i class="fa fa-chevron-left"></i> 用Django实现Github Webhook
+              <a href="/Hexo/hexo-add-title-translation-plugin.html" rel="next" title="Hexo，添加标题翻译插件">
+                <i class="fa fa-chevron-left"></i> Hexo，添加标题翻译插件
               </a>
             
           </div>
@@ -453,8 +474,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Hexo/hexo-add-title-translation-plugin.html" rel="prev" title="Hexo，添加标题翻译插件">
-                Hexo，添加标题翻译插件 <i class="fa fa-chevron-right"></i>
+              <a href="/Hexo/use-gulp-to-compress-and-deploy-hexo-blog-with-one-click.html" rel="prev" title="利用gulp对Hexo博客压缩并一键之部署">
+                利用gulp对Hexo博客压缩并一键之部署 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -626,7 +647,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#新建项目"><span class="nav-number">1.</span> <span class="nav-text">新建项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置"><span class="nav-number">2.</span> <span class="nav-text">设置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#申请-Let’s-Encrypt通配符证书步骤"><span class="nav-number">1.</span> <span class="nav-text">申请 Let’s Encrypt通配符证书步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#升级-acme-sh"><span class="nav-number">1.1.</span> <span class="nav-text">升级 acme.sh</span></a></li></ol></li></ol></div>
             
 
           </div>
