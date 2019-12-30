@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tangjiuyang.com/about/index.html</loc>
+    
+    <lastmod>2019-12-30T17:30:07.672Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://tangjiuyang.com/Hexo/hexo-adds-addthis-sharing-function.html</loc>
     
     <lastmod>2019-12-30T16:55:13.698Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>https://tangjiuyang.com/Hexo/hexo-blog-next-theme-opens-article-directory-and-adjusts-style.html</loc>
     
     <lastmod>2019-12-30T16:50:54.470Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tangjiuyang.com/about/index.html</loc>
-    
-    <lastmod>2019-12-30T15:21:44.916Z</lastmod>
     
   </url>
   
