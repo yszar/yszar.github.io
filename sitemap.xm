@@ -4,7 +4,35 @@
   <url>
     <loc>https://tangjiuyang.com/Hexo/hexo-adds-addthis-sharing-function.html</loc>
     
-    <lastmod>2019-12-30T15:27:25.667Z</lastmod>
+    <lastmod>2019-12-30T16:55:13.698Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/Python/pycharm-remote-synchronization-settings-ssh-interpreter.html</loc>
+    
+    <lastmod>2019-12-30T16:50:54.791Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/Linux/Python/compile-and-install-python-380-on-ubuntu.html</loc>
+    
+    <lastmod>2019-12-30T16:50:54.686Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/Python/github-webhook-with-django.html</loc>
+    
+    <lastmod>2019-12-30T16:50:54.580Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/Hexo/hexo-blog-next-theme-opens-article-directory-and-adjusts-style.html</loc>
+    
+    <lastmod>2019-12-30T16:50:54.470Z</lastmod>
     
   </url>
   
@@ -16,23 +44,9 @@
   </url>
   
   <url>
-    <loc>https://tangjiuyang.com/Hexo/hexo-blog-next-theme-opens-article-directory-and-adjusts-style.html</loc>
-    
-    <lastmod>2019-12-30T11:36:27.598Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://tangjiuyang.com/Linux/all-configuration-of-this-blog-server.html</loc>
     
     <lastmod>2019-12-30T11:20:33.701Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tangjiuyang.com/Linux/Python/compile-and-install-python-380-on-ubuntu.html</loc>
-    
-    <lastmod>2019-12-30T11:18:13.643Z</lastmod>
     
   </url>
   
@@ -54,20 +68,6 @@
     <loc>https://tangjiuyang.com/Hexo/hexo-add-title-translation-plugin.html</loc>
     
     <lastmod>2019-12-29T18:27:45.099Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tangjiuyang.com/Python/github-webhook-with-django.html</loc>
-    
-    <lastmod>2019-12-29T18:17:06.339Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tangjiuyang.com/Python/pycharm-remote-synchronization-settings-ssh-interpreter.html</loc>
-    
-    <lastmod>2019-12-29T17:58:36.140Z</lastmod>
     
   </url>
   
