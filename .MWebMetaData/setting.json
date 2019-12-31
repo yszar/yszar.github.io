@@ -1,0 +1,10 @@
+{
+  "name" : "myhexo",
+  "fileExtension" : ".md",
+  "autoUploadInsertedImageKey" : "aliyun-OSS-oss-cn-beijing",
+  "autoUploadInsertedImage" : true,
+  "folderType" : 10,
+  "mediaFloder" : "media",
+  "orderBy" : 0,
+  "newlinesToBR" : 0
+}
