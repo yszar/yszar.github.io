@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tangjiuyang.com/categories/index.html</loc>
+    
+    <lastmod>2019-12-31T02:35:33.577Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/tags/index.html</loc>
+    
+    <lastmod>2019-12-31T02:35:33.568Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://tangjiuyang.com/about/index.html</loc>
     
     <lastmod>2019-12-30T17:30:07.672Z</lastmod>
@@ -68,20 +82,6 @@
     <loc>https://tangjiuyang.com/Hexo/hexo-add-title-translation-plugin.html</loc>
     
     <lastmod>2019-12-29T18:27:45.099Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tangjiuyang.com/categories/index.html</loc>
-    
-    <lastmod>2019-12-29T17:29:47.005Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tangjiuyang.com/tags/index.html</loc>
-    
-    <lastmod>2019-12-29T17:23:23.414Z</lastmod>
     
   </url>
   
