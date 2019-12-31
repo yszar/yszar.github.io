@@ -1,6 +1,236 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo写作技巧</title>
+    <url>/Hexo/hexo-writing-skills.html</url>
+    <content><![CDATA[<p>本文介绍 Hexo 博客的写作技巧。</p>
+<p>第一章中介绍了 Hexo 中写作相关的基本概念，包括三种基本布局，标签与分类，Markdown 写作语法。</p>
+<p>第二章中介绍了 Hexo 中常用的内置标签，包括 note 标签、label 标签、button 标签、tab 标签以及代码块的高级用法，通过使用写作标签可以快速编写样式丰富的文档片段。</p>
+<p>第三章中介绍了在文档中插入图片、音乐、视频等多媒体元素的方案。</p>
+<p>第四章中根据个人使用经验为大家推荐了几款优雅实用的 Markdown 写作工具。</p>
+<a id="more"></a>
+
+<h1 id="开始写作"><a href="#开始写作" class="headerlink" title="开始写作"></a>开始写作</h1><p>在博客目录下执行如下命令新建一篇文章</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo new [layout] &lt;title&gt;</span></span><br></pre></td></tr></table></figure>
+<p>如果未指定文章的布局（layout），则默认使用 <code>post</code> 布局，生成的文档存放于 <code>source\_posts\</code> 目录下，打开后使用 Markdown 语法进行写作，保存后刷新浏览器即可看到文章。</p>
+<h2 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h2><p>布局是什么概念呢，你可以理解为新建文档时的一个模板，基于布局生成的文档将会继承布局的样式。</p>
+<p>Hexo 默认有三种布局：<code>post</code>、 <code>page</code> 和 <code>draft</code>，用户可以在 <code>scaffolds</code> 目录下新建文档来自定义布局格式，还可以修改站点配置文件中的 <code>default_layout</code>参数来指定生成文档时的默认布局。</p>
+<h3 id="文章（post）"><a href="#文章（post）" class="headerlink" title="文章（post）"></a>文章（post）</h3><p>基于 <code>post</code> 布局生成的文档存在于 <code>source\_posts\</code> 目录下，该目录下的文档会作为博客正文显示在网站中。</p>
+<h3 id="页面（page）"><a href="#页面（page）" class="headerlink" title="页面（page）"></a>页面（page）</h3><p><code>page</code> 布局用于生成类似 <strong>首页</strong> 和 <strong>归档</strong> 这样的页面。默认的 Next 主题样式中只包含首页和归档这两个链接，可以通过修改主题配置文件中的 <code>menu</code> 字段来新增更多页面菜单。</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">themes\next\_config.yml</span><br><span class="line">menu:</span><br><span class="line">  home: / || home</span><br><span class="line">  about: /about/ || user</span><br><span class="line">+ tags: /tags/ || tags</span><br><span class="line">+ categories: /categories/ || th</span><br><span class="line">+ archives: /archives/ || archive</span><br></pre></td></tr></table></figure>
+
+<p>其中，<code>||</code> 之前的值表示菜单链接，之后的值表示所用的 <code>FontAwesome</code> 图标名称。</p>
+<p>刷新页面后即可看到页面内多了几项菜单。<br><img data-src="https://oss.tangjiuyang.com/2019/12/31/ping-mu-kuai-zhao-20191231-xia-wu42528.png" alt="新增菜单入口"></p>
+<p>此时点击 <strong>关于</strong>、<strong>标签</strong> 和 <strong>分类</strong> 都会跳转到 404 页面，原因是我们只开放了页面入口，却没有创造对应于链接的页面视图，此时就需要通过 <code>hexo new page &lt;title&gt;</code> 命令来新建页面。</p>
+<p>基于 <code>page</code> 布局的新建命令将会在 <code>source</code> 目录下新建一个 <code>&lt;title&gt;</code> 文件夹，并在该文件夹下创建一个 <code>index.md</code> 文件，编辑该文件即可修改页面内容。</p>
+<p>例如，通过 <code>hexo new page tags</code> 命令将会生成如下目录。</p>
+<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">└──  <span class="keyword">source</span>             </span><br><span class="line">  ├── _posts          </span><br><span class="line">  └── <span class="keyword">tags</span></span><br><span class="line">    └── <span class="built_in">index</span>.md</span><br></pre></td></tr></table></figure>
+
+<p>编辑 <code>index.md</code> 文件，在 <code>Front-Matter</code> 中添加 <code>type: tags</code> ，Next 主题将自动在该页面内显示标签云。</p>
+<figure class="highlight md"><figcaption><span>source\tags\index.md</span></figcaption><table><tr><td class="code"><pre><span class="line">  title: 标签</span><br><span class="line">  date: 2018-10-19 22:57:00</span><br><span class="line"><span class="bullet">+ </span>type: tags</span><br></pre></td></tr></table></figure>
+
+<div class="note primary">
+            <p>Front-Matter 是文件最上方以 <code>---</code> 分隔的区域，用于指定本文件的各种参数值</p>
+          </div>
+
+<p>在菜单中点击 标签 跳转到刚创建的标签页面。<br><img data-src="https://oss.tangjiuyang.com/2019/12/31/15777815382148.jpg" alt="Hexo 标签页面"></p>
+<p>同理可通过 <code>page</code> 布局生成 <strong>关于</strong> 和 <strong>分类</strong> 两个页面。</p>
+<h3 id="草稿（draft）"><a href="#草稿（draft）" class="headerlink" title="草稿（draft）"></a>草稿（draft）</h3><p><code>draft</code> 布局用于创建草稿，生成的文档存在于 <code>source\_drafts\</code> 目录中，默认配置下将不会把该目录下的文档渲染到网站中。</p>
+<p>通过以下命令将草稿发布为正式文章：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo publish &lt;title&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>该命令会将 <code>source\_drafts\</code> 目录下以<br>考虑到一些文章可能需要数天才能完成，建议将新建文档时的默认布局设置为 <code>draft</code>：</p>
+<figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">default_layout:</span> <span class="string">post</span></span><br><span class="line"><span class="string">+</span> <span class="attr">default_layout:</span> <span class="string">draft</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="标签与分类"><a href="#标签与分类" class="headerlink" title="标签与分类"></a>标签与分类</h2><p>我们刚提到了标签，也提到了分类，那么标签和分类是什么，其区别是什么。</p>
+<p>标签和分类都是用于对文章进行归档的一种方式，标签是一种列表结构，而分类是一种树结构。我们以人作为例子，从标签的角度考虑，我可以拥有程序员、高颜值、幽默等标签，这些标签之间没有层级关系；从分类的角度考虑，我是亚洲人、中国人、河南人，这些分类之间是有明确的包含关系的。</p>
+<p>可以在 <code>Front-Matter</code> 中添加 <code>catergories</code> 和 <code>tags</code> 字段为文章添加标签和分类，如我为本文添加了 <strong>Hexo</strong> 和 <strong>Markdown</strong> 两个标签，并将其归类到了 <strong>技术 / 博客</strong> 类别，对应的 <code>Front-Matter</code> 结构如下：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Hexo搭建个人博客系列：写作技巧篇</span></span><br><span class="line"><span class="attr">tags:</span> <span class="string">Hexo</span> <span class="string">Markdown</span></span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">技术</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">博客</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Markdown-基本语法"><a href="#Markdown-基本语法" class="headerlink" title="Markdown 基本语法"></a>Markdown 基本语法</h2><p>Markdown 是一种标记语言，语法简单，易阅读易编写，可以让用户完全脱离鼠标写出样式丰富的文档，广受程序员喜爱，目前许多网站都已经支持通过 Markdown 语法来写文章或者发表评论。</p>
+<div class="note primary">
+            <p>请参考 <span class="exturl" data-url="aHR0cHM6Ly93d3cubWFya2Rvd25ndWlkZS5vcmcvYmFzaWMtc3ludGF4" title="https://www.markdownguide.org/basic-syntax">基础语法 | Markdown Guide<i class="fa fa-external-link"></i></span> 和 <span class="exturl" data-url="aHR0cHM6Ly93d3cubWFya2Rvd25ndWlkZS5vcmcvZXh0ZW5kZWQtc3ludGF4" title="https://www.markdownguide.org/extended-syntax">扩展语法 | Markdown<i class="fa fa-external-link"></i></span> Guide</p>
+          </div>
+
+<h1 id="Hexo-内置标签"><a href="#Hexo-内置标签" class="headerlink" title="Hexo 内置标签"></a>Hexo 内置标签</h1><div class="note primary">
+            <p>本章节参考 <span class="exturl" data-url="aHR0cHM6Ly9hbG1vc3RvdmVyLnJ1LzIwMTYtMDEvaGV4by10aGVtZS1uZXh0LXRlc3Qv" title="https://almostover.ru/2016-01/hexo-theme-next-test/">Ivan.nginx | Hexo Theme Next 主题样式测试<i class="fa fa-external-link"></i></span> 及 <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lmlpc3NuYW4uY29tL3RhZy1wbHVnaW5zLmh0bWw=" title="https://theme-next.iissnan.com/tag-plugins.html">内置标签 - NexT 使用文档<i class="fa fa-external-link"></i></span></p>
+          </div>
+
+<h2 id="文本居中标签"><a href="#文本居中标签" class="headerlink" title="文本居中标签"></a>文本居中标签</h2><p>居中标签效果如下：</p>
+<blockquote class="blockquote-center">我不去想是否能够成功，既然选择了远方，便只顾风雨兼程。</blockquote>
+
+<p>一般在引用单行文本时使用，如作为文章开篇题词。</p>
+<p>可以通过以下几种方式使用该标签：</p>
+<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 --&gt;</span></span></span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- 其中 class="blockquote-center" 是必须的 --&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">blockquote</span> <span class="attr">class</span>=<span class="string">"blockquote-center"</span>&gt;</span>blah blah blah<span class="tag">&lt;/<span class="name">blockquote</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- 标签方式 --&gt;</span></span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name">centerquote</span> %&#125;</span><span class="xml">blah blah blah</span><span class="template-tag">&#123;% <span class="name">endcenterquote</span> %&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- 标签别名 --&gt;</span></span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name">cq</span> %&#125;</span><span class="xml"> blah blah blah </span><span class="template-tag">&#123;% <span class="name">endcq</span> %&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="代码块进阶用法"><a href="#代码块进阶用法" class="headerlink" title="代码块进阶用法"></a>代码块进阶用法</h2><p>可以通过为代码块附加参数的形式为其添加更丰富的信息提示，效果如下：</p>
+<figure class="highlight js"><figcaption><span>Hellow World tangjiuyang.com 链接地址</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">"Hello world!"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>代码块进阶语法规则：</p>
+<figure class="highlight taggerscript"><table><tr><td class="code"><pre><span class="line"><span class="symbol">\`</span><span class="symbol">\`</span><span class="symbol">\`</span> [language] [title] [url] [link text]</span><br><span class="line">code snippet</span><br><span class="line"><span class="symbol">\`</span><span class="symbol">\`</span><span class="symbol">\`</span></span><br></pre></td></tr></table></figure>
+
+<p>其中，各参数意义如下：</p>
+<ul>
+<li>langugae：语言名称，引导渲染引擎正确解析并高亮显示关键字</li>
+<li>title：代码块标题，将会显示在左上角</li>
+<li>url：链接地址，如果没有指定 link text 则会在右上角显示 link</li>
+<li>link text：链接名称，指定 url 后有效，将会显示在右上角<br>url 必须为有效链接地址才会以链接的形式显示在右上角，否则将作为标题显示在左上角。以 url 为分界，左侧除了第一个单词会被解析为 language，其他所有单词都会被解析为 title，而右侧的所有单词都会被解析为 link text。</li>
+</ul>
+<p>如果不想填写 title，可以在 language 和 url 之间添加至少三个空格。</p>
+<div class="note primary">
+            <p>代码块支持多种语言高亮预设，详细的语言列表可查看 <span class="exturl" data-url="aHR0cHM6Ly9hbG1vc3RvdmVyLnJ1LzIwMTYtMDcvaGV4by1oaWdobGlnaHQtY29kZS1zdHlsZXMv" title="https://almostover.ru/2016-07/hexo-highlight-code-styles/">Ivan.nginx | Hexo 代码块中的颜色方案<i class="fa fa-external-link"></i></span>。</p>
+          </div>
+
+<p>可以在站点配置文件中设置 <code>highlight.auto_detect: true</code> 来开启自动语言检测高亮。</p>
+<figure class="highlight diff"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"> highlight:</span><br><span class="line">   enable: true</span><br><span class="line">   line_number: false</span><br><span class="line"><span class="deletion">-  auto_detect: false</span></span><br><span class="line"><span class="addition">+  auto_detect: true</span></span><br><span class="line">   tab_replace:</span><br></pre></td></tr></table></figure>
+
+<p>如果设置语言为 <code>diff</code>，可以在代码前添加 <code>+</code> 和 <code>-</code> 来使用如上所示的高亮增删行提示效果，在展示代码改动痕迹时比较实用。</p>
+<div class="note primary">
+            <p>更多代码块高亮的个性化设置请参见 <span class="exturl" data-url="aHR0cHM6Ly93d3cub2ZpbmQuY24vYmxvZy9IRVhPL0hFWE8lRTQlQjglOEIlRTclOUElODQlRTglQUYlQUQlRTYlQjMlOTUlRTklQUIlOTglRTQlQkElQUUlRTYlOEIlOTMlRTUlQjElOTUlRTQlQkYlQUUlRTYlOTQlQjkuaHRtbCMlRTglQUUlQkUlRTclQkQlQUUlRTQlQkIlQTMlRTclQTAlODElRTYlQjclQkIlRTUlOEElQTAlRTUlODglQTAlRTklOTklQTQlRTYlQTAlODclRTglQUUlQjA=" title="https://www.ofind.cn/blog/HEXO/HEXO%E4%B8%8B%E7%9A%84%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE%E6%8B%93%E5%B1%95%E4%BF%AE%E6%94%B9.html#%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%A0%81%E6%B7%BB%E5%8A%A0%E5%88%A0%E9%99%A4%E6%A0%87%E8%AE%B0">猪猪侠 | Hexo 下的语法高亮拓展修改<i class="fa fa-external-link"></i></span></p>
+          </div>
+
+<h2 id="note-标签"><a href="#note-标签" class="headerlink" title="note 标签"></a>note 标签</h2><p>通过 <code>note</code> 标签可以为段落添加背景色，语法如下：</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> note </span>[class] %&#125;</span><br><span class="line">文本内容 (支持行内标签)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<p>支持的 class 种类包括 <code>default</code> <code>primary</code> <code>success</code> <code>info</code> <code>warning</code> <code>danger</code>，也可以不指定 class。</p>
+<p>各种 class 种类的效果如下：</p>
+<div class="note primary">
+            <p>primary note tag</p>
+          </div>
+
+<div class="note success">
+            <p>success note tag</p>
+          </div>
+
+<div class="note info">
+            <p>info note tag</p>
+          </div>
+
+<div class="note warning">
+            <p>warning note tag</p>
+          </div>
+
+<div class="note danger">
+            <p>danger note tag</p>
+          </div>
+
+<div class="note undefined">
+            <p>undefined class note tag</p>
+          </div>
+
+<p>更多配置可在主题配置文件中设置</p>
+<figure class="highlight yml"><figcaption><span>themes\next\_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">note:</span></span><br><span class="line">  <span class="comment"># Note 标签样式预设</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">modern</span>  <span class="comment"># simple | modern | flat | disabled</span></span><br><span class="line">  <span class="attr">icons:</span> <span class="literal">false</span>  <span class="comment"># 是否显示图标</span></span><br><span class="line">  <span class="attr">border_radius:</span> <span class="number">3</span>  <span class="comment"># 圆角半径</span></span><br><span class="line">  <span class="attr">light_bg_offset:</span> <span class="number">0</span>  <span class="comment"># 默认背景减淡效果，以百分比计算</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="label-标签"><a href="#label-标签" class="headerlink" title="label 标签"></a>label 标签</h2><p>通过 label 标签可以为文字添加背景色，语法如下：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">&#123;% label [<span class="class"><span class="keyword">class</span>]<span class="meta">@text</span>  %&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>支持的 class 种类包括 <code>default</code> <code>primary</code> <code>success</code> <code>info</code> <code>warning</code> <code>danger</code>，默认使用 <code>default</code> 作为缺省。</p>
+<p>使用示例如下：</p>
+<figure class="highlight puppet"><table><tr><td class="code"><pre><span class="line">I heard the echo, &#123;% label default@from the valleys and the heart %&#125;</span><br><span class="line">Open to the lonely soul <span class="keyword">of</span> &#123;% label info@sickle harvesting %&#125;</span><br><span class="line"><span class="keyword">Repeat</span> <span class="keyword">outrightly</span>, but also repeat the well-being of</span><br><span class="line"><span class="keyword">Eventually</span> &#123;% label warning@swaying <span class="keyword">in</span> the desert oasis %&#125;</span><br><span class="line">&#123;% label success@I believe %&#125; <span class="keyword">I</span> <span class="keyword">am</span></span><br><span class="line">&#123;% label primary@Born as the bright summer flowers %&#125;</span><br><span class="line"><span class="keyword">Do</span> <span class="keyword">not</span> <span class="keyword">withered</span> <span class="keyword">undefeated</span> <span class="keyword">fiery</span> <span class="keyword">demon</span> <span class="keyword">rule</span></span><br><span class="line"><span class="keyword">Heart</span> <span class="keyword">rate</span> <span class="keyword">and</span> <span class="keyword">breathing</span> <span class="keyword">to</span> <span class="keyword">bear</span> &#123;% label danger@the load of the cumbersome %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>I heard the echo, <span class="label default">from the valleys and the heart</span><br>Open to the lonely soul of <span class="label info">sickle harvesting</span><br>Repeat outrightly, but also repeat the well-being of<br>Eventually <span class="label warning">swaying in the desert oasis</span></p>
+<span class="label success">I believe</span> I am
+<span class="label primary">Born as the bright summer flowers</span>
+<p>Do not withered undefeated fiery demon rule<br>Heart rate and breathing to bear <span class="label danger">the load of the cumbersome</span></p>
+<p>可在主题配置文件中设置 <code>label: false</code> 来取消 label 标签默认 CSS 样式。</p>
+<h2 id="button-按钮"><a href="#button-按钮" class="headerlink" title="button 按钮"></a>button 按钮</h2><p>通过 button 标签可以快速添加带有主题样式的按钮，语法如下：</p>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">&#123;% button /<span class="type">path</span>/<span class="keyword">to</span>/url/, <span class="type">text</span>, icon [<span class="keyword">class</span>], title %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>也可简写为：</p>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">&#123;% btn /<span class="type">path</span>/<span class="keyword">to</span>/url/, <span class="type">text</span>, icon [<span class="keyword">class</span>], title %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中， 图标 ID 来源于 <span class="exturl" data-url="aHR0cHM6Ly9mb250YXdlc29tZS5jb20vdjQuNy4wL2ljb25zLw==" title="https://fontawesome.com/v4.7.0/icons/">FontAwesome<i class="fa fa-external-link"></i></span> 。</p>
+<p>使用示例如下：</p>
+<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">btn</span> #, 文本 %&#125;</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name">btn</span> #, 文本 &amp; 标题,, 标题 %&#125;</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name">btn</span> #, 文本 &amp; 图标, home %&#125;</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name">btn</span> #, 文本 &amp; 大图标 (固定宽度), home fa-fw fa-lg %&#125;</span></span><br></pre></td></tr></table></figure>
+
+<a class="btn" href="#">文本</a>
+<a class="btn" href="#" title="标题">文本 & 标题</a>
+<a class="btn" href="#"><i class="fa fa-home"></i>文本 & 图标</a>
+<a class="btn" href="#"><i class="fa fa-home fa-fw fa-lg"></i>文本 & 大图标 (固定宽度)</a>
+
+<h2 id="tab-标签"><a href="#tab-标签" class="headerlink" title="tab 标签"></a>tab 标签</h2><p>tab 标签用于快速创建 tab 选项卡，语法如下</p>
+<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">tabs</span> [Unique name], [index] %&#125;</span></span><br><span class="line"><span class="xml">  <span class="comment">&lt;!-- tab [Tab caption]@[icon] --&gt;</span></span></span><br><span class="line"><span class="xml">  标签页内容（支持行内标签）</span></span><br><span class="line"><span class="xml">  <span class="comment">&lt;!-- endtab --&gt;</span></span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name">endtabs</span> %&#125;</span></span><br></pre></td></tr></table></figure>
+<p>其中，各参数意义如下：</p>
+<ul>
+<li>Unique name: 全局唯一的 Tab 名称，将作为各个标签页的 id 属性前缀</li>
+<li>index: 当前激活的标签页索引，如果未定义则默认选中显示第一个标签页，如果设为 - 1 则默认隐藏所有标签页</li>
+<li>Tab caption: 当前标签页的标题，如果不指定则会以 Unique name 加上索引作为标题</li>
+<li>icon: 在标签页标题中添加 Font awesome 图标<br>使用示例如下：<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">tabs</span> Tab标签列表 %&#125;</span></span><br><span class="line"><span class="xml">  <span class="comment">&lt;!-- tab 标签页1 --&gt;</span></span></span><br><span class="line"><span class="xml">    标签页1文本内容</span></span><br><span class="line"><span class="xml">  <span class="comment">&lt;!-- endtab --&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="comment">&lt;!-- tab 标签页2 --&gt;</span></span></span><br><span class="line"><span class="xml">    标签页2文本内容</span></span><br><span class="line"><span class="xml">  <span class="comment">&lt;!-- endtab --&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="comment">&lt;!-- tab 标签页3 --&gt;</span></span></span><br><span class="line"><span class="xml">    标签页3文本内容</span></span><br><span class="line"><span class="xml">  <span class="comment">&lt;!-- endtab --&gt;</span></span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name">endtabs</span> %&#125;</span></span><br></pre></td></tr></table></figure>
+<div class="tabs" id="tab标签列表"><ul class="nav-tabs"><li class="tab active"><a href="#tab标签列表-1">标签页1</a></li><li class="tab"><a href="#tab标签列表-2">标签页2</a></li><li class="tab"><a href="#tab标签列表-3">标签页3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab标签列表-1"><p>  标签页1文本内容</p></div><div class="tab-pane" id="tab标签列表-2"><p>  标签页2文本内容</p></div><div class="tab-pane" id="tab标签列表-3"><p>  标签页3文本内容</p></div></div></div>
+
+</li>
+</ul>
+<h2 id="引用站内链接"><a href="#引用站内链接" class="headerlink" title="引用站内链接"></a>引用站内链接</h2><p>可以通过如下语法引入站内文章的地址或链接：</p>
+<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">post_path</span> slug %&#125;</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name">post_link</span> slug [title] %&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>其中，<code>slug</code> 表示 <code>_post</code> 目录下的 Markdown 文件名。</p>
+<p><code>post_path</code> 标签将会渲染为文章的地址，即 <code>permalink</code>；而 <code>post_link</code> 标签将会渲染为链接，可以通过 <code>title</code> 指定链接标题。</p>
+<p>如以下标签将会生成 <code>/posts/hexo-writing-skills.html</code></p>
+<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">post_path</span> hexo-writing-skills %&#125;</span></span><br></pre></td></tr></table></figure>
+<p>而以下标签则会生成 </p>
+<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">post_link</span> hexo-writing-skills 链接标题 %&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>这种站内引用方式比直接使用 url 引用的形式更为可靠，因为即使修改了 permalink 格式，或者修改了文章的路由地址，只要 Markdown 文件名没有发生改变，引用链接都不会失效。</p>
+<h2 id="插入-Swig-代码"><a href="#插入-Swig-代码" class="headerlink" title="插入 Swig 代码"></a>插入 Swig 代码</h2><p>如果需要在页面内插入 Swig 代码，包括原生 HTML 代码，JavaScript 脚本等，可以通过 raw 标签来禁止 Markdown 引擎渲染标签内的内容。语法如下：</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> raw </span>%&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>该标签通常用于在页面内引入三方脚本实现特殊功能，尤其是当该三方脚本尚无相关 hexo 插件支持的时候，可以通过写原生 Web 页面的形式引入脚本并编写实现逻辑。</p>
+<h2 id="插入-Gist"><a href="#插入-Gist" class="headerlink" title="插入 Gist"></a>插入 Gist</h2><p>如果需要在页面内插入 Gist 上的代码片段时，可以使用如下标签:</p>
+<figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line">&#123;% gist gist_id [filename] %&#125;</span><br></pre></td></tr></table></figure>
+<p>其中，各参数意义如下：</p>
+<ul>
+<li>gist_id: Gist 仓库页面 url 中最后一段随机字符串</li>
+<li>filename: Gist 中的文件名<br>如果 Gist 中只有一个文件，可以不用指定 filename，也可以通过 JavaScript 脚本的形式直接引入，如：<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://gist.github.com/Coodool/cb4ff46a3523955dd4b918dd775b6774.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>如果 Gist 中有多个文件，可以在标签内输入 filename 来指定只引入某个文件，如果没有指定 filename，将会引入 Gist 中的所有文件。另外，引用 JavaScript 脚本形式无法精确控制只引入某一个文件，将会同时引入 Gist 中的所有文件。</p>
+<p>如果指定了与 Gist 无法匹配的 filename，页面上将不会显示任何标签内容。所以，一般在 Gist 只有一个文件的情况下无需指定 filename。</p>
+<div class="note warning">
+            <p>在页面中引入 Gist 代码段将会同时从 github 服务器上下载脚本与 CSS 样式文件，由于国内访问 github 服务器延迟较高，往往资源文件连接和下载的速度很慢，会阻塞页面的渲染进程导致短时白屏。</p>
+          </div>
+
+<h1 id="插入多媒体"><a href="#插入多媒体" class="headerlink" title="插入多媒体"></a>插入多媒体</h1><h2 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h2><p>Markdown 并不会保存插入的图片资源本身，只是记录了获取资源的链接。因此我们需要选择一款合适的图床来支持博客写作，目前各大云服务商都提供了对象存储服务，如七牛云 KODO、又拍云 USS、腾讯云 COS、阿里云 OSS 等。</p>
+<p>所以在 Markdown 中插入一张图片要分为以下几步来进行：</p>
+<ol>
+<li>将图片资源上传到图床中</li>
+<li>获取图片外链</li>
+<li>插入到 Markdown 文档中</li>
+<li>对于博客这种低频访问的应用场景，各大服务商的服务其实并没有显著的差异，并且前期的使用都提供了免费的流量，所以我认为图床的选择主要参考以下几个方面：</li>
+</ol>
+<ul>
+<li>图床是否提供了便捷的图形化管理工具用于图片的上传下载？</li>
+</ul>
+<p>如阿里云有 ossbrowser，腾讯云有 cosbrowser，七牛云有 QsunSync 等，但就本人使用体验来说，七牛云 QsunSync 的 UI 界面确实很拙劣，功能较为单一，而腾讯云 cosbrowser 的界面就相对美观优雅的多，并以 Windows 资源管理器的交互方式为用户提供资源的上传、下载和管理服务。</p>
+<p><img data-src="https://oss.tangjiuyang.com/2019/12/31/15777850616683.jpg" alt="腾讯云COS客户端界面截图"></p>
+<ul>
+<li>是否能够方便的插入到 Markdown 文档中？</li>
+</ul>
+<p>这就和服务商的关系不大了，主要看主流 Markdown 文档编辑器对各大图床的支持程度。其实关于在 Markdown 中更便捷的插入图片这事儿，最上心的还是文档编辑器的开发者，为了给用户提供更方便的文档写作体验，各大文档编辑器以及支持了 Markdown 语法的笔记软件都花了不少心思，解决方案无外乎两种，第一种是内置图片存储服务，如有道云笔记（需付费）、石墨文档，第二种是集成了云服务商的图床服务，如 Hexo Editor、Mweb 等，前者插入图片方便，适用于个人笔记，而后者能够提供 CDN 加速服务，适用于博客等公开文档。</p>
+<p>其中 Hexo Editor 支持腾讯云和七牛云的一键上传服务，MWeb 支持 Imgur、七牛云、又拍云，也可自定义图床服务。</p>
+<div class="note primary">
+            <p>本站使用阿里云 OSS 提供对象存储服务。</p>
+          </div>
+
+<h2 id="网易云音乐"><a href="#网易云音乐" class="headerlink" title="网易云音乐"></a>网易云音乐</h2><p>在网页版云音乐中找到歌曲，点击生成外链播放器：<br><img data-src="https://oss.tangjiuyang.com/2019/12/31/15777851618716.jpg" alt=""><br><img data-src="https://oss.tangjiuyang.com/2019/12/31/15777851535212.jpg" alt="获取歌曲外链"></p>
+<p>根据个人喜好选择播放器尺寸和播放模式：<br><img data-src="https://oss.tangjiuyang.com/2019/12/31/15777851865373.jpg" alt="获取插件代码"></p>
+<p>将获取到的 <code>iframe</code> 代码添加到页面中，默认样式如下：</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1313385920&auto=1&height=66"></iframe>
+
+<p>播放器宽度将会被拉长占满整个页宽，看起来有点别扭。查看控制台之后发现 iframe 在渲染的时候被处理过，外层包了一个类名为 fluid-vids 的 div 元素。顺藤摸瓜，找到了相关代码，原来是为了让嵌入的视频支持自适应布局，恰好也将 music.163.com 域名包含在了处理逻辑内，只需要将该行删除即可。</p>
+<figure class="highlight js"><figcaption><span>themes\next\source\js\src\utils.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> SUPPORTED_PLAYERS = [</span><br><span class="line">  <span class="string">'www.youtube.com'</span>,</span><br><span class="line">  <span class="string">'player.vimeo.com'</span>,</span><br><span class="line">  <span class="string">'player.youku.com'</span>,</span><br><span class="line">  <span class="comment">//'music.163.com',</span></span><br><span class="line">  <span class="string">'www.tudou.com'</span></span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+
+<p>这样播放器样式就变成左对齐固定宽度了，如果你还想让播放器居中，可以将 iframe 包在 <code>&lt;center&gt;</code> 标签内。</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">center</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">iframe</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> <span class="attr">width</span>=<span class="string">329</span> <span class="attr">height</span>=<span class="string">86</span> <span class="attr">src</span>=<span class="string">"//music.163.com/outchain/player?type=2&amp;id=34613621&amp;auto=0&amp;height=66"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">center</span>&gt;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>写作技巧</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo增加Addthis分享功能</title>
     <url>/Hexo/hexo-adds-addthis-sharing-function.html</url>
     <content><![CDATA[<!--
@@ -10,14 +240,14 @@
 <span id="inline-green"> 主题配置文件 </span>
 <a id="download" href="https://git-scm.com/download/win" target="_blank" rel="noopener"><i class="fa fa-download"></i><span> Download Now</span> </a>
 -->
-<p><img src="https://oss.tangjiuyang.com/2019/12/30/15777188305096.jpg" alt=""></p>
-<p>我选择的是<a href="http://www.addthis.com/" target="_blank" rel="noopener">AddThis</a>作为博客的第三方分享。AdThis是国外的第三方分享,使用方便,可以用google直接登录。能自定义分享样式</p>
+<p><img data-src="https://oss.tangjiuyang.com/2019/12/30/15777188305096.jpg" alt=""></p>
+<p>我选择的是<span class="exturl" data-url="aHR0cDovL3d3dy5hZGR0aGlzLmNvbS8=" title="http://www.addthis.com/">AddThis<i class="fa fa-external-link"></i></span>作为博客的第三方分享。AdThis是国外的第三方分享,使用方便,可以用google直接登录。能自定义分享样式</p>
 <a id="more"></a>
 
-<h2 id="注册AddThis，选择分享按钮："><a href="#注册AddThis，选择分享按钮：" class="headerlink" title="注册AddThis，选择分享按钮："></a>注册AddThis，选择分享按钮：</h2><p><img src="https://oss.tangjiuyang.com/2019/12/30/15777188968790.jpg" alt=""></p>
-<h2 id="选择显示样式-Select-a-Tool-Type"><a href="#选择显示样式-Select-a-Tool-Type" class="headerlink" title="选择显示样式(Select a Tool Type)"></a>选择显示样式(Select a Tool Type)</h2><p>AddThis提供了7种显示样式,你可以更加左边菜单栏点击,右边会自动显示你选择的相应样式。值得注意的是。在其右上角可以切换PC和Phone显示<br><img src="https://oss.tangjiuyang.com/2019/12/30/15777189277993.jpg" alt=""></p>
-<h2 id="点击Continue配置分享按钮"><a href="#点击Continue配置分享按钮" class="headerlink" title="点击Continue配置分享按钮"></a>点击Continue配置分享按钮</h2><p>注意：不同的风格样式,配置方式不同<br><img src="https://oss.tangjiuyang.com/2019/12/30/15777189544810.jpg" alt=""></p>
-<h2 id="获取代码ID"><a href="#获取代码ID" class="headerlink" title="获取代码ID"></a>获取代码ID</h2><p>配置完成后 , 获取代码ID , 在js代码中获取<code>pubid</code>后面的ID<br><img src="https://oss.tangjiuyang.com/2019/12/30/15777189978550.jpg" alt=""></p>
+<h2 id="注册AddThis，选择分享按钮："><a href="#注册AddThis，选择分享按钮：" class="headerlink" title="注册AddThis，选择分享按钮："></a>注册AddThis，选择分享按钮：</h2><p><img data-src="https://oss.tangjiuyang.com/2019/12/30/15777188968790.jpg" alt=""></p>
+<h2 id="选择显示样式-Select-a-Tool-Type"><a href="#选择显示样式-Select-a-Tool-Type" class="headerlink" title="选择显示样式(Select a Tool Type)"></a>选择显示样式(Select a Tool Type)</h2><p>AddThis提供了7种显示样式,你可以更加左边菜单栏点击,右边会自动显示你选择的相应样式。值得注意的是。在其右上角可以切换PC和Phone显示<br><img data-src="https://oss.tangjiuyang.com/2019/12/30/15777189277993.jpg" alt=""></p>
+<h2 id="点击Continue配置分享按钮"><a href="#点击Continue配置分享按钮" class="headerlink" title="点击Continue配置分享按钮"></a>点击Continue配置分享按钮</h2><p>注意：不同的风格样式,配置方式不同<br><img data-src="https://oss.tangjiuyang.com/2019/12/30/15777189544810.jpg" alt=""></p>
+<h2 id="获取代码ID"><a href="#获取代码ID" class="headerlink" title="获取代码ID"></a>获取代码ID</h2><p>配置完成后 , 获取代码ID , 在js代码中获取<code>pubid</code>后面的ID<br><img data-src="https://oss.tangjiuyang.com/2019/12/30/15777189978550.jpg" alt=""></p>
 <p>编辑主题配置文件, 找到关键字<code>add_this_id</code>, 添加<code>pubid</code></p>
 ]]></content>
       <categories>
@@ -44,7 +274,7 @@
 <h1 id="修改主题配置文件"><a href="#修改主题配置文件" class="headerlink" title="修改主题配置文件"></a>修改主题配置文件</h1><p>主题配置文件位于<code>themes/next/_config.yml</code></p>
 <p>每行目录超长自动换行</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">toc:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span>  </span><br><span class="line">  <span class="attr">wrap:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>四、结果图展示<br><img src="https://oss.tangjiuyang.com/2019/12/30/ping-mu-kuai-zhao-20191230-xia-wu73414.png" alt="屏幕快照 2019-12-30 下午7.34.14"></p>
+<p>四、结果图展示<br><img data-src="https://oss.tangjiuyang.com/2019/12/30/ping-mu-kuai-zhao-20191230-xia-wu73414.png" alt="屏幕快照 2019-12-30 下午7.34.14"></p>
 ]]></content>
       <categories>
         <category>Hexo</category>
@@ -76,15 +306,15 @@
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt install zsh-theme-powerlevel9k</span><br></pre></td></tr></table></figure>
 <p>装好之后执行以下命令在 Ubuntu 18.04 LTS 上启用 Powerlevel9k ZSH 主题：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo "source /usr/share/powerlevel9k/powerlevel9k.zsh-theme" &gt;&gt; ~/.zshrc</span><br></pre></td></tr></table></figure>
-<p><img src="media/15772914852653/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-12-26%20%E4%B8%8A%E5%8D%881.08.31.png" alt="Powerlevel9k样式"></p>
-<h4 id="powerlevel9k配置"><a href="#powerlevel9k配置" class="headerlink" title="powerlevel9k配置"></a>powerlevel9k配置</h4><p>默认配置参考官方说明：<br><a href="https://github.com/bhilburn/powerlevel9k/wiki/Stylizing-Your-Prompt" target="_blank" rel="noopener">https://github.com/bhilburn/powerlevel9k/wiki/Stylizing-Your-Prompt</a><br>官方推荐的各种用户配置（带各种截图）：<br><a href="https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config" target="_blank" rel="noopener">https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config</a></p>
+<p><img data-src="media/15772914852653/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-12-26%20%E4%B8%8A%E5%8D%881.08.31.png" alt="Powerlevel9k样式"></p>
+<h4 id="powerlevel9k配置"><a href="#powerlevel9k配置" class="headerlink" title="powerlevel9k配置"></a>powerlevel9k配置</h4><p>默认配置参考官方说明：<br><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2JoaWxidXJuL3Bvd2VybGV2ZWw5ay93aWtpL1N0eWxpemluZy1Zb3VyLVByb21wdA==" title="https://github.com/bhilburn/powerlevel9k/wiki/Stylizing-Your-Prompt">https://github.com/bhilburn/powerlevel9k/wiki/Stylizing-Your-Prompt<i class="fa fa-external-link"></i></span><br>官方推荐的各种用户配置（带各种截图）：<br><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2JoaWxidXJuL3Bvd2VybGV2ZWw5ay93aWtpL1Nob3ctT2ZmLVlvdXItQ29uZmln" title="https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config">https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config<i class="fa fa-external-link"></i></span></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> ==== Theme Settings ====</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> PowerLevel9k</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 左侧栏目显示的要素（指定的关键字参考官网）</span></span><br><span class="line">POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs)</span><br><span class="line"><span class="meta">#</span><span class="bash"> 右侧栏目显示的要素</span></span><br><span class="line">POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time virtualenv)</span><br><span class="line"><span class="meta">#</span><span class="bash">新起一行显示命令 (推荐！极其方便）</span></span><br><span class="line">POWERLEVEL9K_PROMPT_ON_NEWLINE=true</span><br><span class="line"><span class="meta">#</span><span class="bash">右侧状态栏与命令在同一行</span></span><br><span class="line">POWERLEVEL9K_RPROMPT_ON_NEWLINE=true</span><br><span class="line"><span class="meta">#</span><span class="bash">缩短目录层级</span></span><br><span class="line">POWERLEVEL9K_SHORTEN_DIR_LENGTH=1</span><br><span class="line"><span class="meta">#</span><span class="bash">缩短目录策略：隐藏上层目录中间的字</span></span><br><span class="line"><span class="meta">#</span><span class="bash">POWERLEVEL9K_SHORTEN_STRATEGY=<span class="string">"truncate_middle"</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">添加连接上下连接箭头更方便查看</span></span><br><span class="line">POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="↱"</span><br><span class="line">POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="↳ "</span><br><span class="line"><span class="meta">#</span><span class="bash"> 新的命令与上面的命令隔开一行</span></span><br><span class="line"><span class="meta">#</span><span class="bash">POWERLEVEL9K_PROMPT_ADD_NEWLINE=<span class="literal">true</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Git仓库状态的色彩指定</span></span><br><span class="line">POWERLEVEL9K_VCS_CLEAN_FOREGROUND='blue'</span><br><span class="line">POWERLEVEL9K_VCS_CLEAN_BACKGROUND='black'</span><br><span class="line">POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='yellow'</span><br><span class="line">POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='black'</span><br><span class="line">POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='red'</span><br><span class="line">POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='black'</span><br></pre></td></tr></table></figure>
 <h4 id="Python的Virtualenv和Pipenv虚拟环境显示问题"><a href="#Python的Virtualenv和Pipenv虚拟环境显示问题" class="headerlink" title="Python的Virtualenv和Pipenv虚拟环境显示问题"></a>Python的Virtualenv和Pipenv虚拟环境显示问题</h4><p>一般命令行里，进入虚拟环境的shell时会显示如(venv) ~$这样的。<br>但是安装这个主题后，默认是没有的。<br>你必须手动设置添加才行。</p>
 <p>方法是：<br>在<code>POWERLEVEL9K_LEFT_PROMPT_ELEMENTS</code>或者<code>POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS</code>中添加<code>virtualenv</code>要素，就能够显示了。<br>如：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs virtualenv)</span><br></pre></td></tr></table></figure>
-<p><img src="media/15772914852653/15772944514627.jpg" alt=""></p>
+<p><img data-src="media/15772914852653/15772944514627.jpg" alt=""></p>
 <p>显示主机型号图标问题<br>像这种显示当前主机（如Mac）图标和Git图标的问题，是需要字体支持的。</p>
-<p><img src="media/15772914852653/15772946318224.jpg" alt=""></p>
+<p><img data-src="media/15772914852653/15772946318224.jpg" alt=""></p>
 <p>默认是不开启的，必须要在~/.zshrc中指定使用这种方式显示：</p>
 <h4 id="字体设定-注意，字体设定必须放在主题之前）"><a href="#字体设定-注意，字体设定必须放在主题之前）" class="headerlink" title="字体设定 (注意，字体设定必须放在主题之前）"></a>字体设定 (注意，字体设定必须放在主题之前）</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">POWERLEVEL9K_MODE='nerdfont-complete'</span><br></pre></td></tr></table></figure>
 <h4 id="主题设定"><a href="#主题设定" class="headerlink" title="主题设定"></a>主题设定</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ZSH_THEME="powerlevel9k/powerlevel9k"</span><br></pre></td></tr></table></figure>
@@ -123,7 +353,7 @@
 <h3 id="验证是否支持-TLS-1-3"><a href="#验证是否支持-TLS-1-3" class="headerlink" title="验证是否支持 TLS 1.3"></a>验证是否支持 TLS 1.3</h3><p>目前最新版 Chrome 和 Firefox 都支持 TLS 1.3，但需要手动开启：</p>
 <p>Chrome，将 <code>chrome://flags/</code> 中的 <code>Maximum TLS version enabled</code> 改为 <code>TLS 1.3</code>（Chrome 62 中需要将 TLS 1.3 改为 <code>Enabled (Draft)</code>；<br>Firefox，将 <code>about:config</code> 中的 <code>security.tls.version.max</code> 改为 <code>4</code>；</p>
 <blockquote>
-<p> <a href="https://www.ssllabs.com/ssltest/index.html" target="_blank" rel="noopener">Qualys SSL Labs’s SSL Server Test</a> 也支持验证服务端是否支持 TLS 1.3，非常方便，继续推荐。</p>
+<p> <span class="exturl" data-url="aHR0cHM6Ly93d3cuc3NsbGFicy5jb20vc3NsdGVzdC9pbmRleC5odG1s" title="https://www.ssllabs.com/ssltest/index.html">Qualys SSL Labs’s SSL Server Test<i class="fa fa-external-link"></i></span> 也支持验证服务端是否支持 TLS 1.3，非常方便，继续推荐。</p>
 </blockquote>
 <h3 id="管理脚本与自启动"><a href="#管理脚本与自启动" class="headerlink" title="管理脚本与自启动"></a>管理脚本与自启动</h3><p>为了方便管理 Nginx 服务，再创建一个管理脚本：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim /etc/init.d/nginx</span><br></pre></td></tr></table></figure>
@@ -170,13 +400,13 @@
 <blockquote>
 <p>优先执行短赋值（借鉴golang）右边的代码<br>将右边的代码执行结果赋值给左边变量<br>再执行if判断</p>
 </blockquote>
-<p>展示张图片<br><img src="https://img-blog.csdnimg.cn/20190517190032161.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzQ2NDE0,size_16,color_FFFFFF,t_70" alt=""></p>
+<p>展示张图片<br><img data-src="https://img-blog.csdnimg.cn/20190517190032161.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzQ2NDE0,size_16,color_FFFFFF,t_70" alt=""></p>
 <h3 id="编译字节码可以单独指定存放位置"><a href="#编译字节码可以单独指定存放位置" class="headerlink" title="编译字节码可以单独指定存放位置"></a>编译字节码可以单独指定存放位置</h3><p>说白了可以通过设置环境变量 <code>PYTHONPYCACHEPREFIX</code>来指定这个生成路径，你也可以在代码中使用 <code>sys.pycache_prefix</code>来获取这个生成路径</p>
 <p>最直接的作用就是分发Python代码的时候可以只分发编译字节码包，从而一定程度上提高了Python的安全性（可能）</p>
-<p>在Python3.8之前，<code>finally</code> 中加 <code>continue</code> 语句是不合法的。<br><img src="https://oss.tangjiuyang.com/2019/12/25/15772765508044.jpg" alt=""></p>
-<p>Python3.8之后这个限制被移除了。<br><img src="https://oss.tangjiuyang.com/2019/12/25/15772765993531.jpg" alt=""></p>
-<p>执行结果如下<br><img src="https://oss.tangjiuyang.com/2019/12/25/15772766129872.jpg" alt=""></p>
-<p>更多细节，<a href="https://docs.python.org/3.8/whatsnew/3.8.html" target="_blank" rel="noopener">Python3.8.0a4官方文档</a></p>
+<p>在Python3.8之前，<code>finally</code> 中加 <code>continue</code> 语句是不合法的。<br><img data-src="https://oss.tangjiuyang.com/2019/12/25/15772765508044.jpg" alt=""></p>
+<p>Python3.8之后这个限制被移除了。<br><img data-src="https://oss.tangjiuyang.com/2019/12/25/15772765993531.jpg" alt=""></p>
+<p>执行结果如下<br><img data-src="https://oss.tangjiuyang.com/2019/12/25/15772766129872.jpg" alt=""></p>
+<p>更多细节，<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnB5dGhvbi5vcmcvMy44L3doYXRzbmV3LzMuOC5odG1s" title="https://docs.python.org/3.8/whatsnew/3.8.html">Python3.8.0a4官方文档<i class="fa fa-external-link"></i></span></p>
 <p>在ubuntu1804之后python3.7存在，暂不替换（不设置软连接）。<br>python3.8下载（支持Linux，Windows，Mac）</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.8.0/Python-3.8.0a4.tar.xz</span><br></pre></td></tr></table></figure>
 
@@ -195,8 +425,8 @@
         <category>Python</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>linux</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -233,13 +463,13 @@
 <p>如何通过<code>acme.sh</code>申请Let’s Encrypt通配符证书？ - 第2张 - boke112联盟(boke112.com)</p>
 <p>2、查看证书列表</p>
 <p>acme.sh –list<br>3、删除证书</p>
-<p>acme.sh remove Main_Domain(证书的主域名，上述证书列表中可看见)<br>4、获取 Aliyun 域名 API 的密钥，在阿里云官网登录的情况下点击<a href="https://ak-console.aliyun.com/#/accesskey即可看到自己的密钥，没有就直接创建一个即可。非阿里云的请移步《如何使用" target="_blank" rel="noopener">https://ak-console.aliyun.com/#/accesskey即可看到自己的密钥，没有就直接创建一个即可。非阿里云的请移步《如何使用</a> DNS API》查阅相对应的 API 的办法。</p>
+<p>acme.sh remove Main_Domain(证书的主域名，上述证书列表中可看见)<br>4、获取 Aliyun 域名 API 的密钥，在阿里云官网登录的情况下点击<span class="exturl" data-url="aHR0cHM6Ly9hay1jb25zb2xlLmFsaXl1bi5jb20vIy9hY2Nlc3NrZXnljbPlj6/nnIvliLDoh6rlt7HnmoTlr4bpkqXvvIzmsqHmnInlsLHnm7TmjqXliJvlu7rkuIDkuKrljbPlj6/jgILpnZ7pmL/ph4zkupHnmoTor7fnp7vmraXjgIrlpoLkvZXkvb/nlKg=" title="https://ak-console.aliyun.com/#/accesskey即可看到自己的密钥，没有就直接创建一个即可。非阿里云的请移步《如何使用">https://ak-console.aliyun.com/#/accesskey即可看到自己的密钥，没有就直接创建一个即可。非阿里云的请移步《如何使用<i class="fa fa-external-link"></i></span> DNS API》查阅相对应的 API 的办法。</p>
 <p>5、获得密钥之后分别输入以下命令</p>
 <p>export Ali_Key=”sdfsdfsdfljlbjkljlkjsdfoiwje”<br>export Ali_Secret=”jlsdflanljkljlfdsaklkjflsa”<br>acme.sh –issue –dns dns_ali -d yigujin.cn -d *.yigujin.cn –force<br>记得修改以上的域名为自己的域名哦<br>6、获取通配符证书之后，把证书复制到另一个地方待用</p>
 <p>acme.sh –installcert -d yigujin.cn -d *.yigujin.cn <br>–key-file  /etc/nginx/ssl/yigujin.cn.key  <br>–fullchain-file /etc/nginx/ssl/yigujin.cn.cer <br>–reloadcmd  “service nginx force-reload”<br>记得修改以上的域名为自己的域名，存放证书的路径也要自行修改哦。<br>申请 Let’s Encrypt通配符证书遇到一个问题<br>不知道是不是因为升级 acme.sh 失败的缘故还是什么问题，我申请得到的通配符证书复制到指定位置存放之后，.cer 文件只有域名的证书内容，而无 ca 证书的内容，所以就会出现两个问题：</p>
 <p>1、在服务器显示：nginx：[warn] “ssl_stapling” ignored,issuer certificate not found 的警告信息。</p>
 <p>如何通过acme.sh申请Let’s Encrypt通配符证书？ - 第3张 - boke112联盟(boke112.com)</p>
-<p>2、在<a href="https://myssl.com/检测得到的等级从" target="_blank" rel="noopener">https://myssl.com/检测得到的等级从</a> A+变成了 B。</p>
+<p>2、在<span class="exturl" data-url="aHR0cHM6Ly9teXNzbC5jb20v5qOA5rWL5b6X5Yiw55qE562J57qn5LuO" title="https://myssl.com/检测得到的等级从">https://myssl.com/检测得到的等级从<i class="fa fa-external-link"></i></span> A+变成了 B。</p>
 <p>其实以上两个问题都是同一个原因导致的，就是我们通过以下命令：</p>
 <p>–fullchain-file /etc/nginx/ssl/yigujin.cn.cer <br>所得到的 yigujin.cn.cer 证书里面根本就没有 CA 的证书的，而同样的方法申请非通配符的证书，cer 文件里面都含有 CA 证书，这个目前还不知道是什么原因导致。</p>
 <p>既然知道了原因，那么解决办法就有两个，一个是放弃通配符证书，另一个就是人工添加 CA 证书。这里重点介绍人工添加 CA 证书的办法。</p>
@@ -264,7 +494,7 @@
   <entry>
     <title>Hexo，添加标题翻译插件</title>
     <url>/Hexo/hexo-add-title-translation-plugin.html</url>
-    <content><![CDATA[<h1 id="文章背景"><a href="#文章背景" class="headerlink" title="文章背景"></a>文章背景</h1><p>  hexo生成的默认文章链接格式是这样的：<a href="https://blog.mariojd.cn/2013/07/14/" target="_blank" rel="noopener">https://blog.mariojd.cn/2013/07/14/</a><Markdown file name>/，这个配置在hexo根目录下的_config.yml里面：permalink: :year/:month/:day/:title/，这种默认的配置缺点很明显，当文件名是中文的时候url链接里就有中文出现，看起来low的同时也非常不利于seo优化，下面介绍两种解决方案。</p>
+    <content><![CDATA[<h1 id="文章背景"><a href="#文章背景" class="headerlink" title="文章背景"></a>文章背景</h1><p>  hexo生成的默认文章链接格式是这样的：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLm1hcmlvamQuY24vMjAxMy8wNy8xNC8=" title="https://blog.mariojd.cn/2013/07/14/">https://blog.mariojd.cn/2013/07/14/<i class="fa fa-external-link"></i></span><Markdown file name>/，这个配置在hexo根目录下的_config.yml里面：permalink: :year/:month/:day/:title/，这种默认的配置缺点很明显，当文件名是中文的时候url链接里就有中文出现，看起来low的同时也非常不利于seo优化，下面介绍两种解决方案。</p>
 <a id="more"></a>
 
 <h2 id="方案一：添加urlname属性-手动"><a href="#方案一：添加urlname属性-手动" class="headerlink" title="方案一：添加urlname属性(手动)"></a>方案一：添加urlname属性(手动)</h2><p>  在md文件的<code>Front-matter</code>区域新增<code>urlname</code>属性，可以是文章的英文Title也可以是其它自定义标识，所以每次编写Markdown你都得这么做，参考如下：
@@ -292,10 +522,10 @@
   <entry>
     <title>Pycharm 远端同步设置（SSH Interpreter）</title>
     <url>/Python/pycharm-remote-synchronization-settings-ssh-interpreter.html</url>
-    <content><![CDATA[<h2 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h2><p><img src="https://oss.tangjiuyang.com/2019/12/30/sshinterpreter1.png" alt="SSHInterpreter1"></p>
+    <content><![CDATA[<h2 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h2><p><img data-src="https://oss.tangjiuyang.com/2019/12/30/sshinterpreter1.png" alt="SSHInterpreter1"></p>
 <a id="more"></a>
 
-<h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><p>设置本地项目路径1，设置SSH编译器2，设置远端项目路径3（会自动与本地映射）<br><img src="https://oss.tangjiuyang.com/2019/12/30/sshinterpreter2.png" alt="SSHInterpreter2"><br>interpreter 点击 “….”，选择<code>SSH interpreter</code><br><img src="https://oss.tangjiuyang.com/2019/12/30/ssh4interpreter3.png" alt="SSHInterpreter3"><br><img src="https://oss.tangjiuyang.com/2019/12/30/sshinterpreter4.png" alt="SSHInterpreter4"><br>最后设置一下 自动同步。<br><img src="https://oss.tangjiuyang.com/2019/12/30/sshinterpreter5.png" alt="SSHInterpreter5"></p>
+<h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><p>设置本地项目路径1，设置SSH编译器2，设置远端项目路径3（会自动与本地映射）<br><img data-src="https://oss.tangjiuyang.com/2019/12/30/sshinterpreter2.png" alt="SSHInterpreter2"><br>interpreter 点击 “….”，选择<code>SSH interpreter</code><br><img data-src="https://oss.tangjiuyang.com/2019/12/30/ssh4interpreter3.png" alt="SSHInterpreter3"><br><img data-src="https://oss.tangjiuyang.com/2019/12/30/sshinterpreter4.png" alt="SSHInterpreter4"><br>最后设置一下 自动同步。<br><img data-src="https://oss.tangjiuyang.com/2019/12/30/sshinterpreter5.png" alt="SSHInterpreter5"></p>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -324,16 +554,16 @@
 <p>core/urls.py</p>
 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> path</span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> views</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">'webhook'</span>, views.webhook, name=<span class="string">'webhook'</span>),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 <p>在 Github 项目右侧的 <code>Settings</code> 中找到 <code>Webhooks</code>，填入你上面定义的外网链接，Secret 暂时留空，其他设置见下图，然后点击 Add Webhook。</p>
-<p><img src="https://oss.tangjiuyang.com/2019/12/30/15776407068706.jpg" alt=""></p>
+<p><img data-src="https://oss.tangjiuyang.com/2019/12/30/15776407068706.jpg" alt=""></p>
 <p><code>core/views.py</code> 先写一个简单的小例子。</p>
 <p><code>csrf_exempt</code> 装饰器表示不需要 csrf 认证，我们这里使用的密钥认证，稍后再说。</p>
 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse</span><br><span class="line"><span class="keyword">from</span> django.views.decorators.csrf <span class="keyword">import</span> csrf_exempt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@csrf_exempt</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">webhook</span><span class="params">(request)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">'pong'</span>)</span><br></pre></td></tr></table></figure>
-<p>将服务端在 VPS 上运行起来，这里推荐使用 Pycharm 的 SSH Interpreter 的，方便远程调试。<br><a href="http://localhost:4000/Python/pycharm-remote-synchronization-settings-ssh-interpreter.html" target="_blank" rel="noopener">SSH Interpreter设置传送门</a><br>注意：需要将运行 IP 改成 <code>0.0.0.0</code>，同时要向 <code>settings.py</code> 中的 <code>ALLOWED_HOSTS</code> 列表添加你的 VPS 主机名。</p>
+<p>将服务端在 VPS 上运行起来，这里推荐使用 Pycharm 的 SSH Interpreter 的，方便远程调试。<br><span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo0MDAwL1B5dGhvbi9weWNoYXJtLXJlbW90ZS1zeW5jaHJvbml6YXRpb24tc2V0dGluZ3Mtc3NoLWludGVycHJldGVyLmh0bWw=" title="http://localhost:4000/Python/pycharm-remote-synchronization-settings-ssh-interpreter.html">SSH Interpreter设置传送门<i class="fa fa-external-link"></i></span><br>注意：需要将运行 IP 改成 <code>0.0.0.0</code>，同时要向 <code>settings.py</code> 中的 <code>ALLOWED_HOSTS</code> 列表添加你的 VPS 主机名。</p>
 <p>我们在 Github Webhook 上主动发送请求测试下，查看响应，得到的是预期的 <code>pong</code>。</p>
-<p><img src="https://oss.tangjiuyang.com/2019/12/30/15776426446826.jpg" alt=""></p>
+<p><img data-src="https://oss.tangjiuyang.com/2019/12/30/15776426446826.jpg" alt=""></p>
 <h1 id="保证-Webhook的安全"><a href="#保证-Webhook的安全" class="headerlink" title="保证 Webhook的安全"></a>保证 Webhook的安全</h1><h2 id="IP-白名单"><a href="#IP-白名单" class="headerlink" title="IP 白名单"></a>IP 白名单</h2><p>此刻任何人在浏览器或者其他地方都可以直接访问该链接</p>
-<p><img src="https://oss.tangjiuyang.com/2019/12/30/15776426837621.jpg" alt=""></p>
-<p>然而我们只想接收来自 Github 的请求，其他的理都不想理，因此我们可以建立 Github 白名单，只允许白名单的 IP 访问。幸而 Github 已经提供了所有最新的服务器 IP。通过 <a href="https://api.github.com/meta" target="_blank" rel="noopener">https://api.github.com/meta</a> 就可以查看到。</p>
+<p><img data-src="https://oss.tangjiuyang.com/2019/12/30/15776426837621.jpg" alt=""></p>
+<p>然而我们只想接收来自 Github 的请求，其他的理都不想理，因此我们可以建立 Github 白名单，只允许白名单的 IP 访问。幸而 Github 已经提供了所有最新的服务器 IP。通过 <span class="exturl" data-url="aHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS9tZXRh" title="https://api.github.com/meta">https://api.github.com/meta<i class="fa fa-external-link"></i></span> 就可以查看到。</p>
 <p>要获取用户的 IP，可以从请求头下手。</p>
 <ul>
 <li><code>REMOTE_ADDR</code> 该请求头记录了 TCP 连接地址，但是如果用户使用了代理，就变成了代理 IP。所以一般先看 <code>HTTP_X_FORWARDED_FOR</code>。</li>
@@ -349,9 +579,9 @@
 
 
 <p>用 Github 测试成功</p>
-<p><img src="https://oss.tangjiuyang.com/2019/12/30/15776428863934.jpg" alt=""></p>
+<p><img data-src="https://oss.tangjiuyang.com/2019/12/30/15776428863934.jpg" alt=""></p>
 <p>用浏览器测试，已经被阻止了</p>
-<p><img src="https://oss.tangjiuyang.com/2019/12/30/15776429000755.jpg" alt=""></p>
+<p><img data-src="https://oss.tangjiuyang.com/2019/12/30/15776429000755.jpg" alt=""></p>
 <p>但是速度有点慢，因为每次访问都有从 API 去获取白名单，因此我将其放到 <code>settings.py</code> 中，只在每次启动时获取一次。</p>
 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line">IP_WHITELIST = requests.get(<span class="string">'https://api.github.com/meta'</span>).json()[<span class="string">'hooks'</span>]</span><br></pre></td></tr></table></figure>
 
@@ -364,7 +594,7 @@
 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line">GITHUB_WEBHOOK_KEY = <span class="string">'9IPDq6yjYcBe7jyvgZfzQtAHfU3jF9DAixsEiACM4OlsrzIYzM'</span></span><br></pre></td></tr></table></figure>
 
 <p>将该密钥同时填写到 <code>Github Webhooks</code> 中，点击 Update webhook。</p>
-<p><img src="https://oss.tangjiuyang.com/2019/12/30/15776431184422.jpg" alt=""></p>
+<p><img data-src="https://oss.tangjiuyang.com/2019/12/30/15776431184422.jpg" alt=""></p>
 <p>Github Webhook 将每次请求称为 Delivery，Delivery 的请求头格式如下：</p>
 <ul>
 <li>X-GitHub-Event 事件类型，例如 ping</li>
@@ -373,14 +603,14 @@
 </ul>
 <p><code>core/views.py</code> 继续改进如下：</p>
 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse, HttpResponseForbidden</span><br><span class="line"><span class="keyword">from</span> django.views.decorators.csrf <span class="keyword">import</span> csrf_exempt</span><br><span class="line"><span class="keyword">from</span> django.conf <span class="keyword">import</span> settings</span><br><span class="line"><span class="keyword">from</span> ipaddress <span class="keyword">import</span> ip_address, ip_network</span><br><span class="line"><span class="keyword">import</span> hmac</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_client_ip</span><span class="params">(request)</span>:</span></span><br><span class="line">    x_forwarded_for = request.META.get(<span class="string">'HTTP_X_FORWARDED_FOR'</span>)</span><br><span class="line">    <span class="keyword">if</span> x_forwarded_for:</span><br><span class="line">        ip = x_forwarded_for.split(<span class="string">','</span>)[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        ip = request.META.get(<span class="string">'REMOTE_ADDR'</span>)</span><br><span class="line">    <span class="keyword">return</span> ip</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@csrf_exempt</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">webhook</span><span class="params">(request)</span>:</span></span><br><span class="line">    client_ip = get_client_ip(request)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> network <span class="keyword">in</span> settings.IP_WHITELIST:</span><br><span class="line">        <span class="keyword">if</span> ip_address(client_ip) <span class="keyword">in</span> ip_network(network):</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> HttpResponseForbidden(<span class="string">'你没有权限访问！'</span>)</span><br><span class="line"></span><br><span class="line">    header_signature = request.META.get(<span class="string">'HTTP_X_HUB_SIGNATURE'</span>)</span><br><span class="line">    <span class="keyword">if</span> header_signature <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">        <span class="keyword">return</span> HttpResponseForbidden(<span class="string">'你没有权限访问！'</span>)</span><br><span class="line"></span><br><span class="line">    hash_type, signature = header_signature.split(<span class="string">'='</span>)</span><br><span class="line">    <span class="keyword">if</span> hash_type != <span class="string">'sha1'</span>:</span><br><span class="line">        <span class="keyword">return</span> HttpResponseForbidden(<span class="string">'不支持的加密方式'</span>, status=<span class="number">501</span>)</span><br><span class="line"></span><br><span class="line">    mac = hmac.new(settings.GITHUB_WEBHOOK_KEY.encode(<span class="string">'utf-8'</span>), request.body, hash_type).hexdigest()</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> hmac.compare_digest(mac, signature):</span><br><span class="line">        <span class="keyword">return</span> HttpResponseForbidden(<span class="string">'你没有权限访问！'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">'pong'</span>)</span><br></pre></td></tr></table></figure>
-<p>注意上面 <code>hmac.compare_digest(a, b)</code> 的结果和 <code>a == b</code> 一模一样，用于校验字符串。那为什么还要用这个函数呢？网上几乎查询不到相关资料，Python 官方文档写的也太简单晦涩了，直到看到 <a href="https://news.ycombinator.com/item?id=11119154" target="_blank" rel="noopener">https://news.ycombinator.com/item?id=11119154</a> 这个帖子才知道了原因。因为 a == b 在判断字符串是否相等时，如果第一个字符不相等，就立即返回 <code>False</code>，正常的算法都是要求越快越好，这也是理所当然的，但是 <code>hmac.compare_digest(a, b)</code> 会从头到尾判断，这样反而降低了运算速度。那为什么要这么做呢？</p>
+<p>注意上面 <code>hmac.compare_digest(a, b)</code> 的结果和 <code>a == b</code> 一模一样，用于校验字符串。那为什么还要用这个函数呢？网上几乎查询不到相关资料，Python 官方文档写的也太简单晦涩了，直到看到 <span class="exturl" data-url="aHR0cHM6Ly9uZXdzLnljb21iaW5hdG9yLmNvbS9pdGVtP2lkPTExMTE5MTU0" title="https://news.ycombinator.com/item?id=11119154">https://news.ycombinator.com/item?id=11119154<i class="fa fa-external-link"></i></span> 这个帖子才知道了原因。因为 a == b 在判断字符串是否相等时，如果第一个字符不相等，就立即返回 <code>False</code>，正常的算法都是要求越快越好，这也是理所当然的，但是 <code>hmac.compare_digest(a, b)</code> 会从头到尾判断，这样反而降低了运算速度。那为什么要这么做呢？</p>
 <p>原来破解有一种思想叫做时序攻击 <code>timing attack</code>，如果用 <code>a == b</code>，会大大减少破解时间，相当于降低破解难度，而 <code>hmac.compare_digest(a, b)</code> 在一定程度上防御了时序攻击。</p>
 <p>当然 Django 也内置了类似功能：<code>django.utils.crypto.constant_time_compare</code>，内部就是调用的 <code>hmac.compare_digest</code></p>
 <p>可以看看知乎上的讨论：如何通俗地解释时序攻击</p>
 <h2 id="只允许-POST-请求"><a href="#只允许-POST-请求" class="headerlink" title="只允许 POST 请求"></a>只允许 <code>POST</code> 请求</h2><p>这又是一种限制</p>
 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> hmac</span><br><span class="line"><span class="keyword">from</span> ipaddress <span class="keyword">import</span> ip_address, ip_network</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> django.conf <span class="keyword">import</span> settings</span><br><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse, HttpResponseForbidden</span><br><span class="line"><span class="keyword">from</span> django.views.decorators.csrf <span class="keyword">import</span> csrf_exempt</span><br><span class="line"><span class="keyword">from</span> django.views.decorators.http <span class="keyword">import</span> require_POST</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="meta">@require_POST</span></span><br><span class="line"><span class="meta">@csrf_exempt</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">webhook</span><span class="params">(request)</span>:</span></span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">'pong'</span>)</span><br></pre></td></tr></table></figure>
 
-<h1 id="处理-Github-事件"><a href="#处理-Github-事件" class="headerlink" title="处理 Github 事件"></a>处理 Github 事件</h1><p>上面已经提到过这个请求头 <code>X-GitHub-Event</code>，有哪些事件类型，建议参考 <a href="https://developer.github.com/v3/activity/events/types/#event-types--payloads" target="_blank" rel="noopener">Event Types &amp; Payloads</a>。</p>
+<h1 id="处理-Github-事件"><a href="#处理-Github-事件" class="headerlink" title="处理 Github 事件"></a>处理 Github 事件</h1><p>上面已经提到过这个请求头 <code>X-GitHub-Event</code>，有哪些事件类型，建议参考 <span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIuZ2l0aHViLmNvbS92My9hY3Rpdml0eS9ldmVudHMvdHlwZXMvI2V2ZW50LXR5cGVzLS1wYXlsb2Fkcw==" title="https://developer.github.com/v3/activity/events/types/#event-types--payloads">Event Types &amp; Payloads<i class="fa fa-external-link"></i></span>。</p>
 <p>在这里考虑到只部署博客，我们只接受 push 事件。然后利用子进程进行 <code>git pull</code> 操作。</p>
 <p>先在服务器的 <code>Home</code> 目录下克隆博客的静态页面，</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/yszar/yszar.github.io blog</span></span><br></pre></td></tr></table></figure>

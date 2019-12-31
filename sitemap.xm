@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tangjiuyang.com/Hexo/hexo-writing-skills.html</loc>
+    
+    <lastmod>2019-12-31T09:50:24.902Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/about/index.html</loc>
+    
+    <lastmod>2019-12-31T07:33:07.872Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://tangjiuyang.com/categories/index.html</loc>
     
     <lastmod>2019-12-31T02:35:33.577Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>https://tangjiuyang.com/tags/index.html</loc>
     
     <lastmod>2019-12-31T02:35:33.568Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tangjiuyang.com/about/index.html</loc>
-    
-    <lastmod>2019-12-30T17:30:07.672Z</lastmod>
     
   </url>
   
