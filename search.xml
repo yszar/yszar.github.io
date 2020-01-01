@@ -629,4 +629,117 @@
         <tag>django</tag>
       </tags>
   </entry>
+  <entry>
+    <title>文章分类</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>标签</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>关于我的博客</title>
+    <url>/about/index.html</url>
+    <content><![CDATA[<ul>
+<li>服务器: 阿里云ECS-香港</li>
+<li>境外用户转至Github Page</li>
+<li>系统: Ubuntu 18.04.3 LTS + Nginx + Hexo</li>
+<li>图片存储: 阿里云OSS</li>
+</ul>
+<hr>
+<h1 id="2019年12月28日"><a href="#2019年12月28日" class="headerlink" title="2019年12月28日"></a>2019年12月28日</h1><ul>
+<li>搭建Hexo + Github Page环境<br>详细参考知乎 <span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8zNTY2ODIzNw==" title="https://zhuanlan.zhihu.com/p/35668237">超详细Hexo+Github博客搭建小白教程<i class="fa fa-external-link"></i></span><br>不再赘述</li>
+<li>Hexo增加标题翻译插件<br><a href="https://tangjiuyang.com/Hexo/hexo-add-title-translation-plugin.html">传送门</a></li>
+<li>利用gulp对Hexo进行压缩，提高访问速度<br><a href="https://tangjiuyang.com/Hexo/use-gulp-to-compress-and-deploy-hexo-blog-with-one-click.html">传送门</a></li>
+</ul>
+<h1 id="2019年12月29日"><a href="#2019年12月29日" class="headerlink" title="2019年12月29日"></a>2019年12月29日</h1><ul>
+<li>服务器安装Nginx，并进行相关配置。<br><a href="https://tangjiuyang.com/Linux/all-configuration-of-this-blog-server.html">传送门</a></li>
+<li>通过Github Webhook实现Github Page与服务器自动同步。<a href="https://tangjiuyang.com/Python/github-webhook-with-django.html">传送门</a></li>
+</ul>
+<h1 id="2019年12月30日"><a href="#2019年12月30日" class="headerlink" title="2019年12月30日"></a>2019年12月30日</h1><ul>
+<li>给域名申请了免费通配符证书并自动续签<br><a href="https://tangjiuyang.com/%E5%BB%BA%E7%AB%99%E7%9B%B8%E5%85%B3/apply-for-lets-via-acmesh.html">传送门</a></li>
+<li>通过阿里云域名控制台设置，将大陆用户请求转发至服务器，境外用户请求转发至Github Page</li>
+<li>更改上一篇，下一篇的顺序,进入一篇文章，在文章底部，有上下篇的链接（&lt; &gt;），但是点 &gt; 发现进入的是页面中的的上面那篇文章，与操作习惯不符，别扭。</li>
+</ul>
+<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line">&lt;!-- 文件位置：~/blog/themes/next/layout/_macro/post.swig --&gt;</span><br><span class="line"></span><br><span class="line">&#123;% if not is_index and (post.prev or post.next) %&#125;</span><br><span class="line">  &lt;div class="post-nav"&gt;</span><br><span class="line">    &lt;div class="post-nav-next post-nav-item"&gt;</span><br><span class="line"><span class="deletion">-      &#123;% if post.next %&#125;</span></span><br><span class="line"><span class="addition">+      &#123;% if post.prev %&#125;</span></span><br><span class="line"><span class="deletion">-        &lt;a href="&#123;&#123; url_for(post.next.path) &#125;&#125;" rel="next" title="&#123;&#123; post.next.title &#125;&#125;"&gt;</span></span><br><span class="line"><span class="addition">+        &lt;a href="&#123;&#123; url_for(post.prev.path) &#125;&#125;" rel="prev" title="&#123;&#123; post.prev.title &#125;&#125;"&gt;</span></span><br><span class="line"><span class="deletion">-          &lt;i class="fa fa-chevron-left"&gt;&lt;/i&gt; &#123;&#123; post.next.title &#125;&#125;</span></span><br><span class="line"><span class="addition">+          &lt;i class="fa fa-chevron-left"&gt;&lt;/i&gt; &#123;&#123; post.prev.title &#125;&#125;</span></span><br><span class="line">        &lt;/a&gt;</span><br><span class="line">      &#123;% endif %&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;span class="post-nav-divider"&gt;&lt;/span&gt;</span><br><span class="line"></span><br><span class="line">    &lt;div class="post-nav-prev post-nav-item"&gt;</span><br><span class="line"><span class="deletion">-      &#123;% if post.prev %&#125;</span></span><br><span class="line"><span class="addition">+      &#123;% if post.next %&#125;</span></span><br><span class="line"><span class="deletion">-        &lt;a href="&#123;&#123; url_for(post.prev.path) &#125;&#125;" rel="prev" title="&#123;&#123; post.prev.title &#125;&#125;"&gt;</span></span><br><span class="line"><span class="addition">+        &lt;a href="&#123;&#123; url_for(post.next.path) &#125;&#125;" rel="next" title="&#123;&#123; post.next.title &#125;&#125;"&gt;</span></span><br><span class="line"><span class="deletion">-          &#123;&#123; post.prev.title &#125;&#125; &lt;i class="fa fa-chevron-right"&gt;&lt;/i&gt;</span></span><br><span class="line"><span class="addition">+          &#123;&#123; post.next.title &#125;&#125; &lt;i class="fa fa-chevron-right"&gt;&lt;/i&gt;</span></span><br><span class="line">        &lt;/a&gt;</span><br><span class="line">      &#123;% endif %&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>添加AddThis分享功能<br><a href="https://tangjiuyang.com/Hexo/hexo-adds-addthis-sharing-function.html">传送门</a><h1 id="2019年12月31日"><a href="#2019年12月31日" class="headerlink" title="2019年12月31日"></a>2019年12月31日</h1></li>
+<li>Next升级至7.6版本</li>
+<li>增加文章及整站字数统计。</li>
+<li>增加阅读时长。</li>
+</ul>
+<h2 id="首页文章属性"><a href="#首页文章属性" class="headerlink" title="首页文章属性"></a>首页文章属性</h2><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">post_meta:</span></span><br><span class="line">  <span class="attr">item_text:</span> <span class="literal">false</span>  <span class="comment"># 设为true 可以一行显示 文章的所有属性</span></span><br><span class="line">  <span class="attr">created_at:</span> <span class="literal">true</span>  <span class="comment">#显示创建时间</span></span><br><span class="line">  <span class="attr">updated_at:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span>   <span class="comment">#显示修改的时间</span></span><br><span class="line">    <span class="attr">another_day:</span> <span class="literal">true</span> <span class="comment">#设true时 如果创建时间和修改时间一样则显示一个时间</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="literal">true</span>  <span class="comment">#显示分类信息</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="字数统计、阅读时长"><a href="#字数统计、阅读时长" class="headerlink" title="字数统计、阅读时长"></a>字数统计、阅读时长</h2><p>安装插件：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
+
+<p>主题配置信息如下:</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">separated_meta:</span> <span class="literal">true</span>  <span class="comment"># false 会显示一行</span></span><br><span class="line">  <span class="attr">item_text_post:</span> <span class="literal">true</span>  <span class="comment"># 显示属性名称,设为false后只显示图标和统计数字,不显示属性的文字</span></span><br><span class="line">  <span class="attr">item_text_total:</span> <span class="literal">true</span> <span class="comment">#底部footer是否显示字数统计属性文字</span></span><br><span class="line">  <span class="attr">awl:</span> <span class="number">4</span> <span class="comment">#计算字数的一个设置,没设置过</span></span><br><span class="line">  <span class="attr">wpm:</span> <span class="number">275</span> <span class="comment">#一分钟阅读的字数</span></span><br></pre></td></tr></table></figure>
+<p>站点配置新增如下:</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line"> <span class="comment">#文章内是否显示</span></span><br><span class="line">  <span class="attr">symbols:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">time:</span> <span class="literal">true</span></span><br><span class="line"> <span class="comment"># 网页底部是否显示</span></span><br><span class="line">  <span class="attr">total_symbols:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">total_time:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="内容页里的代码块新增复制按钮"><a href="#内容页里的代码块新增复制按钮" class="headerlink" title="内容页里的代码块新增复制按钮"></a>内容页里的代码块新增复制按钮</h2><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">codeblock:</span></span><br><span class="line">  <span class="attr">copy_button:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">false</span> <span class="comment">#增加复制按钮的开关</span></span><br><span class="line">    <span class="attr">show_result:</span> <span class="literal">false</span> <span class="comment">#点击复制完后是否显示 复制成功 结果提示</span></span><br></pre></td></tr></table></figure>
+<h2 id="配置微信，支付宝打赏"><a href="#配置微信，支付宝打赏" class="headerlink" title="配置微信，支付宝打赏"></a>配置微信，支付宝打赏</h2><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Reward</span></span><br><span class="line"><span class="attr">reward_comment:</span> <span class="comment">#打赏描述</span></span><br><span class="line"><span class="attr">wechatpay:</span> <span class="string">/images/wechatpay.png</span> <span class="comment">#微信支付的二维码图片地址</span></span><br><span class="line"><span class="attr">alipay:</span> <span class="string">/images/alipay.png</span>  <span class="comment">#支付宝的地址</span></span><br><span class="line"><span class="comment">#bitcoin: /images/bitcoin.png #这个是设置比特币的</span></span><br></pre></td></tr></table></figure>
+<h2 id="文章原创申明"><a href="#文章原创申明" class="headerlink" title="文章原创申明"></a>文章原创申明</h2><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">creative_commons:</span></span><br><span class="line">  <span class="attr">license:</span> <span class="string">by-nc-sa</span></span><br><span class="line">  <span class="attr">sidebar:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">post:</span> <span class="literal">true</span>  <span class="comment"># 将false改为true即可显示版权信息</span></span><br><span class="line">  <span class="attr">language:</span></span><br></pre></td></tr></table></figure>
+<h1 id="2020年01月01日"><a href="#2020年01月01日" class="headerlink" title="2020年01月01日"></a>2020年01月01日</h1><h2 id="文章字数统计-amp-阅读时间统计"><a href="#文章字数统计-amp-阅读时间统计" class="headerlink" title="文章字数统计&amp;阅读时间统计"></a>文章字数统计&amp;阅读时间统计</h2><figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">symbols:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">time:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">total_symbols:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">total_time:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">exclude_codeblock:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yml"><figcaption><span>themes/next/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">separated_meta:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">item_text_post:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">item_text_total:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">awl:</span> <span class="number">2</span> <span class="comment"># 中文站点建议设置2</span></span><br><span class="line">  <span class="attr">wpm:</span> <span class="number">300</span> <span class="comment"># 中文站点建议设置300</span></span><br></pre></td></tr></table></figure>
+<h2 id="相关文章推荐"><a href="#相关文章推荐" class="headerlink" title="相关文章推荐"></a>相关文章推荐</h2><figure class="highlight yml"><figcaption><span>themes/next/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">related_posts:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">相关文章推荐</span> <span class="comment"># Custom header, leave empty to use the default one</span></span><br><span class="line">  <span class="attr">display_in_home:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">params:</span></span><br><span class="line">    <span class="attr">maxCount:</span> <span class="number">5</span></span><br><span class="line">    <span class="comment">#PPMixingRate: 0.0</span></span><br><span class="line">    <span class="comment">#isDate: false</span></span><br><span class="line">    <span class="comment">#isImage: false</span></span><br><span class="line">    <span class="comment">#isExcerpt: false</span></span><br></pre></td></tr></table></figure>
+<h2 id="站内搜索"><a href="#站内搜索" class="headerlink" title="站内搜索"></a>站内搜索</h2><p>在根目录下执行以下命令安装相关依赖：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install hexo-generator-searchdb --save</span></span><br></pre></td></tr></table></figure>
+
+<p>在主题配置文件中修改相关字段：</p>
+<figure class="highlight yml"><figcaption><span>themes/next/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">trigger:</span> <span class="string">auto</span> <span class="comment"># 每次输入改变都执行搜索</span></span><br><span class="line">  <span class="attr">top_n_per_article:</span> <span class="number">3</span> <span class="comment"># 每篇文章显示的搜索结果数量</span></span><br><span class="line">  <span class="attr">unescape:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<p>在站点配置文件中添加以下字段：</p>
+<figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span> <span class="comment"># 指定搜索范围，可选 post | page | all</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span> <span class="comment"># 指定页面内容形式，可选 html | raw (Markdown) | excerpt | more</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">10000</span></span><br></pre></td></tr></table></figure>
+<h2 id="热门文章排行榜"><a href="#热门文章排行榜" class="headerlink" title="热门文章排行榜"></a>热门文章排行榜</h2><p>添加文章阅读次数排行统计页面<br>该功能同样是基于 LeanCloud 提供的后端服务支持。具体实现方案如下：</p>
+<p>在站点目录下执行以下命令新建页面</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo new page top</span></span><br></pre></td></tr></table></figure>
+<p>在主题配置文件中新增一项菜单入口：</p>
+<figure class="highlight diff"><figcaption><span>themes\next_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line">  menu:</span><br><span class="line">    home: / || home</span><br><span class="line"><span class="addition">+   top: /top/ || signal</span></span><br><span class="line">    tags: /tags/ || tags</span><br><span class="line">    categories: /categories/ || th</span><br><span class="line">    archives: /archives/ || archive</span><br><span class="line">    about: /about/ || user</span><br></pre></td></tr></table></figure>
+<p>在语言包中新增菜单中文：</p>
+<figure class="highlight diff"><figcaption><span>themes\next\languages\zh-CN.yml</span></figcaption><table><tr><td class="code"><pre><span class="line">  menu:</span><br><span class="line">    home: 首页</span><br><span class="line">    archives: 归档</span><br><span class="line">    categories: 分类</span><br><span class="line">    tags: 标签</span><br><span class="line">    about: 关于</span><br><span class="line"><span class="addition">+   top: 排行榜</span></span><br></pre></td></tr></table></figure>
+<p>然后在新增的排行榜页面内添加以下内容：</p>
+<figure class="highlight markdown"><figcaption><span>source\top\index.md</span></figcaption><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 热门文章Top 10</span><br><span class="line">comments: false</span><br><span class="line">date: 2018-10-30 00:54:50</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"post-rank"</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js"</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span></span><br><span class="line">  var APP_ID = '<span class="strong">*****</span>*';  //输入个人LeanCloud账号AppID</span><br><span class="line">  var APP_KEY = '<span class="strong">*****</span>*';  //输入个人LeanCloud账号AppKey</span><br><span class="line">  AV.init(&#123;</span><br><span class="line"><span class="code">    appId: APP_ID,</span></span><br><span class="line"><span class="code">    appKey: APP_KEY</span></span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  var query = new AV.Query('Counter');//表名</span><br><span class="line">  query.descending('time'); //结果按阅读次数降序排序</span><br><span class="line">  query.limit(10);  //最终只返回10条结果</span><br><span class="line">  query.find().then( response =&gt; &#123;</span><br><span class="line"><span class="code">    var content = response.reduce( (accum, &#123;attributes&#125;) =&gt; &#123;</span></span><br><span class="line"><span class="code">      accum += `&lt;p&gt;&lt;div class="prefix"&gt;热度 $&#123;attributes.time&#125; ℃&lt;/div&gt;&lt;div&gt;&lt;a href="$&#123;attributes.url&#125;"&gt;$&#123;attributes.title&#125;&lt;/a&gt;&lt;/div&gt;&lt;/p&gt;`</span></span><br><span class="line"><span class="code">      return accum;</span></span><br><span class="line"><span class="code">    &#125;,"")</span></span><br><span class="line"><span class="code">    document.querySelector("#post-rank").innerHTML = content;</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .catch( error =&gt; &#123;</span><br><span class="line"><span class="code">    console.log(error);</span></span><br><span class="line">  &#125;);</span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></span></span><br><span class="line">  #post-rank &#123;</span><br><span class="line"><span class="code">    text-align: center;</span></span><br><span class="line">  &#125;</span><br><span class="line">  #post-rank .prefix &#123;</span><br><span class="line"><span class="code">    color: #ff4d4f;</span></span><br><span class="line">  &#125;</span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span></span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>热门文章Top 10</title>
+    <url>/top/index.html</url>
+    <content><![CDATA[<div id="post-rank"></div>
+
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js"></script>
+<script>
+  var APP_ID = 'iUS887d8BnkY3Gqc9FJX70fE-gzGzoHsz';  //输入个人LeanCloud账号AppID
+  var APP_KEY = 'ekF4kKyQDgrDkIBadj3IDrVA';  //输入个人LeanCloud账号AppKey
+  AV.init({
+    appId: APP_ID,
+    appKey: APP_KEY
+  });
+
+  var query = new AV.Query('Counter');//表名
+  query.descending('time'); //结果按阅读次数降序排序
+  query.limit(10);  //最终只返回10条结果
+  query.find().then( response => {
+    var content = response.reduce( (accum, {attributes}) => {
+      accum += `<p><div class="prefix">热度 ${attributes.time} ℃</div><div><a href="${attributes.url}">${attributes.title}</a></div></p>`
+      return accum;
+    },"")
+    document.querySelector("#post-rank").innerHTML = content;
+  })
+  .catch( error => {
+    console.log(error);
+  });
+</script>
+
+<style type="text/css">
+  #post-rank {
+    text-align: center;
+  }
+  #post-rank .prefix {
+    color: #ff4d4f;
+  }
+</style>]]></content>
+  </entry>
 </search>
