@@ -4,6 +4,8 @@
     <title>supervisor安装配置使用</title>
     <url>/Linux/supervisor-installation-configuration-use.html</url>
     <content><![CDATA[<h1 id="1-supervisor-简介"><a href="#1-supervisor-简介" class="headerlink" title="1.supervisor 简介"></a>1.supervisor 简介</h1><h2 id="1-1-官网"><a href="#1-1-官网" class="headerlink" title="1.1 官网"></a>1.1 官网</h2><p><span class="exturl" data-url="aHR0cDovL3N1cGVydmlzb3JkLm9yZy8=" title="http://supervisord.org/">supervisor<i class="fa fa-external-link"></i></span> 官网</p>
+<a id="more"></a>
+
 <h2 id="1-2-介绍"><a href="#1-2-介绍" class="headerlink" title="1.2 介绍"></a>1.2 介绍</h2><blockquote>
 <p>Supervisor 是一个进程控制系统。<br>它是一个 C/S 系统 (注意：其提供 WEB 接口给用户查询和控制)。<br>它允许用户去监控和控制在类 UNIX 系统的进程。<br>它的目标与 launchd、daemontools 和 runit 有些相似。<br>但是与它们不一样的是、它不是作为 init (进程号 pid 是 1) 运行。<br>它是被用来控制进程、并且它在启动的时候和一般程序并无二致。<br>那么通俗点，它的作用是什么？<br>你的 Nginx，Tomcat，memcache，Redis… 会崩么？<br>那你自己写的服务器监测脚本呢？<br>好吧、不要再纠结了、交给 Supervisor 吧！<br>它会帮你维护这些、即使它们不小心崩了、Supervisor 会帮你看住它们、维护它们。</p>
 </blockquote>
