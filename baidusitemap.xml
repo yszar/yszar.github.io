@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://tangjiuyang.com/Linux/Python/compile-and-install-python-381-on-ubuntu.html</loc>
+    <lastmod>2020-01-02</lastmod>
+  </url>  <url>
     <loc>https://tangjiuyang.com/Linux/supervisor-installation-configuration-use.html</loc>
     <lastmod>2020-01-01</lastmod>
   </url>  <url>
@@ -11,9 +14,6 @@
     <lastmod>2019-12-30</lastmod>
   </url>  <url>
     <loc>https://tangjiuyang.com/Python/pycharm-remote-synchronization-settings-ssh-interpreter.html</loc>
-    <lastmod>2019-12-30</lastmod>
-  </url>  <url>
-    <loc>https://tangjiuyang.com/Linux/Python/compile-and-install-python-380-on-ubuntu.html</loc>
     <lastmod>2019-12-30</lastmod>
   </url>  <url>
     <loc>https://tangjiuyang.com/Python/github-webhook-with-django.html</loc>

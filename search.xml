@@ -411,8 +411,8 @@
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu编译安装Python3.8.0</title>
-    <url>/Linux/Python/compile-and-install-python-380-on-ubuntu.html</url>
+    <title>Ubuntu编译安装Python3.8.1</title>
+    <url>/Linux/Python/compile-and-install-python-381-on-ubuntu.html</url>
     <content><![CDATA[<blockquote>
 <p>如果你想体验一下，请用虚拟机（感受一下就行，别当真。<br>仅测试Ubuntu</p>
 </blockquote>
@@ -439,7 +439,7 @@
 <p>执行结果如下<br><img data-src="https://oss.tangjiuyang.com/2019/12/25/15772766129872.jpg" alt=""></p>
 <p>更多细节，<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnB5dGhvbi5vcmcvMy44L3doYXRzbmV3LzMuOC5odG1s" title="https://docs.python.org/3.8/whatsnew/3.8.html">Python3.8.0a4官方文档<i class="fa fa-external-link"></i></span></p>
 <p>在ubuntu1804之后python3.7存在，暂不替换（不设置软连接）。<br>python3.8下载（支持Linux，Windows，Mac）</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.8.0/Python-3.8.0a4.tar.xz</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.8.1/Python-3.8.1.tar.xz</span><br></pre></td></tr></table></figure>
 
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="先决条件（这样可以避免两个个报错）"><a href="#先决条件（这样可以避免两个个报错）" class="headerlink" title="先决条件（这样可以避免两个个报错）"></a>先决条件（这样可以避免两个个报错）</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt-get install zlib* -y</span><br><span class="line">apt-get install libffi-dev -y</span><br><span class="line">unxz Python-3.8.0a4.tar.xz</span><br><span class="line">tar -zxvf Python-3.8.0a4</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 解压Python-3.8.0a4.tar.xz包时，这里推荐手动提取，这样可以省去两条命令。如果python是在一个文件夹下，请确认非root用户拥有该文件夹的全县（递归）</span></span><br><span class="line">chown -R [非root]:[非root] Python-3.8.0a4</span><br><span class="line"></span><br><span class="line">./configure --prefix=/usr/local/python3 --with-ssl</span><br></pre></td></tr></table></figure>
 
