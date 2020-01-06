@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://tangjiuyang.com/Linux/Python/two-ways-to-install-python-38-on-ubuntu-1804-system.html</loc>
+    <loc>https://tangjiuyang.com/Nginx/deploying-a-django-project-with-uwsgi-and-nginx.html</loc>
     
-    <lastmod>2020-01-03T03:02:56.752Z</lastmod>
+    <lastmod>2020-01-06T07:13:03.793Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/Linux/two-ways-to-install-python-38-on-ubuntu-1804-system.html</loc>
+    
+    <lastmod>2020-01-06T07:09:41.795Z</lastmod>
     
   </url>
   
@@ -93,7 +100,7 @@
   </url>
   
   <url>
-    <loc>https://tangjiuyang.com/%E5%BB%BA%E7%AB%99%E7%9B%B8%E5%85%B3/apply-for-lets-via-acmesh.html</loc>
+    <loc>https://tangjiuyang.com/mysite/apply-for-lets-via-acmesh.html</loc>
     
     <lastmod>2019-12-29T18:48:19.153Z</lastmod>
     
