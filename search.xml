@@ -87,7 +87,7 @@
 <h1 id="配置-SSL-证书"><a href="#配置-SSL-证书" class="headerlink" title="配置 SSL 证书"></a>配置 SSL 证书</h1><p>如果要配置 SSL 证书，只要修改 Nginx 的配置即可：</p>
 <figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line">server&#123;</span><br><span class="line">  <span class="attribute">ssl_certificate</span>      crt;</span><br><span class="line">  <span class="attribute">ssl_certificate_key</span>  key;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>更详细的配置可以参考 <span class="exturl" data-url="aHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS9xdWVzdGlvbnMvMjk4MjcyOTkvZGphbmdvLXV3c2dpLW5naW54LXNzbC1yZXF1ZXN0LWZvci13b3JraW5nLWNvbmZpZ3VyYXRpb24tZW1waGFzaXMtb24tc3M=" title="https://stackoverflow.com/questions/29827299/django-uwsgi-nginx-ssl-request-for-working-configuration-emphasis-on-ss">StackOverflow 上的这个问题<i class="fa fa-external-link"></i></span>。</p>
-<p>可以。</p>
+<p>可以<a href="https://tangjiuyang.com/mysite/apply-for-lets-via-acmesh.html">使用 Let’s Encrypt 生成免费的 SSL 证书</a>。</p>
 <h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="使用域名时"><a href="#使用域名时" class="headerlink" title="使用域名时"></a>使用域名时</h2><p>如果使用域名，记得把域名添加到 <code>settings.py</code> 的 <code>ALLOWED_HOSTS</code> 中。</p>
 <h2 id="uWSGI-监控工具-uwsgitop"><a href="#uWSGI-监控工具-uwsgitop" class="headerlink" title="uWSGI 监控工具 uwsgitop"></a>uWSGI 监控工具 uwsgitop</h2><h3 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install uwsgi</span><br></pre></td></tr></table></figure>
 <h3 id="启动："><a href="#启动：" class="headerlink" title="启动："></a>启动：</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">uwsgi :port</span><br></pre></td></tr></table></figure>
@@ -100,8 +100,8 @@
         <category>Nginx</category>
       </categories>
       <tags>
-        <tag>django</tag>
         <tag>nginx</tag>
+        <tag>django</tag>
         <tag>uwsgi</tag>
       </tags>
   </entry>
@@ -517,7 +517,7 @@
   </entry>
   <entry>
     <title>在Ubuntu 18.04系统上安装Python 3.8的两种方法</title>
-    <url>/Linux/two-ways-to-install-python-38-on-ubuntu-1804-system.html</url>
+    <url>/Python/two-ways-to-install-python-38-on-ubuntu-1804-system.html</url>
     <content><![CDATA[<p>本文介绍在Ubuntu 18.04/16.04系统上安装Python 3.8的两种不同方法，第一个选择是从Deadsnakes PPA安装deb软件包，第二个选择是从源代码构建，当前Python 3.8在Ubuntu的默认存储库中不可用。相同的步骤适用于Ubuntu 16.04和任何基于Ubuntu的发行版，包括Kubuntu、Linux Mint和Elementary OS，其他发行版请参考在Fedora 29系统中安装Python 3.8 alpha的方法。Python 3.8是Python语言的最新主要版本，它包括许多新功能，例如赋值表达式、仅位置参数、f字符串支持等等，参考Python 3.8.0发布，已提供Python-3.8.0.tgz下载，附更新功能。</p>
 <a id="more"></a>
 
@@ -582,12 +582,12 @@
 <p>至此，你已在Ubuntu 18.04计算机上安装了Python 3.8，然后可以开始开发Python 3项目了。</p>
 ]]></content>
       <categories>
-        <category>Python</category>
         <category>Linux</category>
+        <category>Python</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>linux</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -647,9 +647,9 @@
       </categories>
       <tags>
         <tag>linux</tag>
+        <tag>nginx</tag>
         <tag>服务器</tag>
         <tag>ssl</tag>
-        <tag>nginx</tag>
       </tags>
   </entry>
   <entry>
@@ -786,9 +786,14 @@
       </categories>
       <tags>
         <tag>python</tag>
-        <tag>github</tag>
         <tag>django</tag>
+        <tag>github</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>标签</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>关于我的博客</title>
@@ -858,11 +863,6 @@
   <entry>
     <title>文章分类</title>
     <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
