@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tangjiuyang.com/Python/grouping-functions-in-python-groupby-itertools.html</loc>
+    
+    <lastmod>2020-01-12T17:39:00.802Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://tangjiuyang.com/Nginx/deploying-a-django-project-with-uwsgi-and-nginx.html</loc>
     
     <lastmod>2020-01-06T07:25:11.531Z</lastmod>

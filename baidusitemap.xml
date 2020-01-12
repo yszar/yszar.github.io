@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://tangjiuyang.com/Python/grouping-functions-in-python-groupby-itertools.html</loc>
+    <lastmod>2020-01-12</lastmod>
+  </url>  <url>
     <loc>https://tangjiuyang.com/Nginx/deploying-a-django-project-with-uwsgi-and-nginx.html</loc>
     <lastmod>2020-01-06</lastmod>
   </url>  <url>
