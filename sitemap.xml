@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://tangjiuyang.com/Python/pythons-url-parsing-libraryurlparse.html</loc>
+    <loc>https://tangjiuyang.com/Python/addition-and-subtraction-of-python-dates.html</loc>
     
-    <lastmod>2020-01-12T17:44:59.867Z</lastmod>
+    <lastmod>2020-01-12T17:50:10.943Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://tangjiuyang.com/Python/grouping-functions-in-python-groupby-itertools.html</loc>
     
-    <lastmod>2020-01-12T17:39:18.533Z</lastmod>
+    <lastmod>2020-01-12T17:46:12.625Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/Python/pythons-url-parsing-libraryurlparse.html</loc>
+    
+    <lastmod>2020-01-12T17:45:12.303Z</lastmod>
     
   </url>
   
