@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tangjiuyang.com/Python/pythons-url-parsing-libraryurlparse.html</loc>
+    
+    <lastmod>2020-01-12T17:44:59.867Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://tangjiuyang.com/Python/grouping-functions-in-python-groupby-itertools.html</loc>
     
-    <lastmod>2020-01-12T17:39:00.802Z</lastmod>
+    <lastmod>2020-01-12T17:39:18.533Z</lastmod>
     
   </url>
   
