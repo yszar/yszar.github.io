@@ -16,8 +16,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
+          ref: hexo
           persist-credentials: false
-          fetch-depth: 0
+          # fetch-depth: 0
 
       - name: Prepare Node env
         uses: actions/setup-node@v1
