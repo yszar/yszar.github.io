@@ -36,7 +36,6 @@ jobs:
       # build
       - name: Build
         run: |
-            # sed -i "s/GITHUB_ACCESS_TOKEN/$GITHUB_ACCESS_TOKEN/g" ./_config.yml
             npm i hexo-cli
             npm install # && echo 'tangjiuyang.com' > vuepress/dist/CNAME
             npx hexo clean
