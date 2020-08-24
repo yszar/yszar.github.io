@@ -114,7 +114,7 @@ search:
 translate_title:
   translate_way: google  # google,youdao,baidu_with_appid,baidu_no_appid
   is_need_proxy: true     # true | false
-  proxy_url: http://127.0.0.1:1087 # Your proxy_url
+  # proxy_url: http://127.0.0.1:1087 # Your proxy_url
   # youdao_api_key: '' # Your youdao_api_key
   # youdao_keyfrom: xxxx-blog # Your youdao_keyfrom
   # baidu_appid: '' # Your baidu_appid
