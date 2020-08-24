@@ -20,28 +20,20 @@
     var CONFIG = {"hostname":"tangjiuyang.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="我选择的是AddThis作为博客的第三方分享。AdThis是国外的第三方分享,使用方便,可以用google直接登录。能自定义分享样式">
+  <meta name="description" content="说在前面压缩页面无非就是减小页面大小加快博客访问时间">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo增加Addthis分享功能">
-<meta property="og:url" content="https://tangjiuyang.com/Hexo/hexo-adds-addthis-sharing-function.html">
+<meta property="og:title" content="利用gulp对Hexo博客压缩并一键之部署">
+<meta property="og:url" content="https://tangjiuyang.com/Hexo/use-gulp-to-compress-hexo-blog-and-deploy-with-one-click.html">
 <meta property="og:site_name" content="九阳的博客">
-<meta property="og:description" content="我选择的是AddThis作为博客的第三方分享。AdThis是国外的第三方分享,使用方便,可以用google直接登录。能自定义分享样式">
+<meta property="og:description" content="说在前面压缩页面无非就是减小页面大小加快博客访问时间">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://oss.tangjiuyang.com/2019/12/30/15777188305096.jpg">
-<meta property="og:image" content="https://oss.tangjiuyang.com/2019/12/30/15777188968790.jpg">
-<meta property="og:image" content="https://oss.tangjiuyang.com/2019/12/30/15777189277993.jpg">
-<meta property="og:image" content="https://oss.tangjiuyang.com/2019/12/30/15777189544810.jpg">
-<meta property="og:image" content="https://oss.tangjiuyang.com/2019/12/30/15777189978550.jpg">
-<meta property="article:published_time" content="2019-12-30T15:12:26.000Z">
+<meta property="article:published_time" content="2019-12-30T08:32:18.000Z">
 <meta property="article:modified_time" content="2020-08-24T18:49:58.424Z">
 <meta property="article:author" content="九阳">
 <meta property="article:tag" content="hexo">
-<meta property="article:tag" content="博客">
-<meta property="article:tag" content="addthis">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://oss.tangjiuyang.com/2019/12/30/15777188305096.jpg">
 
-<link rel="canonical" href="https://tangjiuyang.com/Hexo/hexo-adds-addthis-sharing-function.html">
+<link rel="canonical" href="https://tangjiuyang.com/Hexo/use-gulp-to-compress-hexo-blog-and-deploy-with-one-click.html">
 
 
 <script id="page-configurations">
@@ -54,7 +46,7 @@
   };
 </script>
 
-  <title>Hexo增加Addthis分享功能 | 九阳的博客</title>
+  <title>利用gulp对Hexo博客压缩并一键之部署 | 九阳的博客</title>
   
 
 
@@ -161,7 +153,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://tangjiuyang.com/Hexo/hexo-adds-addthis-sharing-function.html">
+    <link itemprop="mainEntityOfPage" href="https://tangjiuyang.com/Hexo/use-gulp-to-compress-hexo-blog-and-deploy-with-one-click.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -174,7 +166,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hexo增加Addthis分享功能
+          利用gulp对Hexo博客压缩并一键之部署
         </h1>
 
         <div class="post-meta">
@@ -184,7 +176,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-12-30 23:12:26" itemprop="dateCreated datePublished" datetime="2019-12-30T23:12:26+08:00">2019-12-30</time>
+              <time title="创建时间：2019-12-30 16:32:18" itemprop="dateCreated datePublished" datetime="2019-12-30T16:32:18+08:00">2019-12-30</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -209,7 +201,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>281</span>
+              <span>1.3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -228,23 +220,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <!--
-<span id="inline-blue"> 站点配置文件 </span>
-<span id="inline-purple"> 主题配置文件 </span>
-<span id="inline-yellow"> 站点配置文件 </span>
-<span id="inline-green"> 主题配置文件 </span>
-<a id="download" target="_blank" rel="noopener" href="https://git-scm.com/download/win"><i class="fa fa-download"></i><span> Download Now</span> </a>
--->
-<p><img src="https://oss.tangjiuyang.com/2019/12/30/15777188305096.jpg"></p>
-<p>我选择的是<a target="_blank" rel="noopener" href="http://www.addthis.com/">AddThis</a>作为博客的第三方分享。AdThis是国外的第三方分享,使用方便,可以用google直接登录。能自定义分享样式</p>
+        <h1 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h1><p>压缩页面无非就是减小页面大小加快博客访问时间</p>
 <a id="more"></a>
 
-<h2 id="注册AddThis，选择分享按钮："><a href="#注册AddThis，选择分享按钮：" class="headerlink" title="注册AddThis，选择分享按钮："></a>注册AddThis，选择分享按钮：</h2><p><img src="https://oss.tangjiuyang.com/2019/12/30/15777188968790.jpg"></p>
-<h2 id="选择显示样式-Select-a-Tool-Type"><a href="#选择显示样式-Select-a-Tool-Type" class="headerlink" title="选择显示样式(Select a Tool Type)"></a>选择显示样式(Select a Tool Type)</h2><p>AddThis提供了7种显示样式,你可以更加左边菜单栏点击,右边会自动显示你选择的相应样式。值得注意的是。在其右上角可以切换PC和Phone显示<br><img src="https://oss.tangjiuyang.com/2019/12/30/15777189277993.jpg"></p>
-<h2 id="点击Continue配置分享按钮"><a href="#点击Continue配置分享按钮" class="headerlink" title="点击Continue配置分享按钮"></a>点击Continue配置分享按钮</h2><p>注意：不同的风格样式,配置方式不同<br><img src="https://oss.tangjiuyang.com/2019/12/30/15777189544810.jpg"></p>
-<h2 id="获取代码ID"><a href="#获取代码ID" class="headerlink" title="获取代码ID"></a>获取代码ID</h2><p>配置完成后 , 获取代码ID , 在js代码中获取<code>pubid</code>后面的ID<br><img src="https://oss.tangjiuyang.com/2019/12/30/15777189978550.jpg"></p>
-<p>编辑主题配置文件, 找到关键字<code>add_this_id</code>, 添加<code>pubid</code></p>
+<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i gulp gulp-htmlclean gulp-htmlmin gulp-minify-css gulp-uglify -s</span><br></pre></td></tr></table></figure>
 
+<h2 id="gulp配置"><a href="#gulp配置" class="headerlink" title="gulp配置"></a>gulp配置</h2><p>在根目录下创建<code>gulpfile.js</code>文件</p>
+<p><code>gulpfile.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">&#x27;gulp&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> minifycss = <span class="built_in">require</span>(<span class="string">&#x27;gulp-minify-css&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> uglify = <span class="built_in">require</span>(<span class="string">&#x27;gulp-uglify&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> htmlmin = <span class="built_in">require</span>(<span class="string">&#x27;gulp-htmlmin&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> htmlclean = <span class="built_in">require</span>(<span class="string">&#x27;gulp-htmlclean&#x27;</span>);</span><br><span class="line"><span class="comment">// 压缩 public 目录 css</span></span><br><span class="line">gulp.task(<span class="string">&#x27;minify-css&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.src(<span class="string">&#x27;./public/**/*.css&#x27;</span>)</span><br><span class="line">        .pipe(minifycss())</span><br><span class="line">        .pipe(gulp.dest(<span class="string">&#x27;./public&#x27;</span>));</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 压缩 public 目录 html</span></span><br><span class="line">gulp.task(<span class="string">&#x27;minify-html&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.src(<span class="string">&#x27;./public/**/*.html&#x27;</span>)</span><br><span class="line">        .pipe(htmlclean())</span><br><span class="line">        .pipe(htmlmin(&#123;</span><br><span class="line">            removeComments: <span class="literal">true</span>,</span><br><span class="line">            minifyJS: <span class="literal">true</span>,</span><br><span class="line">            minifyCSS: <span class="literal">true</span>,</span><br><span class="line">            minifyURLs: <span class="literal">true</span>,</span><br><span class="line">        &#125;))</span><br><span class="line">        .pipe(gulp.dest(<span class="string">&#x27;./public&#x27;</span>))</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 压缩 public/js 目录 js</span></span><br><span class="line">gulp.task(<span class="string">&#x27;minify-js&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.src(<span class="string">&#x27;./public/**/*.js&#x27;</span>)</span><br><span class="line">        .pipe(uglify())</span><br><span class="line">        .pipe(gulp.dest(<span class="string">&#x27;./public&#x27;</span>));</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 执行 gulp 命令时执行的任务</span></span><br><span class="line">gulp.task(<span class="string">&#x27;default&#x27;</span>, [</span><br><span class="line">    <span class="string">&#x27;minify-html&#x27;</span>, <span class="string">&#x27;minify-css&#x27;</span>, <span class="string">&#x27;minify-js&#x27;</span></span><br><span class="line">]);</span><br></pre></td></tr></table></figure>
+
+<h1 id="一键部署"><a href="#一键部署" class="headerlink" title="一键部署"></a>一键部署</h1><p>在<code>package.json</code>中加入如下script</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  &quot;push&quot;: &quot;hexo cl &amp;&amp; hexo g &amp;&amp; gulp &amp;&amp; hexo d&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后在部署的时候只需要运行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run push</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -254,8 +242,6 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/hexo/" rel="tag"># hexo</a>
-              <a href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag"># 博客</a>
-              <a href="/tags/addthis/" rel="tag"># addthis</a>
           </div>
 
         
@@ -264,12 +250,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/Hexo/hexo-blog-next-theme-opens-article-catalog-and-adjust-style.html" rel="prev" title="Hexo博客NexT主题开启文章目录和调整样式">
-      <i class="fa fa-chevron-left"></i> Hexo博客NexT主题开启文章目录和调整样式
+    <a href="/mysite/apply-for-lets-through-acmesh.html" rel="prev" title="通过acme.sh申请Let's">
+      <i class="fa fa-chevron-left"></i> 通过acme.sh申请Let's
     </a></div>
       <div class="post-nav-item">
-    <a href="/Hexo/hexo-writing-skills.html" rel="next" title="Hexo写作技巧">
-      Hexo写作技巧 <i class="fa fa-chevron-right"></i>
+    <a href="/Linux/two-ways-to-install-python-38-on-ubuntu-1804-system.html" rel="next" title="在Ubuntu 18.04系统上安装Python 3.8的两种方法">
+      在Ubuntu 18.04系统上安装Python 3.8的两种方法 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -329,7 +315,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E5%86%8CAddThis%EF%BC%8C%E9%80%89%E6%8B%A9%E5%88%86%E4%BA%AB%E6%8C%89%E9%92%AE%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">注册AddThis，选择分享按钮：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E6%98%BE%E7%A4%BA%E6%A0%B7%E5%BC%8F-Select-a-Tool-Type"><span class="nav-number">2.</span> <span class="nav-text">选择显示样式(Select a Tool Type)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%82%B9%E5%87%BBContinue%E9%85%8D%E7%BD%AE%E5%88%86%E4%BA%AB%E6%8C%89%E9%92%AE"><span class="nav-number">3.</span> <span class="nav-text">点击Continue配置分享按钮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E4%BB%A3%E7%A0%81ID"><span class="nav-number">4.</span> <span class="nav-text">获取代码ID</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B4%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">说在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96"><span class="nav-number">2.1.</span> <span class="nav-text">安装依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gulp%E9%85%8D%E7%BD%AE"><span class="nav-number">2.2.</span> <span class="nav-text">gulp配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2"><span class="nav-number">3.</span> <span class="nav-text">一键部署</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

@@ -20,28 +20,21 @@
     var CONFIG = {"hostname":"tangjiuyang.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="我选择的是AddThis作为博客的第三方分享。AdThis是国外的第三方分享,使用方便,可以用google直接登录。能自定义分享样式">
+  <meta name="description" content="本文介绍在Ubuntu 18.04&#x2F;16.04系统上安装Python 3.8的两种不同方法，第一个选择是从Deadsnakes PPA安装deb软件包，第二个选择是从源代码构建，当前Python 3.8在Ubuntu的默认存储库中不可用。相同的步骤适用于Ubuntu 16.04和任何基于Ubuntu的发行版，包括Kubuntu、Linux Mint和Elementary OS，其他发行版请参考在F">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo增加Addthis分享功能">
-<meta property="og:url" content="https://tangjiuyang.com/Hexo/hexo-adds-addthis-sharing-function.html">
+<meta property="og:title" content="在Ubuntu 18.04系统上安装Python 3.8的两种方法">
+<meta property="og:url" content="https://tangjiuyang.com/Linux/two-ways-to-install-python-38-on-ubuntu-1804-system.html">
 <meta property="og:site_name" content="九阳的博客">
-<meta property="og:description" content="我选择的是AddThis作为博客的第三方分享。AdThis是国外的第三方分享,使用方便,可以用google直接登录。能自定义分享样式">
+<meta property="og:description" content="本文介绍在Ubuntu 18.04&#x2F;16.04系统上安装Python 3.8的两种不同方法，第一个选择是从Deadsnakes PPA安装deb软件包，第二个选择是从源代码构建，当前Python 3.8在Ubuntu的默认存储库中不可用。相同的步骤适用于Ubuntu 16.04和任何基于Ubuntu的发行版，包括Kubuntu、Linux Mint和Elementary OS，其他发行版请参考在F">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://oss.tangjiuyang.com/2019/12/30/15777188305096.jpg">
-<meta property="og:image" content="https://oss.tangjiuyang.com/2019/12/30/15777188968790.jpg">
-<meta property="og:image" content="https://oss.tangjiuyang.com/2019/12/30/15777189277993.jpg">
-<meta property="og:image" content="https://oss.tangjiuyang.com/2019/12/30/15777189544810.jpg">
-<meta property="og:image" content="https://oss.tangjiuyang.com/2019/12/30/15777189978550.jpg">
-<meta property="article:published_time" content="2019-12-30T15:12:26.000Z">
+<meta property="article:published_time" content="2019-12-30T11:17:11.000Z">
 <meta property="article:modified_time" content="2020-08-24T18:49:58.424Z">
 <meta property="article:author" content="九阳">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="博客">
-<meta property="article:tag" content="addthis">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://oss.tangjiuyang.com/2019/12/30/15777188305096.jpg">
 
-<link rel="canonical" href="https://tangjiuyang.com/Hexo/hexo-adds-addthis-sharing-function.html">
+<link rel="canonical" href="https://tangjiuyang.com/Linux/two-ways-to-install-python-38-on-ubuntu-1804-system.html">
 
 
 <script id="page-configurations">
@@ -54,7 +47,7 @@
   };
 </script>
 
-  <title>Hexo增加Addthis分享功能 | 九阳的博客</title>
+  <title>在Ubuntu 18.04系统上安装Python 3.8的两种方法 | 九阳的博客</title>
   
 
 
@@ -161,7 +154,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://tangjiuyang.com/Hexo/hexo-adds-addthis-sharing-function.html">
+    <link itemprop="mainEntityOfPage" href="https://tangjiuyang.com/Linux/two-ways-to-install-python-38-on-ubuntu-1804-system.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -174,7 +167,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hexo增加Addthis分享功能
+          在Ubuntu 18.04系统上安装Python 3.8的两种方法
         </h1>
 
         <div class="post-meta">
@@ -184,7 +177,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-12-30 23:12:26" itemprop="dateCreated datePublished" datetime="2019-12-30T23:12:26+08:00">2019-12-30</time>
+              <time title="创建时间：2019-12-30 19:17:11" itemprop="dateCreated datePublished" datetime="2019-12-30T19:17:11+08:00">2019-12-30</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -199,7 +192,11 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+                  <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
                 </span>
             </span>
 
@@ -209,14 +206,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>281</span>
+              <span>1.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -228,22 +225,68 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <!--
-<span id="inline-blue"> 站点配置文件 </span>
-<span id="inline-purple"> 主题配置文件 </span>
-<span id="inline-yellow"> 站点配置文件 </span>
-<span id="inline-green"> 主题配置文件 </span>
-<a id="download" target="_blank" rel="noopener" href="https://git-scm.com/download/win"><i class="fa fa-download"></i><span> Download Now</span> </a>
--->
-<p><img src="https://oss.tangjiuyang.com/2019/12/30/15777188305096.jpg"></p>
-<p>我选择的是<a target="_blank" rel="noopener" href="http://www.addthis.com/">AddThis</a>作为博客的第三方分享。AdThis是国外的第三方分享,使用方便,可以用google直接登录。能自定义分享样式</p>
+        <p>本文介绍在Ubuntu 18.04/16.04系统上安装Python 3.8的两种不同方法，第一个选择是从Deadsnakes PPA安装deb软件包，第二个选择是从源代码构建，当前Python 3.8在Ubuntu的默认存储库中不可用。相同的步骤适用于Ubuntu 16.04和任何基于Ubuntu的发行版，包括Kubuntu、Linux Mint和Elementary OS，其他发行版请参考在Fedora 29系统中安装Python 3.8 alpha的方法。Python 3.8是Python语言的最新主要版本，它包括许多新功能，例如赋值表达式、仅位置参数、f字符串支持等等，参考Python 3.8.0发布，已提供Python-3.8.0.tgz下载，附更新功能。</p>
 <a id="more"></a>
 
-<h2 id="注册AddThis，选择分享按钮："><a href="#注册AddThis，选择分享按钮：" class="headerlink" title="注册AddThis，选择分享按钮："></a>注册AddThis，选择分享按钮：</h2><p><img src="https://oss.tangjiuyang.com/2019/12/30/15777188968790.jpg"></p>
-<h2 id="选择显示样式-Select-a-Tool-Type"><a href="#选择显示样式-Select-a-Tool-Type" class="headerlink" title="选择显示样式(Select a Tool Type)"></a>选择显示样式(Select a Tool Type)</h2><p>AddThis提供了7种显示样式,你可以更加左边菜单栏点击,右边会自动显示你选择的相应样式。值得注意的是。在其右上角可以切换PC和Phone显示<br><img src="https://oss.tangjiuyang.com/2019/12/30/15777189277993.jpg"></p>
-<h2 id="点击Continue配置分享按钮"><a href="#点击Continue配置分享按钮" class="headerlink" title="点击Continue配置分享按钮"></a>点击Continue配置分享按钮</h2><p>注意：不同的风格样式,配置方式不同<br><img src="https://oss.tangjiuyang.com/2019/12/30/15777189544810.jpg"></p>
-<h2 id="获取代码ID"><a href="#获取代码ID" class="headerlink" title="获取代码ID"></a>获取代码ID</h2><p>配置完成后 , 获取代码ID , 在js代码中获取<code>pubid</code>后面的ID<br><img src="https://oss.tangjiuyang.com/2019/12/30/15777189978550.jpg"></p>
-<p>编辑主题配置文件, 找到关键字<code>add_this_id</code>, 添加<code>pubid</code></p>
+<h1 id="使用Apt在Ubuntu-18-04上安装Python-3-8"><a href="#使用Apt在Ubuntu-18-04上安装Python-3-8" class="headerlink" title="使用Apt在Ubuntu 18.04上安装Python 3.8"></a>使用Apt在Ubuntu 18.04上安装Python 3.8</h1><p>使用apt在Ubuntu 18.04上安装Python 3.8是一个相对简单的过程，只需几分钟：</p>
+<ol>
+<li>以root用户或具有sudo访问权限的用户身份运行以下命令，以更新软件包列表并安装必备组件：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt update</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo apt install software-properties-common</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>将Deadsnakes PPA添加到系统的来源列表中：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo add-apt-repository ppa:deadsnakes/ppa</span></span><br></pre></td></tr></table></figure>
+
+<p>出现提示时，按Enter继续：</p>
+<p><code>Press [ENTER] to continue or Ctrl-c to cancel adding it.</code></p>
+<p>注：意思是按<code>[ENTER]</code>继续，或按<code>Ctrl-c</code>取消添加。</p>
+<ol start="3">
+<li>启用存储库后，请使用以下命令安装Python 3.8：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt install python3.8</span></span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>通过键入以下命令验证安装是否成功：<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> python3.8 --version</span></span><br></pre></td></tr></table></figure>
+返回信息：</li>
+</ol>
+<p><code>Python 3.8.0</code></p>
+<p>至此，Python 3.8已安装在Ubuntu 18.04系统上，你可以开始使用它了。</p>
+<h1 id="从源代码在Ubuntu-18-04上安装Python-3-8"><a href="#从源代码在Ubuntu-18-04上安装Python-3-8" class="headerlink" title="从源代码在Ubuntu 18.04上安装Python 3.8"></a>从源代码在Ubuntu 18.04上安装Python 3.8</h1><p>在本节中，我们将说明如何从源代码编译Python 3.8。</p>
+<ol>
+<li>更新软件包列表并安装构建Python所需的软件包：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt update</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>使用wget从Python下载页面下载最新版本的源代码，或者访问 <a target="_blank" rel="noopener" href="https://www.python.org/">https://www.python.org/</a> 网站下载：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> wget https://www.python.org/ftp/python/3.8.0/Python-3.8.0.tgz</span></span><br></pre></td></tr></table></figure>
+
+<p>在选写本文时，最新版本是3.8.0。</p>
+<ol start="3">
+<li>下载完成后，解压缩下载的文件：<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> tar -xf Python-3.8.0.tgz</span></span><br></pre></td></tr></table></figure></li>
+<li>切换到Python源目录并执行configure脚本，该脚本执行许多检查以确保系统上的所有依赖项都存在：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> Python-3.8.0</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> ./configure --<span class="built_in">enable</span>-optimizations</span></span><br></pre></td></tr></table></figure>
+<p><code>--enable-optimizations</code>选项通过运行多个测试来优化Python二进制文件，这会使构建过程变慢。</p>
+<ol start="5">
+<li>启动Python 3.8构建过程：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> make -j 8</span></span><br></pre></td></tr></table></figure>
+<p>为了加快构建时间，请修改<code>-j</code>以使其对应于处理器中的内核数，你可以通过键入<code>nproc</code>查找编号。</p>
+<ol start="6">
+<li>构建过程完成后，输入以下命令安装Python二进制文件：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo make altinstall</span></span><br></pre></td></tr></table></figure>
+
+<p>不要使用标准的<code>make install</code>，因为它将覆盖默认的系统python3二进制文件。</p>
+<ol start="7">
+<li>Python 3.8已安装并准备使用，通过运行以下命令进行验证：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> python3.8 --version</span></span><br></pre></td></tr></table></figure>
+<p>输出应显示Python版本：</p>
+<p><code>Python 3.8.0</code></p>
+<p>至此，你已在Ubuntu 18.04计算机上安装了Python 3.8，然后可以开始开发Python 3项目了。</p>
 
     </div>
 
@@ -253,9 +296,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/hexo/" rel="tag"># hexo</a>
-              <a href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag"># 博客</a>
-              <a href="/tags/addthis/" rel="tag"># addthis</a>
+              <a href="/tags/python/" rel="tag"># python</a>
+              <a href="/tags/linux/" rel="tag"># linux</a>
           </div>
 
         
@@ -264,12 +306,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/Hexo/hexo-blog-next-theme-opens-article-catalog-and-adjust-style.html" rel="prev" title="Hexo博客NexT主题开启文章目录和调整样式">
-      <i class="fa fa-chevron-left"></i> Hexo博客NexT主题开启文章目录和调整样式
+    <a href="/Hexo/use-gulp-to-compress-hexo-blog-and-deploy-with-one-click.html" rel="prev" title="利用gulp对Hexo博客压缩并一键之部署">
+      <i class="fa fa-chevron-left"></i> 利用gulp对Hexo博客压缩并一键之部署
     </a></div>
       <div class="post-nav-item">
-    <a href="/Hexo/hexo-writing-skills.html" rel="next" title="Hexo写作技巧">
-      Hexo写作技巧 <i class="fa fa-chevron-right"></i>
+    <a href="/Linux/all-configurations-of-this-blog-server.html" rel="next" title="本博客服务器所有配置">
+      本博客服务器所有配置 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -329,7 +371,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E5%86%8CAddThis%EF%BC%8C%E9%80%89%E6%8B%A9%E5%88%86%E4%BA%AB%E6%8C%89%E9%92%AE%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">注册AddThis，选择分享按钮：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E6%98%BE%E7%A4%BA%E6%A0%B7%E5%BC%8F-Select-a-Tool-Type"><span class="nav-number">2.</span> <span class="nav-text">选择显示样式(Select a Tool Type)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%82%B9%E5%87%BBContinue%E9%85%8D%E7%BD%AE%E5%88%86%E4%BA%AB%E6%8C%89%E9%92%AE"><span class="nav-number">3.</span> <span class="nav-text">点击Continue配置分享按钮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E4%BB%A3%E7%A0%81ID"><span class="nav-number">4.</span> <span class="nav-text">获取代码ID</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Apt%E5%9C%A8Ubuntu-18-04%E4%B8%8A%E5%AE%89%E8%A3%85Python-3-8"><span class="nav-number">1.</span> <span class="nav-text">使用Apt在Ubuntu 18.04上安装Python 3.8</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%8E%E6%BA%90%E4%BB%A3%E7%A0%81%E5%9C%A8Ubuntu-18-04%E4%B8%8A%E5%AE%89%E8%A3%85Python-3-8"><span class="nav-number">2.</span> <span class="nav-text">从源代码在Ubuntu 18.04上安装Python 3.8</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

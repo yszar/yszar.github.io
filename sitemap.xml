@@ -2,136 +2,308 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://tangjiuyang.com/Python/addition-and-subtraction-of-python-dates.html</loc>
+    <loc>https://tangjiuyang.com/Hexo/hexo-blog-next-theme-opens-article-catalog-and-adjust-style.html</loc>
     
-    <lastmod>2020-01-12T17:50:10.943Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tangjiuyang.com/Python/grouping-functions-in-python-groupby-itertools.html</loc>
-    
-    <lastmod>2020-01-12T17:46:12.625Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tangjiuyang.com/Python/pythons-url-parsing-libraryurlparse.html</loc>
-    
-    <lastmod>2020-01-12T17:45:12.303Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tangjiuyang.com/Nginx/deploying-a-django-project-with-uwsgi-and-nginx.html</loc>
-    
-    <lastmod>2020-01-06T07:25:11.531Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tangjiuyang.com/Python/two-ways-to-install-python-38-on-ubuntu-1804-system.html</loc>
-    
-    <lastmod>2020-01-06T07:09:41.795Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tangjiuyang.com/Linux/supervisor-installation-configuration-use.html</loc>
-    
-    <lastmod>2020-01-01T15:38:01.979Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tangjiuyang.com/about/index.html</loc>
-    
-    <lastmod>2020-01-01T08:03:44.500Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tangjiuyang.com/top/index.html</loc>
-    
-    <lastmod>2020-01-01T08:00:56.441Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tangjiuyang.com/Hexo/hexo-writing-skills.html</loc>
-    
-    <lastmod>2019-12-31T09:50:24.902Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tangjiuyang.com/categories/index.html</loc>
-    
-    <lastmod>2019-12-31T02:35:33.577Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tangjiuyang.com/tags/index.html</loc>
-    
-    <lastmod>2019-12-31T02:35:33.568Z</lastmod>
+    <lastmod>2020-08-24</lastmod>
     
   </url>
   
   <url>
     <loc>https://tangjiuyang.com/Hexo/hexo-adds-addthis-sharing-function.html</loc>
     
-    <lastmod>2019-12-30T16:55:13.698Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tangjiuyang.com/Python/pycharm-remote-synchronization-settings-ssh-interpreter.html</loc>
-    
-    <lastmod>2019-12-30T16:50:54.791Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tangjiuyang.com/Python/github-webhook-with-django.html</loc>
-    
-    <lastmod>2019-12-30T16:50:54.580Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tangjiuyang.com/Hexo/hexo-blog-next-theme-opens-article-directory-and-adjusts-style.html</loc>
-    
-    <lastmod>2019-12-30T16:50:54.470Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tangjiuyang.com/Linux/all-configuration-of-this-blog-server.html</loc>
-    
-    <lastmod>2019-12-30T11:20:33.701Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tangjiuyang.com/Hexo/use-gulp-to-compress-and-deploy-hexo-blog-with-one-click.html</loc>
-    
-    <lastmod>2019-12-30T08:35:02.009Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tangjiuyang.com/mysite/apply-for-lets-via-acmesh.html</loc>
-    
-    <lastmod>2019-12-29T18:48:19.153Z</lastmod>
+    <lastmod>2020-08-24</lastmod>
     
   </url>
   
   <url>
     <loc>https://tangjiuyang.com/Hexo/hexo-add-title-translation-plugin.html</loc>
     
-    <lastmod>2019-12-29T18:27:45.099Z</lastmod>
+    <lastmod>2020-08-24</lastmod>
     
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/Python/pycharm-remote-synchronization-settings-ssh-interpreter.html</loc>
+    
+    <lastmod>2020-08-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/Python/grouping-functions-in-python-groupby-itertools.html</loc>
+    
+    <lastmod>2020-08-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/Python/python-date-addition-and-subtraction-other-operations.html</loc>
+    
+    <lastmod>2020-08-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/Python/pythons-url-parsing-libraryurlparse.html</loc>
+    
+    <lastmod>2020-08-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/Linux/two-ways-to-install-python-38-on-ubuntu-1804-system.html</loc>
+    
+    <lastmod>2020-08-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/Linux/supervisor-installation-configuration-use.html</loc>
+    
+    <lastmod>2020-08-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/Nginx/use-uwsgi-and-nginx-to-deploy-a-django-project.html</loc>
+    
+    <lastmod>2020-08-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/Hexo/use-gulp-to-compress-hexo-blog-and-deploy-with-one-click.html</loc>
+    
+    <lastmod>2020-08-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/Linux/all-configurations-of-this-blog-server.html</loc>
+    
+    <lastmod>2020-08-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/Python/implement-github-webhook-with-django.html</loc>
+    
+    <lastmod>2020-08-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/mysite/apply-for-lets-through-acmesh.html</loc>
+    
+    <lastmod>2020-08-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/Hexo/hexo-writing-skills.html</loc>
+    
+    <lastmod>2020-08-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/about/index.html</loc>
+    
+    <lastmod>2020-08-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/categories/index.html</loc>
+    
+    <lastmod>2020-08-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/tags/index.html</loc>
+    
+    <lastmod>2020-08-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/top/index.html</loc>
+    
+    <lastmod>2020-08-24</lastmod>
+    
+  </url>
+  
+
+  <url>
+    <loc>https://tangjiuyang.com/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>https://tangjiuyang.com/tags/hexo/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/tags/%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/tags/addthis/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/tags/python/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/tags/pycharm/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/tags/%E5%88%86%E7%BB%84%E5%87%BD%E6%95%B0/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/tags/groupby/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/tags/itertools/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/tags/urlparse/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/tags/linux/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/tags/supervisor/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/tags/nginx/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/tags/django/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/tags/uwsgi/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/tags/github/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/tags/ssl/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/tags/%E5%86%99%E4%BD%9C%E6%8A%80%E5%B7%A7/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>https://tangjiuyang.com/categories/Hexo/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/categories/Python/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/categories/Linux/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/categories/Nginx/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tangjiuyang.com/categories/mysite/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
   </url>
   
 </urlset>

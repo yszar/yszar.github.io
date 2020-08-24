@@ -4,51 +4,21 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 5.1.1">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
-  <meta http-equiv="Cache-Control" content="no-transform">
-  <meta http-equiv="Cache-Control" content="no-siteapp">
-  <meta name="baidu-site-verification" content="ORcxSmvDbo">
 
 <link rel="stylesheet" href="/css/main.css">
 
-<link rel="stylesheet" href="//fonts.proxy.ustclug.org/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    hostname: new URL('https://tangjiuyang.com').hostname,
-    root: '/',
-    scheme: 'Gemini',
-    version: '7.7.0',
-    exturl: true,
-    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
-    copycode: {"enable":true,"show_result":true,"style":"mac"},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
-    bookmark: {"enable":true,"color":"#222","save":"auto"},
-    fancybox: true,
-    mediumzoom: false,
-    lazyload: true,
-    pangu: true,
-    comments: {"style":"tabs","active":"valine","storage":true,"lazyload":true,"nav":null,"activeClass":"valine"},
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},
-    path: 'search.xml',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
-  };
-</script>
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"tangjiuyang.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
   <meta name="description" content="心有猛虎，细嗅蔷薇。">
 <meta property="og:type" content="website">
@@ -67,40 +37,16 @@
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
   };
 </script>
 
-  <title>九阳的博客 - 前路漫漫</title>
+  <title>九阳的博客</title>
   
-    <script>
-      function sendPageView() {
-        if (CONFIG.hostname !== location.hostname) return;
-        var uid = localStorage.getItem('uid') || (Math.random() + '.' + Math.random());
-        localStorage.setItem('uid', uid);
-        navigator.sendBeacon('https://www.google-analytics.com/collect', new URLSearchParams({
-          v  : 1,
-          tid: 'UA-126970002-4',
-          cid: uid,
-          t  : 'pageview',
-          dp : encodeURIComponent(location.pathname)
-        }));
-      }
-      document.addEventListener('pjax:complete', sendPageView);
-      sendPageView();
-    </script>
 
 
-  <script pjax>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?41ab901a72ed35133011901f6333f003";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 
 
 
@@ -137,19 +83,6 @@
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">九阳的博客</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-        <h1 class="site-subtitle" itemprop="description">前路漫漫</h1>
-      
-  </div>
-
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏">
       <span class="toggle-line toggle-line-first"></span>
@@ -157,75 +90,44 @@
       <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">九阳的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">前路漫漫</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
 </div>
 
 
+
+
 <nav class="site-nav">
-  
-  <ul id="menu" class="menu">
+  <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">5</span></a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">18</span></a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">15</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
-        <li class="menu-item menu-item-top">
-
-    <a href="/top/" rel="section"><i class="fa fa-fw fa-signal"></i>排行榜</a>
-
-  </li>
-        <li class="menu-item menu-item-sitemap">
-
-    <a href="/sitemap.xml" rel="section"><i class="fa fa-fw fa-sitemap"></i>站点地图</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
   </ul>
-
 </nav>
-  <div class="site-search">
-    <div class="popup search-popup">
-    <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
-           placeholder="搜索..." spellcheck="false"
-           type="text" id="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result"></div>
 
-</div>
-<div class="search-pop-overlay"></div>
 
-  </div>
+
+
 </div>
     </header>
 
@@ -234,8 +136,6 @@
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
-  <div class="reading-progress-bar"></div>
-  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
 
     <main class="main">
@@ -243,18 +143,16 @@
         <div class="content-wrap">
           
 
-          <div class="content">
+          <div class="content index posts-expand">
             
-
-  <div class="posts-expand">
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://tangjiuyang.com/Python/addition-and-subtraction-of-python-dates.html">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://tangjiuyang.com/Python/python-date-addition-and-subtraction-other-operations.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://oss.tangjiuyang.com/IMG_1621.JPG">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="九阳">
       <meta itemprop="description" content="心有猛虎，细嗅蔷薇。">
     </span>
@@ -265,66 +163,49 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/Python/addition-and-subtraction-of-python-dates.html" class="post-title-link" itemprop="url">Python日期的加减等操作</a>
+            <a href="/Python/python-date-addition-and-subtraction-other-operations.html" class="post-title-link" itemprop="url">Python日期的加减等操作</a>
         </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-01-13 01:46:06 / 修改时间：01:50:10" itemprop="dateCreated datePublished" datetime="2020-01-13T01:46:06+08:00">2020-01-13</time>
+              <time title="创建时间：2020-01-13 01:46:06" itemprop="dateCreated datePublished" datetime="2020-01-13T01:46:06+08:00">2020-01-13</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-25 02:49:58" itemprop="dateModified" datetime="2020-08-25T02:49:58+08:00">2020-08-25</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
+                <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
+                  <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
                 </span>
             </span>
 
-          
-            <span id="/Python/addition-and-subtraction-of-python-dates.html" class="post-meta-item leancloud_visitors" data-flag-title="Python日期的加减等操作" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/Python/addition-and-subtraction-of-python-dates.html#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/Python/addition-and-subtraction-of-python-dates.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
+          <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
+                <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.8k</span>
+              <span>1.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
+                <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -339,7 +220,7 @@
           <h1 id="1-日期输出格式化"><a href="#1-日期输出格式化" class="headerlink" title="1. 日期输出格式化"></a>1. 日期输出格式化</h1><p>所有日期、时间的api都在datetime模块内。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/Python/addition-and-subtraction-of-python-dates.html#more" rel="contents">
+              <a class="btn" href="/Python/python-date-addition-and-subtraction-other-operations.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -359,14 +240,14 @@
   
   
 
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://tangjiuyang.com/Python/pythons-url-parsing-libraryurlparse.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://oss.tangjiuyang.com/IMG_1621.JPG">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="九阳">
       <meta itemprop="description" content="心有猛虎，细嗅蔷薇。">
     </span>
@@ -383,60 +264,43 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-01-13 01:40:42 / 修改时间：01:45:12" itemprop="dateCreated datePublished" datetime="2020-01-13T01:40:42+08:00">2020-01-13</time>
+              <time title="创建时间：2020-01-13 01:40:42" itemprop="dateCreated datePublished" datetime="2020-01-13T01:40:42+08:00">2020-01-13</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-25 02:49:58" itemprop="dateModified" datetime="2020-08-25T02:49:58+08:00">2020-08-25</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
+                <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
+                  <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
                 </span>
             </span>
 
-          
-            <span id="/Python/pythons-url-parsing-libraryurlparse.html" class="post-meta-item leancloud_visitors" data-flag-title="Python的url解析库--urlparse" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/Python/pythons-url-parsing-libraryurlparse.html#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/Python/pythons-url-parsing-libraryurlparse.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
+          <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
+                <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.2k</span>
+              <span>3.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
+                <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
+              <span>4 分钟</span>
             </span>
 
         </div>
@@ -472,14 +336,14 @@
   
   
 
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://tangjiuyang.com/Python/grouping-functions-in-python-groupby-itertools.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://oss.tangjiuyang.com/IMG_1621.JPG">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="九阳">
       <meta itemprop="description" content="心有猛虎，细嗅蔷薇。">
     </span>
@@ -496,60 +360,43 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-01-13 01:37:37 / 修改时间：01:46:12" itemprop="dateCreated datePublished" datetime="2020-01-13T01:37:37+08:00">2020-01-13</time>
+              <time title="创建时间：2020-01-13 01:37:37" itemprop="dateCreated datePublished" datetime="2020-01-13T01:37:37+08:00">2020-01-13</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-25 02:49:58" itemprop="dateModified" datetime="2020-08-25T02:49:58+08:00">2020-08-25</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
+                <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
+                  <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
                 </span>
             </span>
 
-          
-            <span id="/Python/grouping-functions-in-python-groupby-itertools.html" class="post-meta-item leancloud_visitors" data-flag-title="Python中的分组函数（groupby、itertools）" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/Python/grouping-functions-in-python-groupby-itertools.html#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/Python/grouping-functions-in-python-groupby-itertools.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
+          <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
+                <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.1k</span>
+              <span>3.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
+                <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -563,7 +410,7 @@
       
           <a id="more"></a>
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> operator <span class="keyword">import</span> itemgetter <span class="comment">#itemgetter用来去dict中的key，省去了使用lambda函数</span></span><br><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> groupby <span class="comment">#itertool还包含有其他很多函数，比如将多个list联合起来。。</span></span><br><span class="line">d1=&#123;<span class="string">'name'</span>:<span class="string">'zhangsan'</span>,<span class="string">'age'</span>:<span class="number">20</span>,<span class="string">'country'</span>:<span class="string">'China'</span>&#125;</span><br><span class="line">d2=&#123;<span class="string">'name'</span>:<span class="string">'wangwu'</span>,<span class="string">'age'</span>:<span class="number">19</span>,<span class="string">'country'</span>:<span class="string">'USA'</span>&#125;</span><br><span class="line">d3=&#123;<span class="string">'name'</span>:<span class="string">'lisi'</span>,<span class="string">'age'</span>:<span class="number">22</span>,<span class="string">'country'</span>:<span class="string">'JP'</span>&#125;</span><br><span class="line">d4=&#123;<span class="string">'name'</span>:<span class="string">'zhaoliu'</span>,<span class="string">'age'</span>:<span class="number">22</span>,<span class="string">'country'</span>:<span class="string">'USA'</span>&#125;</span><br><span class="line">d5=&#123;<span class="string">'name'</span>:<span class="string">'pengqi'</span>,<span class="string">'age'</span>:<span class="number">22</span>,<span class="string">'country'</span>:<span class="string">'USA'</span>&#125;</span><br><span class="line">d6=&#123;<span class="string">'name'</span>:<span class="string">'lijiu'</span>,<span class="string">'age'</span>:<span class="number">22</span>,<span class="string">'country'</span>:<span class="string">'China'</span>&#125;</span><br><span class="line">lst=[d1,d2,d3,d4,d5,d6]</span><br><span class="line"></span><br><span class="line"><span class="comment">#通过country进行分组：</span></span><br><span class="line"></span><br><span class="line">lst.sort(key=itemgetter(<span class="string">'country'</span>)) <span class="comment">#需要先排序，然后才能groupby。lst排序后自身被改变</span></span><br><span class="line">lstg = groupby(lst,itemgetter(<span class="string">'country'</span>)) </span><br><span class="line"><span class="comment">#lstg = groupby(lst,key=lambda x:x['country']) 等同于使用itemgetter()</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key,group <span class="keyword">in</span> lstg:</span><br><span class="line">    <span class="keyword">for</span> g <span class="keyword">in</span> group: <span class="comment">#group是一个迭代器，包含了所有的分组列表</span></span><br><span class="line">        <span class="keyword">print</span> key,g</span><br><span class="line">返回：</span><br><span class="line">China &#123;<span class="string">'country'</span>: <span class="string">'China'</span>, <span class="string">'age'</span>: <span class="number">20</span>, <span class="string">'name'</span>: <span class="string">'zhangsan'</span>&#125;</span><br><span class="line">China &#123;<span class="string">'country'</span>: <span class="string">'China'</span>, <span class="string">'age'</span>: <span class="number">22</span>, <span class="string">'name'</span>: <span class="string">'lijiu'</span>&#125;</span><br><span class="line">JP &#123;<span class="string">'country'</span>: <span class="string">'JP'</span>, <span class="string">'age'</span>: <span class="number">22</span>, <span class="string">'name'</span>: <span class="string">'lisi'</span>&#125;</span><br><span class="line">USA &#123;<span class="string">'country'</span>: <span class="string">'USA'</span>, <span class="string">'age'</span>: <span class="number">19</span>, <span class="string">'name'</span>: <span class="string">'wangwu'</span>&#125;</span><br><span class="line">USA &#123;<span class="string">'country'</span>: <span class="string">'USA'</span>, <span class="string">'age'</span>: <span class="number">22</span>, <span class="string">'name'</span>: <span class="string">'zhaoliu'</span>&#125;</span><br><span class="line">USA &#123;<span class="string">'country'</span>: <span class="string">'USA'</span>, <span class="string">'age'</span>: <span class="number">22</span>, <span class="string">'name'</span>: <span class="string">'pengqi'</span>&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> [key <span class="keyword">for</span> key,group <span class="keyword">in</span> lstg] <span class="comment">#返回：['China', 'JP', 'USA']</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> [(key,list(group)) <span class="keyword">for</span> key,group <span class="keyword">in</span> lstg]</span><br><span class="line"><span class="comment">#返回的list中包含着三个元组：</span></span><br><span class="line">[(<span class="string">'China'</span>, [&#123;<span class="string">'country'</span>: <span class="string">'China'</span>, <span class="string">'age'</span>: <span class="number">20</span>, <span class="string">'name'</span>: <span class="string">'zhangsan'</span>&#125;, &#123;<span class="string">'country'</span>: <span class="string">'China'</span>, <span class="string">'age'</span>: <span class="number">22</span>, <span class="string">'name'</span>: <span class="string">'lijiu'</span>&#125;]), (<span class="string">'JP'</span>, [&#123;<span class="string">'country'</span>: <span class="string">'JP'</span>, <span class="string">'age'</span>: <span class="number">22</span>, <span class="string">'name'</span>: <span class="string">'lisi'</span>&#125;]), (<span class="string">'USA'</span>, [&#123;<span class="string">'country'</span>: <span class="string">'USA'</span>, <span class="string">'age'</span>: <span class="number">19</span>, <span class="string">'name'</span>: <span class="string">'wangwu'</span>&#125;, &#123;<span class="string">'country'</span>: <span class="string">'USA'</span>, <span class="string">'age'</span>: <span class="number">22</span>, <span class="string">'name'</span>: <span class="string">'zhaoliu'</span>&#125;, &#123;<span class="string">'country'</span>: <span class="string">'USA'</span>, <span class="string">'age'</span>: <span class="number">22</span>, <span class="string">'name'</span>: <span class="string">'pengqi'</span>&#125;])]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> dict([(key,list(group)) <span class="keyword">for</span> key,group <span class="keyword">in</span> lstg])</span><br><span class="line"><span class="comment">#返回的是一个字典：</span></span><br><span class="line">&#123;<span class="string">'JP'</span>: [&#123;<span class="string">'country'</span>: <span class="string">'JP'</span>, <span class="string">'age'</span>: <span class="number">22</span>, <span class="string">'name'</span>: <span class="string">'lisi'</span>&#125;], <span class="string">'China'</span>: [&#123;<span class="string">'country'</span>: <span class="string">'China'</span>, <span class="string">'age'</span>: <span class="number">20</span>, <span class="string">'name'</span>: <span class="string">'zhangsan'</span>&#125;, &#123;<span class="string">'country'</span>: <span class="string">'China'</span>, <span class="string">'age'</span>: <span class="number">22</span>, <span class="string">'name'</span>: <span class="string">'lijiu'</span>&#125;], <span class="string">'USA'</span>: [&#123;<span class="string">'country'</span>: <span class="string">'USA'</span>, <span class="string">'age'</span>: <span class="number">19</span>, <span class="string">'name'</span>: <span class="string">'wangwu'</span>&#125;, &#123;<span class="string">'country'</span>: <span class="string">'USA'</span>, <span class="string">'age'</span>: <span class="number">22</span>, <span class="string">'name'</span>: <span class="string">'zhaoliu'</span>&#125;, &#123;<span class="string">'country'</span>: <span class="string">'USA'</span>, <span class="string">'age'</span>: <span class="number">22</span>, <span class="string">'name'</span>: <span class="string">'pengqi'</span>&#125;]&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> dict([(key,len(list(group))) <span class="keyword">for</span> key,group <span class="keyword">in</span> lstg])</span><br><span class="line"><span class="comment">#返回每个分组的个数：</span></span><br><span class="line">&#123;<span class="string">'JP'</span>: <span class="number">1</span>, <span class="string">'China'</span>: <span class="number">2</span>, <span class="string">'USA'</span>: <span class="number">3</span>&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> operator <span class="keyword">import</span> itemgetter <span class="comment">#itemgetter用来去dict中的key，省去了使用lambda函数</span></span><br><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> groupby <span class="comment">#itertool还包含有其他很多函数，比如将多个list联合起来。。</span></span><br><span class="line">d1=&#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;zhangsan&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:<span class="number">20</span>,<span class="string">&#x27;country&#x27;</span>:<span class="string">&#x27;China&#x27;</span>&#125;</span><br><span class="line">d2=&#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;wangwu&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:<span class="number">19</span>,<span class="string">&#x27;country&#x27;</span>:<span class="string">&#x27;USA&#x27;</span>&#125;</span><br><span class="line">d3=&#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;lisi&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:<span class="number">22</span>,<span class="string">&#x27;country&#x27;</span>:<span class="string">&#x27;JP&#x27;</span>&#125;</span><br><span class="line">d4=&#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;zhaoliu&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:<span class="number">22</span>,<span class="string">&#x27;country&#x27;</span>:<span class="string">&#x27;USA&#x27;</span>&#125;</span><br><span class="line">d5=&#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;pengqi&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:<span class="number">22</span>,<span class="string">&#x27;country&#x27;</span>:<span class="string">&#x27;USA&#x27;</span>&#125;</span><br><span class="line">d6=&#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;lijiu&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:<span class="number">22</span>,<span class="string">&#x27;country&#x27;</span>:<span class="string">&#x27;China&#x27;</span>&#125;</span><br><span class="line">lst=[d1,d2,d3,d4,d5,d6]</span><br><span class="line"></span><br><span class="line"><span class="comment">#通过country进行分组：</span></span><br><span class="line"></span><br><span class="line">lst.sort(key=itemgetter(<span class="string">&#x27;country&#x27;</span>)) <span class="comment">#需要先排序，然后才能groupby。lst排序后自身被改变</span></span><br><span class="line">lstg = groupby(lst,itemgetter(<span class="string">&#x27;country&#x27;</span>)) </span><br><span class="line"><span class="comment">#lstg = groupby(lst,key=lambda x:x[&#x27;country&#x27;]) 等同于使用itemgetter()</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key,group <span class="keyword">in</span> lstg:</span><br><span class="line">    <span class="keyword">for</span> g <span class="keyword">in</span> group: <span class="comment">#group是一个迭代器，包含了所有的分组列表</span></span><br><span class="line">        <span class="keyword">print</span> key,g</span><br><span class="line">返回：</span><br><span class="line">China &#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;China&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">20</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;zhangsan&#x27;</span>&#125;</span><br><span class="line">China &#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;China&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">22</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;lijiu&#x27;</span>&#125;</span><br><span class="line">JP &#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;JP&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">22</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;lisi&#x27;</span>&#125;</span><br><span class="line">USA &#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;USA&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">19</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;wangwu&#x27;</span>&#125;</span><br><span class="line">USA &#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;USA&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">22</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;zhaoliu&#x27;</span>&#125;</span><br><span class="line">USA &#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;USA&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">22</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;pengqi&#x27;</span>&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> [key <span class="keyword">for</span> key,group <span class="keyword">in</span> lstg] <span class="comment">#返回：[&#x27;China&#x27;, &#x27;JP&#x27;, &#x27;USA&#x27;]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> [(key,list(group)) <span class="keyword">for</span> key,group <span class="keyword">in</span> lstg]</span><br><span class="line"><span class="comment">#返回的list中包含着三个元组：</span></span><br><span class="line">[(<span class="string">&#x27;China&#x27;</span>, [&#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;China&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">20</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;zhangsan&#x27;</span>&#125;, &#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;China&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">22</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;lijiu&#x27;</span>&#125;]), (<span class="string">&#x27;JP&#x27;</span>, [&#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;JP&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">22</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;lisi&#x27;</span>&#125;]), (<span class="string">&#x27;USA&#x27;</span>, [&#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;USA&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">19</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;wangwu&#x27;</span>&#125;, &#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;USA&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">22</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;zhaoliu&#x27;</span>&#125;, &#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;USA&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">22</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;pengqi&#x27;</span>&#125;])]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> dict([(key,list(group)) <span class="keyword">for</span> key,group <span class="keyword">in</span> lstg])</span><br><span class="line"><span class="comment">#返回的是一个字典：</span></span><br><span class="line">&#123;<span class="string">&#x27;JP&#x27;</span>: [&#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;JP&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">22</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;lisi&#x27;</span>&#125;], <span class="string">&#x27;China&#x27;</span>: [&#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;China&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">20</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;zhangsan&#x27;</span>&#125;, &#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;China&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">22</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;lijiu&#x27;</span>&#125;], <span class="string">&#x27;USA&#x27;</span>: [&#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;USA&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">19</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;wangwu&#x27;</span>&#125;, &#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;USA&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">22</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;zhaoliu&#x27;</span>&#125;, &#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;USA&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">22</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;pengqi&#x27;</span>&#125;]&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> dict([(key,len(list(group))) <span class="keyword">for</span> key,group <span class="keyword">in</span> lstg])</span><br><span class="line"><span class="comment">#返回每个分组的个数：</span></span><br><span class="line">&#123;<span class="string">&#x27;JP&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;China&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;USA&#x27;</span>: <span class="number">3</span>&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -578,14 +425,14 @@
   
   
 
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://tangjiuyang.com/Nginx/deploying-a-django-project-with-uwsgi-and-nginx.html">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://tangjiuyang.com/Nginx/use-uwsgi-and-nginx-to-deploy-a-django-project.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://oss.tangjiuyang.com/IMG_1621.JPG">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="九阳">
       <meta itemprop="description" content="心有猛虎，细嗅蔷薇。">
     </span>
@@ -596,66 +443,49 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/Nginx/deploying-a-django-project-with-uwsgi-and-nginx.html" class="post-title-link" itemprop="url">使用uWSGI和Nginx部署Django项目</a>
+            <a href="/Nginx/use-uwsgi-and-nginx-to-deploy-a-django-project.html" class="post-title-link" itemprop="url">使用uWSGI和Nginx部署Django项目</a>
         </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-01-06 14:45:40 / 修改时间：15:25:11" itemprop="dateCreated datePublished" datetime="2020-01-06T14:45:40+08:00">2020-01-06</time>
+              <time title="创建时间：2020-01-06 14:45:40" itemprop="dateCreated datePublished" datetime="2020-01-06T14:45:40+08:00">2020-01-06</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-25 02:49:58" itemprop="dateModified" datetime="2020-08-25T02:49:58+08:00">2020-08-25</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
+                <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Nginx/" itemprop="url" rel="index">
-                    <span itemprop="name">Nginx</span>
-                  </a>
+                  <a href="/categories/Nginx/" itemprop="url" rel="index"><span itemprop="name">Nginx</span></a>
                 </span>
             </span>
 
-          
-            <span id="/Nginx/deploying-a-django-project-with-uwsgi-and-nginx.html" class="post-meta-item leancloud_visitors" data-flag-title="使用uWSGI和Nginx部署Django项目" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/Nginx/deploying-a-django-project-with-uwsgi-and-nginx.html#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/Nginx/deploying-a-django-project-with-uwsgi-and-nginx.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
+          <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
+                <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
               <span>3.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
+                <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>6 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -670,7 +500,7 @@
           <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文只介绍部署。<br>首先需要有一个已经可用的 Django 项目。<br>操作环境 Ubuntu。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/Nginx/deploying-a-django-project-with-uwsgi-and-nginx.html#more" rel="contents">
+              <a class="btn" href="/Nginx/use-uwsgi-and-nginx-to-deploy-a-django-project.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -690,14 +520,14 @@
   
   
 
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://tangjiuyang.com/Linux/supervisor-installation-configuration-use.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://oss.tangjiuyang.com/IMG_1621.JPG">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="九阳">
       <meta itemprop="description" content="心有猛虎，细嗅蔷薇。">
     </span>
@@ -714,60 +544,43 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-01-01 23:20:11 / 修改时间：23:38:01" itemprop="dateCreated datePublished" datetime="2020-01-01T23:20:11+08:00">2020-01-01</time>
+              <time title="创建时间：2020-01-01 23:20:11" itemprop="dateCreated datePublished" datetime="2020-01-01T23:20:11+08:00">2020-01-01</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-25 02:49:58" itemprop="dateModified" datetime="2020-08-25T02:49:58+08:00">2020-08-25</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
+                <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
+                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
                 </span>
             </span>
 
-          
-            <span id="/Linux/supervisor-installation-configuration-use.html" class="post-meta-item leancloud_visitors" data-flag-title="supervisor安装配置使用" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/Linux/supervisor-installation-configuration-use.html#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/Linux/supervisor-installation-configuration-use.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
+          <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
+                <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
               <span>2.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
+                <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -779,7 +592,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="1-supervisor-简介"><a href="#1-supervisor-简介" class="headerlink" title="1.supervisor 简介"></a>1.supervisor 简介</h1><h2 id="1-1-官网"><a href="#1-1-官网" class="headerlink" title="1.1 官网"></a>1.1 官网</h2><p><a href="http://supervisord.org/" target="_blank" rel="noopener">supervisor</a> 官网</p>
+          <h1 id="1-supervisor-简介"><a href="#1-supervisor-简介" class="headerlink" title="1.supervisor 简介"></a>1.supervisor 简介</h1><h2 id="1-1-官网"><a href="#1-1-官网" class="headerlink" title="1.1 官网"></a>1.1 官网</h2><p><a target="_blank" rel="noopener" href="http://supervisord.org/">supervisor</a> 官网</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/Linux/supervisor-installation-configuration-use.html#more" rel="contents">
@@ -802,14 +615,14 @@
   
   
 
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://tangjiuyang.com/Hexo/hexo-writing-skills.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://oss.tangjiuyang.com/IMG_1621.JPG">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="九阳">
       <meta itemprop="description" content="心有猛虎，细嗅蔷薇。">
     </span>
@@ -826,60 +639,43 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-12-31 16:13:06 / 修改时间：17:50:24" itemprop="dateCreated datePublished" datetime="2019-12-31T16:13:06+08:00">2019-12-31</time>
+              <time title="创建时间：2019-12-31 16:13:06" itemprop="dateCreated datePublished" datetime="2019-12-31T16:13:06+08:00">2019-12-31</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-25 02:49:58" itemprop="dateModified" datetime="2020-08-25T02:49:58+08:00">2020-08-25</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
+                <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
-                  </a>
+                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
                 </span>
             </span>
 
-          
-            <span id="/Hexo/hexo-writing-skills.html" class="post-meta-item leancloud_visitors" data-flag-title="Hexo写作技巧" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/Hexo/hexo-writing-skills.html#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/Hexo/hexo-writing-skills.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
+          <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
+                <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>8.1k</span>
+              <span>8.3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
+                <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>14 分钟</span>
+              <span>8 分钟</span>
             </span>
 
         </div>
@@ -918,14 +714,14 @@
   
   
 
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://tangjiuyang.com/Hexo/hexo-adds-addthis-sharing-function.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://oss.tangjiuyang.com/IMG_1621.JPG">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="九阳">
       <meta itemprop="description" content="心有猛虎，细嗅蔷薇。">
     </span>
@@ -942,7 +738,7 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
 
@@ -950,55 +746,32 @@
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-31 00:55:13" itemprop="dateModified" datetime="2019-12-31T00:55:13+08:00">2019-12-31</time>
+                <time title="修改时间：2020-08-25 02:49:58" itemprop="dateModified" datetime="2020-08-25T02:49:58+08:00">2020-08-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
+                <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
-                  </a>
+                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
                 </span>
             </span>
 
-          
-            <span id="/Hexo/hexo-adds-addthis-sharing-function.html" class="post-meta-item leancloud_visitors" data-flag-title="Hexo增加Addthis分享功能" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/Hexo/hexo-adds-addthis-sharing-function.html#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/Hexo/hexo-adds-addthis-sharing-function.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
+          <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
+                <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
               <span>281</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
+                <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               <span>1 分钟</span>
@@ -1018,10 +791,10 @@
 <span id="inline-purple"> 主题配置文件 </span>
 <span id="inline-yellow"> 站点配置文件 </span>
 <span id="inline-green"> 主题配置文件 </span>
-<a id="download" href="https://git-scm.com/download/win" target="_blank" rel="noopener"><i class="fa fa-download"></i><span> Download Now</span> </a>
+<a id="download" target="_blank" rel="noopener" href="https://git-scm.com/download/win"><i class="fa fa-download"></i><span> Download Now</span> </a>
 -->
-<p><img src="https://oss.tangjiuyang.com/2019/12/30/15777188305096.jpg" alt=""></p>
-<p>我选择的是<a href="http://www.addthis.com/" target="_blank" rel="noopener">AddThis</a>作为博客的第三方分享。AdThis是国外的第三方分享,使用方便,可以用google直接登录。能自定义分享样式</p>
+<p><img src="https://oss.tangjiuyang.com/2019/12/30/15777188305096.jpg"></p>
+<p>我选择的是<a target="_blank" rel="noopener" href="http://www.addthis.com/">AddThis</a>作为博客的第三方分享。AdThis是国外的第三方分享,使用方便,可以用google直接登录。能自定义分享样式</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/Hexo/hexo-adds-addthis-sharing-function.html#more" rel="contents">
@@ -1044,14 +817,14 @@
   
   
 
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://tangjiuyang.com/Hexo/hexo-blog-next-theme-opens-article-directory-and-adjusts-style.html">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://tangjiuyang.com/Hexo/hexo-blog-next-theme-opens-article-catalog-and-adjust-style.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://oss.tangjiuyang.com/IMG_1621.JPG">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="九阳">
       <meta itemprop="description" content="心有猛虎，细嗅蔷薇。">
     </span>
@@ -1062,13 +835,13 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/Hexo/hexo-blog-next-theme-opens-article-directory-and-adjusts-style.html" class="post-title-link" itemprop="url">Hexo博客NexT主题开启文章目录和调整样式</a>
+            <a href="/Hexo/hexo-blog-next-theme-opens-article-catalog-and-adjust-style.html" class="post-title-link" itemprop="url">Hexo博客NexT主题开启文章目录和调整样式</a>
         </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
 
@@ -1076,55 +849,32 @@
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-31 00:50:54" itemprop="dateModified" datetime="2019-12-31T00:50:54+08:00">2019-12-31</time>
+                <time title="修改时间：2020-08-25 02:49:58" itemprop="dateModified" datetime="2020-08-25T02:49:58+08:00">2020-08-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
+                <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
-                  </a>
+                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
                 </span>
             </span>
 
-          
-            <span id="/Hexo/hexo-blog-next-theme-opens-article-directory-and-adjusts-style.html" class="post-meta-item leancloud_visitors" data-flag-title="Hexo博客NexT主题开启文章目录和调整样式" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/Hexo/hexo-blog-next-theme-opens-article-directory-and-adjusts-style.html#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/Hexo/hexo-blog-next-theme-opens-article-directory-and-adjusts-style.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
+          <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
+                <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
               <span>327</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
+                <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               <span>1 分钟</span>
@@ -1142,7 +892,7 @@
           <p>Hexo博客NexT主题中是有目录的，只是在默认情况下没有开启，需要我们来手动开启。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/Hexo/hexo-blog-next-theme-opens-article-directory-and-adjusts-style.html#more" rel="contents">
+              <a class="btn" href="/Hexo/hexo-blog-next-theme-opens-article-catalog-and-adjust-style.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1162,14 +912,14 @@
   
   
 
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://tangjiuyang.com/Linux/all-configuration-of-this-blog-server.html">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://tangjiuyang.com/Linux/all-configurations-of-this-blog-server.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://oss.tangjiuyang.com/IMG_1621.JPG">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="九阳">
       <meta itemprop="description" content="心有猛虎，细嗅蔷薇。">
     </span>
@@ -1180,66 +930,49 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/Linux/all-configuration-of-this-blog-server.html" class="post-title-link" itemprop="url">本博客服务器所有配置</a>
+            <a href="/Linux/all-configurations-of-this-blog-server.html" class="post-title-link" itemprop="url">本博客服务器所有配置</a>
         </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-12-30 19:18:49 / 修改时间：19:20:33" itemprop="dateCreated datePublished" datetime="2019-12-30T19:18:49+08:00">2019-12-30</time>
+              <time title="创建时间：2019-12-30 19:18:49" itemprop="dateCreated datePublished" datetime="2019-12-30T19:18:49+08:00">2019-12-30</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-25 02:49:58" itemprop="dateModified" datetime="2020-08-25T02:49:58+08:00">2020-08-25</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
+                <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
+                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
                 </span>
             </span>
 
-          
-            <span id="/Linux/all-configuration-of-this-blog-server.html" class="post-meta-item leancloud_visitors" data-flag-title="本博客服务器所有配置" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/Linux/all-configuration-of-this-blog-server.html#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/Linux/all-configuration-of-this-blog-server.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
+          <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
+                <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>6.9k</span>
+              <span>7.1k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
+                <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>11 分钟</span>
+              <span>6 分钟</span>
             </span>
 
         </div>
@@ -1256,7 +989,7 @@
 </blockquote>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/Linux/all-configuration-of-this-blog-server.html#more" rel="contents">
+              <a class="btn" href="/Linux/all-configurations-of-this-blog-server.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1276,14 +1009,14 @@
   
   
 
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://tangjiuyang.com/Python/two-ways-to-install-python-38-on-ubuntu-1804-system.html">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://tangjiuyang.com/Linux/two-ways-to-install-python-38-on-ubuntu-1804-system.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://oss.tangjiuyang.com/IMG_1621.JPG">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="九阳">
       <meta itemprop="description" content="心有猛虎，细嗅蔷薇。">
     </span>
@@ -1294,13 +1027,13 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/Python/two-ways-to-install-python-38-on-ubuntu-1804-system.html" class="post-title-link" itemprop="url">在Ubuntu 18.04系统上安装Python 3.8的两种方法</a>
+            <a href="/Linux/two-ways-to-install-python-38-on-ubuntu-1804-system.html" class="post-title-link" itemprop="url">在Ubuntu 18.04系统上安装Python 3.8的两种方法</a>
         </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
 
@@ -1308,64 +1041,39 @@
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-06 15:09:41" itemprop="dateModified" datetime="2020-01-06T15:09:41+08:00">2020-01-06</time>
+                <time title="修改时间：2020-08-25 02:49:58" itemprop="dateModified" datetime="2020-08-25T02:49:58+08:00">2020-08-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
+                <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
+                  <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
+                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
                 </span>
             </span>
 
-          
-            <span id="/Python/two-ways-to-install-python-38-on-ubuntu-1804-system.html" class="post-meta-item leancloud_visitors" data-flag-title="在Ubuntu 18.04系统上安装Python 3.8的两种方法" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/Python/two-ways-to-install-python-38-on-ubuntu-1804-system.html#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/Python/two-ways-to-install-python-38-on-ubuntu-1804-system.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
+          <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
+                <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
               <span>1.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
+                <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -1380,7 +1088,7 @@
           <p>本文介绍在Ubuntu 18.04/16.04系统上安装Python 3.8的两种不同方法，第一个选择是从Deadsnakes PPA安装deb软件包，第二个选择是从源代码构建，当前Python 3.8在Ubuntu的默认存储库中不可用。相同的步骤适用于Ubuntu 16.04和任何基于Ubuntu的发行版，包括Kubuntu、Linux Mint和Elementary OS，其他发行版请参考在Fedora 29系统中安装Python 3.8 alpha的方法。Python 3.8是Python语言的最新主要版本，它包括许多新功能，例如赋值表达式、仅位置参数、f字符串支持等等，参考Python 3.8.0发布，已提供Python-3.8.0.tgz下载，附更新功能。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/Python/two-ways-to-install-python-38-on-ubuntu-1804-system.html#more" rel="contents">
+              <a class="btn" href="/Linux/two-ways-to-install-python-38-on-ubuntu-1804-system.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1400,7 +1108,6 @@
   
   
 
-  </div>
 
   
   <nav class="pagination">
@@ -1414,7 +1121,7 @@
 
 <script>
   window.addEventListener('tabs:register', () => {
-    let activeClass = CONFIG.comments.activeClass;
+    let { activeClass } = CONFIG.comments;
     if (CONFIG.comments.storage) {
       activeClass = localStorage.getItem('comments_active') || activeClass;
     }
@@ -1462,8 +1169,6 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="九阳"
-      src="https://oss.tangjiuyang.com/IMG_1621.JPG">
   <p class="site-author-name" itemprop="name">九阳</p>
   <div class="site-description" itemprop="description">心有猛虎，细嗅蔷薇。</div>
 </div>
@@ -1478,58 +1183,18 @@
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
-          
         <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-          
         <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
-  <div class="sidebar-button motion-element"><i class="fa fa-comment"></i>
-    Chat
-  </a>
-  </div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lzemFy" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yszar"><i class="fa fa-fw fa-github"></i>GitHub</span>
-      </span>
-      <span class="links-of-author-item">
-        <span class="exturl" data-url="bWFpbHRvOnlzemFyeXN6YXJAZ21haWwuY29t" title="E-Mail → mailto:yszaryszar@gmail.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</span>
-      </span>
-      <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20veXN6YXI=" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;yszar"><i class="fa fa-fw fa-weibo"></i>Weibo</span>
-      </span>
-      <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9wbHVzLmdvb2dsZS5jb20veXN6YXJ5c3phcg==" title="Google → https:&#x2F;&#x2F;plus.google.com&#x2F;yszaryszar"><i class="fa fa-fw fa-google"></i>Google</span>
-      </span>
-      <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9qaXV5YW5nMTA=" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;jiuyang10"><i class="fa fa-fw fa-twitter"></i>Twitter</span>
-      </span>
-      <span class="links-of-author-item">
-        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
-      </span>
-  </div>
-  <div class="cc-license motion-element" itemprop="license">
-    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
-  </div>
 
 
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title">
-      <i class="fa fa-fw fa-link"></i>
-      Links
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://tangjiuyang.com/" title="https:&#x2F;&#x2F;tangjiuyang.com">本站</a>
-        </li>
-    </ul>
-  </div>
 
       </div>
 
@@ -1545,9 +1210,11 @@
       <div class="footer-inner">
         
 
+        
+
 <div class="copyright">
   
-  &copy; 2019 – 
+  &copy; 
   <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -1555,21 +1222,16 @@
   <span class="author" itemprop="copyrightHolder">九阳</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
+      <i class="fa fa-chart-area"></i>
     </span>
-      <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">43k</span>
+    <span title="站点总字数">47k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:12</span>
+    <span title="站点阅读时长">43 分钟</span>
 </div>
-  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> 强力驱动 v4.2.0
-  </div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Gemini</span> v7.7.0
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
         
@@ -1579,100 +1241,6 @@
 
 
 
-  <script pjax>
-  function leancloudSelector(url) {
-    url = encodeURI(url);
-    return document.getElementById(url).querySelector('.leancloud-visitors-count');
-  }
-  if (CONFIG.page.isPost) {
-    function addCount(Counter) {
-      var visitors = document.querySelector('.leancloud_visitors');
-      var url = decodeURI(visitors.getAttribute('id'));
-      var title = visitors.getAttribute('data-flag-title');
-
-      Counter('get', `/classes/Counter?where=${JSON.stringify({ url })}`)
-        .then(response => response.json())
-        .then(({ results }) => {
-          if (results.length > 0) {
-            var counter = results[0];
-            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
-              .then(response => response.json())
-              .then(() => {
-                leancloudSelector(url).innerText = counter.time + 1;
-              })
-              .catch(error => {
-                console.error('Failed to save visitor count', error);
-              })
-          } else {
-              Counter('post', '/classes/Counter', { title: title, url: url, time: 1 })
-                .then(response => response.json())
-                .then(() => {
-                  leancloudSelector(url).innerText = 1;
-                })
-                .catch(error => {
-                  console.error('Failed to create', error);
-                });
-          }
-        })
-        .catch(error => {
-          console.error('LeanCloud Counter Error', error);
-        });
-    }
-  } else {
-    function showTime(Counter) {
-      var visitors = document.querySelectorAll('.leancloud_visitors');
-      var entries = [...visitors].map(element => {
-        return decodeURI(element.getAttribute('id'));
-      });
-
-      Counter('get', `/classes/Counter?where=${JSON.stringify({ url: { '$in': entries } })}`)
-        .then(response => response.json())
-        .then(({ results }) => {
-          if (results.length === 0) {
-            document.querySelectorAll('.leancloud_visitors .leancloud-visitors-count').forEach(element => {
-              element.innerText = 0;
-            });
-            return;
-          }
-          for (let item of results) {
-            let { url, time } = item;
-            leancloudSelector(url).innerText = time;
-          }
-          for (let url of entries) {
-            var element = leancloudSelector(url);
-            if (element.innerText == '') {
-              element.innerText = 0;
-            }
-          }
-        })
-        .catch(error => {
-          console.error('LeanCloud Counter Error', error);
-        });
-    }
-  }
-
-  fetch('https://app-router.leancloud.cn/2/route?appId=iUS887d8BnkY3Gqc9FJX70fE-gzGzoHsz')
-    .then(response => response.json())
-    .then(({ api_server }) => {
-      var Counter = (method, url, data) => {
-        return fetch(`https://${api_server}/1.1${url}`, {
-          method: method,
-          headers: {
-            'X-LC-Id': 'iUS887d8BnkY3Gqc9FJX70fE-gzGzoHsz',
-            'X-LC-Key': 'ekF4kKyQDgrDkIBadj3IDrVA',
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data)
-        });
-      };
-      if (CONFIG.page.isPost) {
-        if (CONFIG.hostname !== location.hostname) return;
-        addCount(Counter);
-      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
 
 
       </div>
@@ -1681,11 +1249,6 @@
 
   
   <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
@@ -1694,136 +1257,33 @@
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/pisces.js"></script>
+<script src="/js/schemes/muse.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
 
-<script src="/js/bookmark.js"></script>
 
-  <script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '#page-configurations',
-    '.content-wrap',
-    '.post-toc-wrap',
-    '#pjax'
-  ],
-  switches: {
-    '.post-toc-wrap': Pjax.switches.innerHTML
-  },
-  analytics: false,
-  cacheBust: false,
-  scrollTo : !CONFIG.bookmark.enable
-});
 
-window.addEventListener('pjax:success', () => {
-  document.querySelectorAll('script[pjax], script#page-configurations, #pjax script').forEach(element => {
-    var code = element.text || element.textContent || element.innerHTML || '';
-    var parent = element.parentNode;
-    parent.removeChild(element);
-    var script = document.createElement('script');
-    if (element.id) {
-      script.id = element.id;
-    }
-    if (element.className) {
-      script.className = element.className;
-    }
-    if (element.type) {
-      script.type = element.type;
-    }
-    if (element.src) {
-      script.src = element.src;
-      // Force synchronous loading of peripheral JS.
-      script.async = false;
-    }
-    if (element.getAttribute('pjax') !== null) {
-      element.setAttribute('pjax', '');
-    }
-    if (code !== '') {
-      script.appendChild(document.createTextNode(code));
-    }
-    parent.appendChild(script);
-  });
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  NexT.utils.updateSidebarPosition();
-});
-</script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
   
-  <script pjax>
-    (function(){
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-    })();
-  </script>
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div id="pjax">
-  
 
   
 
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el: '#valine-comments',
-      verify: false,
-      notify: false,
-      appId: 'iUS887d8BnkY3Gqc9FJX70fE-gzGzoHsz',
-      appKey: 'ekF4kKyQDgrDkIBadj3IDrVA',
-      placeholder: "Just go go",
-      avatar: 'mm',
-      meta: guest,
-      pageSize: '10' || 10,
-      visitor: false,
-      lang: 'zh-cn' || 'zh-cn',
-      path: location.pathname,
-      recordIP: false,
-      serverURLs: ''
-    });
-  }, window.Valine);
-});
-</script>
-
-    </div>
 </body>
 </html>
