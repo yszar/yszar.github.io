@@ -18,6 +18,7 @@ jobs:
         with:
           ref: hexo-fs
           persist-credentials: false
+          submodules: true
           # fetch-depth: 0
 
       - name: Prepare Node env
