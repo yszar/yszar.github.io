@@ -53,12 +53,22 @@ jobs:
           FOLDER: public
 
       # Deploy
-      - name: Send
+      - name: Send-HK
         uses: easingthemes/ssh-deploy@v2.1.4
         env:
           SSH_PRIVATE_KEY: ${{ secrets.ALI_HK_PEM }}
           ARGS: "-avz --delete"
           SOURCE: "public"
           REMOTE_HOST: ${{ secrets.ALI_HK_IP }}
+          REMOTE_USER: "root"
+          TARGET: "/web/tangjiuyang"
+
+      - name: Send-BJ
+        uses: easingthemes/ssh-deploy@v2.1.4
+        env:
+        SSH_PRIVATE_KEY: ${{ secrets.ALI_BJ_PEM }}
+          ARGS: "-avz --delete"
+          SOURCE: "public"
+          REMOTE_HOST: ${{ secrets.ALI_BJ_IP }}
           REMOTE_USER: "root"
           TARGET: "/web/tangjiuyang"
