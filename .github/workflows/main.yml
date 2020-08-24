@@ -36,7 +36,7 @@ jobs:
       # build
       - name: Build
         run: |
-            #sed -i "s/GITHUB_ACCESS_TOKEN/$GITHUB_ACCESS_TOKEN/g" ./_config.yml
+            # sed -i "s/GITHUB_ACCESS_TOKEN/$GITHUB_ACCESS_TOKEN/g" ./_config.yml
             npm i hexo-cli
             npm install # && echo 'tangjiuyang.com' > vuepress/dist/CNAME
             npx hexo clean
@@ -48,7 +48,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GIT_CONFIG_NAME: yszar
           GIT_CONFIG_EMAIL: yszar@vip.qq.com
-            #ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+            # ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: master
           FOLDER: public
 
