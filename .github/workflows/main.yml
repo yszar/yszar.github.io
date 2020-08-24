@@ -4,7 +4,7 @@ name: Deploy GitHub Pages
 on:
   push:
     branches:
-      - hexo
+      - hexo-fs
 
 # 任务
 jobs:
@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          ref: hexo
+          ref: hexo-fs
           persist-credentials: false
           # fetch-depth: 0
 
