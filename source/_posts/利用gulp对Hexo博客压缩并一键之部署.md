@@ -1,11 +1,11 @@
 ---
 title: 利用gulp对Hexo博客压缩并一键之部署
-translate_title: use-gulp-to-compress-and-deploy-hexo-blog-with-one-click
-date: 2019-12-30 16:32:18
+translate_title: use-gulp-to-compress-hexo-blog-and-deploy-with-one-click
 tags:
-- hexo
+  - hexo
 categories:
-- Hexo
+  - Hexo
+date: 2019-12-30 16:32:18
 ---
 # 说在前面
 压缩页面无非就是减小页面大小加快博客访问时间

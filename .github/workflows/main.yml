@@ -1,0 +1,63 @@
+name: Deploy GitHub Pages
+
+# 触发条件：在 push 到 hexo 分支后
+on:
+  push:
+    branches:
+      - hexo
+
+# 任务
+jobs:
+  build-and-deploy:
+    # 服务器环境：最新版 Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      # 拉取代码
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: hexo
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Prepare Node env
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+      
+      - name: Set Env
+          env:
+            GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
+          run: |
+     #     git config --global user.name 'yszar' # github用户名
+     #     git config --global user.email 'yszar@vip.qq.com' # github邮箱
+            sed -i "s/GITHUB_ACCESS_TOKEN/$GITHUB_ACCESS_TOKEN/g" ./_config.yml
+
+      # build
+      - name: Build
+        run: |
+            npm i hexo-cli
+            npm install # && echo 'tangjiuyang.com' > vuepress/dist/CNAME
+            npx hexo clean
+            npx hexo g
+       # 部署到 GitHub Pages
+      - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_CONFIG_NAME: yszar
+          GIT_CONFIG_EMAIL: yszar@vip.qq.com
+            #ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: master
+          FOLDER: public
+
+      # Deploy
+      - name: Send
+        uses: easingthemes/ssh-deploy@v2.1.4
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.ALI_HK_PEM }}
+          ARGS: "-avz --delete"
+          SOURCE: "public"
+          REMOTE_HOST: ${{ secrets.ALI_HK_IP }}
+          REMOTE_USER: "root"
+          TARGET: "/web/tangjiuyang"

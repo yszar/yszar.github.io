@@ -1,14 +1,14 @@
 ---
 title: 通过acme.sh申请Let's
-translate_title: apply-for-lets-via-acmesh
-date: 2019-12-30 02:44:05
+translate_title: apply-for-lets-through-acmesh
 tags:
-- linux
-- 服务器
-- ssl
-- nginx
+  - linux
+  - 服务器
+  - ssl
+  - nginx
 categories:
-- 建站相关
+  - 建站相关
+date: 2019-12-30 02:44:05
 ---
 Let's Encrypt 已经可以申请通配符证书了，详细通过 acme.sh 申请 Let’s Encrypt 证书的请移步《Linux 下使用 acme.sh 申请和管理 Let’s Encrypt 证书》，我是已经有了 Let’s Encrypt 证书的情况下删除证书重新申请通配符证书的，不过方法都大同小异。在这次申请 Let’s Encrypt 通配符证书的时候也遇到一些问题，现在将申请的过程及问题解决办法记录下来分享给大家，以便大家参考。
 
