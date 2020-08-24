@@ -4,7 +4,7 @@ tags:
   - python
 categories:
   - Python
-translate_title: addition-and-subtraction-of-python-dates
+translate_title: python-date-addition-and-subtraction-other-operations
 date: 2020-01-13 01:46:06
 ---
 # 1. 日期输出格式化

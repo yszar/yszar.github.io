@@ -42,10 +42,10 @@ jobs:
             npx hexo clean
             npx hexo g
        # 部署到 GitHub Pages
-      - name: Build and Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+       # - name: Build and Deploy
+       # uses:33 JamesIves/github-pages-deploy-action@releases/v3
+       #with:
+        3#####  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GIT_CONFIG_NAME: yszar
           GIT_CONFIG_EMAIL: yszar@vip.qq.com
             # ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
@@ -53,22 +53,32 @@ jobs:
           FOLDER: public
 
       # Deploy
-      - name: Send-HK
-        uses: easingthemes/ssh-deploy@v2.1.4
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.ALI_HK_PEM }}
-          ARGS: "-avz --delete"
-          SOURCE: "public"
-          REMOTE_HOST: ${{ secrets.ALI_HK_IP }}
-          REMOTE_USER: "root"
-          TARGET: "/web/tangjiuyang"
+      - name: Send-HK-BJ
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.ALI_HK_PEM }},${{ secrets.ALI_HK_PEM }}
+          username: root
+          key: ${{ secrets.ALI_HK_PEM }}
+          port: 22
+          script: |
+            cd /web/tangjiuyang
+            git pull origin master
+        # uses: easingthemes/ssh-deploy@v2.1.4
+        # env:
+        #  SSH_PRIVATE_KEY: ${{ secrets.ALI_HK_PEM }}
+        #  ARGS: "-avz --delete"
+        #  SOURCE: "public"
+        #  REMOTE_HOST: ${{ secrets.ALI_HK_IP }}
+        #  REMOTE_USER: "root"
+        #  TARGET: "/web/tangjiuyang"
 
-      - name: Send-BJ
-        uses: easingthemes/ssh-deploy@v2.1.4
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.ALI_BJ_PEM }}
-          ARGS: "-avz --delete"
-          SOURCE: "public"
-          REMOTE_HOST: ${{ secrets.ALI_BJ_IP }}
-          REMOTE_USER: "root"
-          TARGET: "/web/tangjiuyang"
+          #      - name: Send-BJ
+          #        uses: easingthemes/ssh-deploy@v2.1.4
+          # env:
+          # SSH_PRIVATE_KEY: ${{ secrets.ALI_BJ_PEM }}
+          # ARGS: "-avz --delete"
+          # SOURCE: "public"
+          # REMOTE_HOST: ${{ secrets.ALI_BJ_IP }}
+          # REMOTE_USER: "root"
+          # TAgit pull
+    "/web/tangjiuyang"
