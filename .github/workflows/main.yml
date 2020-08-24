@@ -37,7 +37,7 @@ jobs:
       - name: Build
         run: |
             npm i hexo-cli
-            npm install # && echo 'tangjiuyang.com' > vuepress/dist/CNAME
+            npm install
             npx hexo clean
             npx hexo g
        # 部署到 GitHub Pages
