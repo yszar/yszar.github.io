@@ -59,9 +59,7 @@ threads = 2
 stats = 127.0.0.1:8080
 ```
 
-{% note primary %}
 考虑到安全性，[uWSGI 文档](http://uwsgi-docs-cn.readthedocs.io/zh_CN/latest/WSGIquickstart.html#id2)中提到，不要使用 `root` 权限来运行 `uWSGI`，添加 `uid` 和 `gid` 选项指定用户和组。
-{% endnote %}
 
 使用配置文件运行：
 ```shell
@@ -69,10 +67,8 @@ uwsgi conf.ini
 ```
 现在项目已经通过 `uWSGI` 运行在 `8000` 端口了。
 **注意**：
-{% note warning %}
 `http` 选项的参数可以只是一个端口，比如 `:8000`，不过效果等于 `0.0.0.0:8000`。
 所以最好完整地写为 `127.0.0.1:8000`，让项目只运行在本地，然后反向代理出去。
-{% endnote %}
 
 ## 停止和重启
 一般会设置多个进程，那么可以在配置文件中添加 `master` 选项：
@@ -132,9 +128,7 @@ server{
 ## 修改 uWSGI 配置
 删除 `http`选项，添加 `socket` 选项，并设置一个 sock 文件的路径，运行 uWSGI 后会生成该 sock 文件。
 生成的 sock 文件可能会缺少执行权限，可以通过设置 `chmod-socket = 666` 解决。
-{% note primary %}
 关于 Linux 中的权限，可以看这篇文章：[《檔案權限》](http://s2.naes.tn.edu.tw/~kv/file.htm)。
-{% endnote %}
 
 `socket` 选项可以设置两种类型的值：
 
