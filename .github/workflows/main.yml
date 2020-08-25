@@ -45,7 +45,7 @@ jobs:
        # - name: Build and Deploy
        # uses:33 JamesIves/github-pages-deploy-action@releases/v3
        # with:
-        # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+       # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GIT_CONFIG_NAME: yszar
           GIT_CONFIG_EMAIL: yszar@vip.qq.com
             # ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
