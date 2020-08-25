@@ -54,16 +54,19 @@ jobs:
 
       # Deploy
       - name: Send-HK-BJ
-        uses: appleboy/ssh-action@master
+        #uses: appleboy/ssh-action@master
+        uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.ALI_HK_PEM }},${{ secrets.ALI_HK_PEM }}
           username: root
           key: ${{ secrets.ALI_HK_PEM }}
           port: 22
-          sync: true
-          script: |
-            cd /web/tangjiuyang
-            git pull origin master
+          source: "public"
+          target: "/web/tangjiuyang"
+          # sync: true
+          #script: |
+          #  cd /web/tangjiuyang
+          #  git pull origin master
         # uses: easingthemes/ssh-deploy@v2.1.4
         # env:
         #  SSH_PRIVATE_KEY: ${{ secrets.ALI_HK_PEM }}
