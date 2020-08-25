@@ -6,7 +6,7 @@ tags:
 - linux
 - supervisor
 categories:
-- Linux
+- 服务器
 ---
 # 1.supervisor 简介
 ## 1.1 官网

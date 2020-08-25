@@ -5,7 +5,7 @@ tags:
   - django
   - uwsgi
 categories:
-  - Nginx
+  - 服务器
 translate_title: deploy-django-project-using-uwsgi-and-nginx
 date: 2020-01-06 14:45:40
 ---

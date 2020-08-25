@@ -6,7 +6,7 @@ tags:
   - groupby
   - itertools
 categories:
-  - Python
+  - python
 translate_title: grouping-functions-in-python-groupby-itertools
 date: 2020-01-13 01:37:37
 ---

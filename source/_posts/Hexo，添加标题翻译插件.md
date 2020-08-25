@@ -3,7 +3,7 @@ title: Hexo，添加标题翻译插件
 tags:
   - hexo
 categories:
-  - Hexo
+  - 前端
 translate_title: hexo-add-title-translation-plugin
 date: 2019-12-30 02:20:26
 ---

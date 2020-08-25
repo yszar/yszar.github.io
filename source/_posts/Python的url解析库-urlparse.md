@@ -4,7 +4,7 @@ tags:
   - python
   - urlparse
 categories:
-  - Python
+  - python
 translate_title: pythons-url-parsing-libraryurlparse
 date: 2020-01-13 01:40:42
 ---

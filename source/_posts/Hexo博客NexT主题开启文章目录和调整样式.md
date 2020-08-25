@@ -4,7 +4,7 @@ translate_title: hexo-blog-next-theme-opens-article-catalog-and-adjust-style
 tags:
   - hexo
 categories:
-  - Hexo
+  - 前端
 date: 2019-12-30 19:33:28
 ---
 Hexo博客NexT主题中是有目录的，只是在默认情况下没有开启，需要我们来手动开启。

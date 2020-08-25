@@ -3,7 +3,7 @@ title: Python日期的加减等操作
 tags:
   - python
 categories:
-  - Python
+  - python
 translate_title: python-date-addition-and-subtraction-other-operations
 date: 2020-01-13 01:46:06
 ---

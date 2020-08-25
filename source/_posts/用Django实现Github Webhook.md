@@ -5,7 +5,7 @@ tags:
   - github
   - django
 categories:
-  - Python
+  - python
 translate_title: implement-github-webhook-with-django
 date: 2019-12-29 00:25:49
 ---

@@ -7,7 +7,7 @@ tags:
 - 博客
 - addthis
 categories:
-- Hexo
+- 前端
 ---
 <!--
 <span id="inline-blue"> 站点配置文件 </span>

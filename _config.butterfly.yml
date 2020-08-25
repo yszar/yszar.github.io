@@ -8,9 +8,9 @@
 
 menu:
   首页: / || fas fa-home
-  Python: /python || fab fa-python
-  前端: /frontend || fab fa-html5
-  服务器: /server || fas fa-server
+  Python: /categories/python/ || fab fa-python
+  前端: /categories/frontend/ || fab fa-html5
+  服务器: /categories/server/ || fas fa-server
   时间轴: /archives/ || fas fa-archive
   # 标签: /tags/ || fas fa-tags
   # 分类: /categories/ || fas fa-folder-open
@@ -428,11 +428,11 @@ bing_site_verification:
 
 # Baidu Webmaster tools verification setting
 # See: https://ziyuan.baidu.com/site/
-baidu_site_verification:
+baidu_site_verification: ORcxSmvDbo
 
 # 360 Webmaster tools verification setting
 # see http://zhanzhang.so.com/
-qihu_site_verification:
+qihu_site_verification: 94d6d6aa96267891dea24f811102ac27
 
 # Yandex Webmaster tools verification setting
 # see https://webmaster.yandex.com/

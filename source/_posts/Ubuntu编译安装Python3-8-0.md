@@ -5,8 +5,8 @@ tags:
   - linux
   - python
 categories:
-  - [Linux]
-  - [Python]
+  - 服务器
+  - python
 date: 2019-12-30 19:17:11
 ---
 本文介绍在Ubuntu 18.04/16.04系统上安装Python 3.8的两种不同方法，第一个选择是从Deadsnakes PPA安装deb软件包，第二个选择是从源代码构建，当前Python 3.8在Ubuntu的默认存储库中不可用。相同的步骤适用于Ubuntu 16.04和任何基于Ubuntu的发行版，包括Kubuntu、Linux Mint和Elementary OS，其他发行版请参考在Fedora 29系统中安装Python 3.8 alpha的方法。Python 3.8是Python语言的最新主要版本，它包括许多新功能，例如赋值表达式、仅位置参数、f字符串支持等等，参考Python 3.8.0发布，已提供Python-3.8.0.tgz下载，附更新功能。

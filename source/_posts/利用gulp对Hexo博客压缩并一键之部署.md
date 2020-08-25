@@ -4,7 +4,7 @@ translate_title: use-gulp-to-compress-hexo-blog-and-deploy-with-one-click
 tags:
   - hexo
 categories:
-  - Hexo
+  - 前端
 date: 2019-12-30 16:32:18
 ---
 # 说在前面

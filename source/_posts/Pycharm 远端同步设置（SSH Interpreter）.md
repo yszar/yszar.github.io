@@ -4,7 +4,7 @@ tags:
   - python
   - pycharm
 categories:
-  - Python
+  - python
 translate_title: pycharm-remote-synchronization-settings-ssh-interpreter
 date: 2019-12-30 01:38:20
 ---
