@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tangjiuyang.com/top/index.html</loc>
+    
+    <lastmod>2020-08-25</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://tangjiuyang.com/Hexo/hexo-blog-next-theme-opens-article-catalog-and-adjust-style.html</loc>
     
     <lastmod>2020-08-25</lastmod>
@@ -122,13 +129,6 @@
   
   <url>
     <loc>https://tangjiuyang.com/tags/index.html</loc>
-    
-    <lastmod>2020-08-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tangjiuyang.com/top/index.html</loc>
     
     <lastmod>2020-08-25</lastmod>
     
