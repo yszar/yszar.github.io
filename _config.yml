@@ -4,9 +4,9 @@
 
 # Site
 title: 九阳的博客
-subtitle: '前路漫漫'
-description: '心有猛虎，细嗅蔷薇。'
-keywords:
+subtitle: '代码胜于雄辩'
+description: '代码胜于雄辩'
+keywords: linux开发,linux教程,python开发,python教程,python技巧,服务端开发
 author: 九阳
 language: zh-CN
 timezone: 'Asia/Shanghai'
@@ -94,7 +94,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: butterfly
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -102,6 +102,22 @@ deploy:
   type: git
   repo: https://GITHUB_ACCESS_TOKEN@github.com/yszar.github.io.git
   branch: master
+
+algolia:
+  appId: "7OMHN3QCWR"
+  apiKey: "c551e4781854d5825eae3d0dd6caf9a6"
+  adminApiKey: "022a7e59fed0f1c763ebc0fc8b0b8b23"
+  chunkSize: 5000
+  indexName: "tangjiuyang-hexo"
+  fields:
+    - content:strip:truncate,0,500
+    - excerpt:strip
+    - gallery
+    - permalink
+    - photos
+    - slug
+    - tags
+    - title
 
 # 本地搜索
 search:
