@@ -56,8 +56,7 @@ jobs:
       - name: Send-HK-BJ
         uses: appleboy/ssh-action@master
         with:
-          # host: ${{ secrets.ALI_HK_PEM }},${{ secrets.ALI_HK_PEM }}
-            host: "47.242.67.157,123.57.236.141"
+          host: ${{ secrets.ALI_HK_PEM }},${{ secrets.ALI_HK_PEM }}
           username: root
           key: ${{ secrets.ALI_HK_PEM }}
           port: 22
