@@ -45,7 +45,7 @@ jobs:
        # - name: Build and Deploy
        # uses:33 JamesIves/github-pages-deploy-action@releases/v3
        #with:
-        3#####  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GIT_CONFIG_NAME: yszar
           GIT_CONFIG_EMAIL: yszar@vip.qq.com
             # ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
@@ -60,6 +60,7 @@ jobs:
           username: root
           key: ${{ secrets.ALI_HK_PEM }}
           port: 22
+          sync: true
           script: |
             cd /web/tangjiuyang
             git pull origin master
