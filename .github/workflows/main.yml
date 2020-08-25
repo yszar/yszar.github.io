@@ -42,15 +42,15 @@ jobs:
             npx hexo clean
             npx hexo g
        # 部署到 GitHub Pages
-       # - name: Build and Deploy
-       # uses:33 JamesIves/github-pages-deploy-action@releases/v3
-       # with:
-       # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GIT_CONFIG_NAME: yszar
-          GIT_CONFIG_EMAIL: yszar@vip.qq.com
+       - name: Build and Deploy
+         uses: JamesIves/github-pages-deploy-action@releases/v3
+         with:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+           GIT_CONFIG_NAME: yszar
+           GIT_CONFIG_EMAIL: yszar@vip.qq.com
             # ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: master
-          FOLDER: public
+           BRANCH: master
+           FOLDER: public
 
       # Deploy
       - name: Send-HK-BJ
@@ -82,4 +82,4 @@ jobs:
           # REMOTE_HOST: ${{ secrets.ALI_BJ_IP }}
           # REMOTE_USER: "root"
           # TAgit pull
-    "/web/tangjiuyang"
+          #"/web/tangjiuyang"
