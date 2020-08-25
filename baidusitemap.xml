@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://tangjiuyang.com/Hexo/use-gulp-to-compress-hexo-blog-and-deploy-with-one-click.html</loc>
+    <lastmod>2020-08-25</lastmod>
+  </url>
+  <url>
+    <loc>https://tangjiuyang.com/Linux/all-configurations-of-this-blog-server.html</loc>
+    <lastmod>2020-08-25</lastmod>
+  </url>
+  <url>
+    <loc>https://tangjiuyang.com/Python/implement-github-webhook-with-django.html</loc>
+    <lastmod>2020-08-25</lastmod>
+  </url>
+  <url>
+    <loc>https://tangjiuyang.com/mysite/apply-for-lets-through-acmesh.html</loc>
+    <lastmod>2020-08-25</lastmod>
+  </url>
+  <url>
     <loc>https://tangjiuyang.com/Hexo/hexo-blog-next-theme-opens-article-catalog-and-adjust-style.html</loc>
     <lastmod>2020-08-25</lastmod>
   </url>
@@ -41,23 +57,7 @@
     <lastmod>2020-08-25</lastmod>
   </url>
   <url>
-    <loc>https://tangjiuyang.com/Hexo/use-gulp-to-compress-hexo-blog-and-deploy-with-one-click.html</loc>
-    <lastmod>2020-08-25</lastmod>
-  </url>
-  <url>
-    <loc>https://tangjiuyang.com/Linux/all-configurations-of-this-blog-server.html</loc>
-    <lastmod>2020-08-25</lastmod>
-  </url>
-  <url>
-    <loc>https://tangjiuyang.com/Python/implement-github-webhook-with-django.html</loc>
-    <lastmod>2020-08-25</lastmod>
-  </url>
-  <url>
-    <loc>https://tangjiuyang.com/mysite/apply-for-lets-through-acmesh.html</loc>
-    <lastmod>2020-08-25</lastmod>
-  </url>
-  <url>
-    <loc>https://tangjiuyang.com/Hexo/hexo-writing-skills.html</loc>
+    <loc>https://tangjiuyang.com/%E5%89%8D%E7%AB%AF/hexo-writing-skills.html</loc>
     <lastmod>2020-08-25</lastmod>
   </url>
 </urlset> 
