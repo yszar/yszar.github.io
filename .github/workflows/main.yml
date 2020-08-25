@@ -65,6 +65,7 @@ jobs:
           port: 22
           source: "public"
           target: "/web/tangjiuyang"
+          strip_components: 1
           # sync: true
           #script: |
           #  cd /web/tangjiuyang
