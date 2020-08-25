@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Hexo博客NexT主题开启文章目录和调整样式</title>
-    <url>/Hexo/hexo-blog-next-theme-opens-article-catalog-and-adjust-style.html</url>
+    <url>/%E5%89%8D%E7%AB%AF/hexo-blog-next-theme-opens-article-catalog-and-adjust-style.html</url>
     <content><![CDATA[<p>Hexo博客NexT主题中是有目录的，只是在默认情况下没有开启，需要我们来手动开启。</p>
 <a id="more"></a>
 
@@ -18,7 +18,7 @@
 <p>四、结果图展示<br><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/ping-mu-kuai-zhao-20191230-xia-wu73414.png" alt="屏幕快照 2019-12-30 下午7.34.14"></p>
 ]]></content>
       <categories>
-        <category>Hexo</category>
+        <category>前端</category>
       </categories>
       <tags>
         <tag>hexo</tag>
@@ -26,7 +26,7 @@
   </entry>
   <entry>
     <title>Hexo增加Addthis分享功能</title>
-    <url>/Hexo/hexo-adds-addthis-sharing-function.html</url>
+    <url>/%E5%89%8D%E7%AB%AF/hexo-adds-addthis-sharing-function.html</url>
     <content><![CDATA[<!--
 <span id="inline-blue"> 站点配置文件 </span>
 <span id="inline-purple"> 主题配置文件 </span>
@@ -45,7 +45,7 @@
 <p>编辑主题配置文件, 找到关键字<code>add_this_id</code>, 添加<code>pubid</code></p>
 ]]></content>
       <categories>
-        <category>Hexo</category>
+        <category>前端</category>
       </categories>
       <tags>
         <tag>hexo</tag>
@@ -55,7 +55,7 @@
   </entry>
   <entry>
     <title>Hexo，添加标题翻译插件</title>
-    <url>/Hexo/hexo-add-title-translation-plugin.html</url>
+    <url>/%E5%89%8D%E7%AB%AF/hexo-add-title-translation-plugin.html</url>
     <content><![CDATA[<h1 id="文章背景"><a href="#文章背景" class="headerlink" title="文章背景"></a>文章背景</h1><p>  hexo生成的默认文章链接格式是这样的：<a href="https://blog.mariojd.cn/2013/07/14/">https://blog.mariojd.cn/2013/07/14/</a><Markdown file name>/，这个配置在hexo根目录下的_config.yml里面：permalink: :year/:month/:day/:title/，这种默认的配置缺点很明显，当文件名是中文的时候url链接里就有中文出现，看起来low的同时也非常不利于seo优化，下面介绍两种解决方案。</p>
 <a id="more"></a>
 
@@ -75,7 +75,7 @@
 <h3 id="记坑"><a href="#记坑" class="headerlink" title="记坑"></a>记坑</h3><p>  按上述流程安装、配置和部署，但生成的链接都是<code>undefined.html</code>，随后给作者提issue，回复后留意<code>hexo g</code>输出，并且看了源码，用<code>hexo config</code>查看配置信息后未发现问题，最终定位为Google翻译服务的不稳定。</p>
 ]]></content>
       <categories>
-        <category>Hexo</category>
+        <category>前端</category>
       </categories>
       <tags>
         <tag>hexo</tag>
@@ -83,14 +83,14 @@
   </entry>
   <entry>
     <title>Pycharm 远端同步设置（SSH Interpreter）</title>
-    <url>/Python/pycharm-remote-synchronization-settings-ssh-interpreter.html</url>
+    <url>/python/pycharm-remote-synchronization-settings-ssh-interpreter.html</url>
     <content><![CDATA[<h2 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h2><p><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/sshinterpreter1.png" alt="SSHInterpreter1"></p>
 <a id="more"></a>
 
 <h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><p>设置本地项目路径1，设置SSH编译器2，设置远端项目路径3（会自动与本地映射）<br><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/sshinterpreter2.png" alt="SSHInterpreter2"><br>interpreter 点击 “….”，选择<code>SSH interpreter</code><br><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/ssh4interpreter3.png" alt="SSHInterpreter3"><br><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/sshinterpreter4.png" alt="SSHInterpreter4"><br>最后设置一下 自动同步。<br><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/sshinterpreter5.png" alt="SSHInterpreter5"></p>
 ]]></content>
       <categories>
-        <category>Python</category>
+        <category>python</category>
       </categories>
       <tags>
         <tag>python</tag>
@@ -99,12 +99,12 @@
   </entry>
   <entry>
     <title>Python中的分组函数（groupby、itertools）</title>
-    <url>/Python/grouping-functions-in-python-groupby-itertools.html</url>
+    <url>/python/grouping-functions-in-python-groupby-itertools.html</url>
     <content><![CDATA[<a id="more"></a>
 
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> operator <span class="keyword">import</span> itemgetter <span class="comment">#itemgetter用来去dict中的key，省去了使用lambda函数</span></span><br><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> groupby <span class="comment">#itertool还包含有其他很多函数，比如将多个list联合起来。。</span></span><br><span class="line">d1=&#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;zhangsan&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:<span class="number">20</span>,<span class="string">&#x27;country&#x27;</span>:<span class="string">&#x27;China&#x27;</span>&#125;</span><br><span class="line">d2=&#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;wangwu&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:<span class="number">19</span>,<span class="string">&#x27;country&#x27;</span>:<span class="string">&#x27;USA&#x27;</span>&#125;</span><br><span class="line">d3=&#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;lisi&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:<span class="number">22</span>,<span class="string">&#x27;country&#x27;</span>:<span class="string">&#x27;JP&#x27;</span>&#125;</span><br><span class="line">d4=&#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;zhaoliu&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:<span class="number">22</span>,<span class="string">&#x27;country&#x27;</span>:<span class="string">&#x27;USA&#x27;</span>&#125;</span><br><span class="line">d5=&#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;pengqi&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:<span class="number">22</span>,<span class="string">&#x27;country&#x27;</span>:<span class="string">&#x27;USA&#x27;</span>&#125;</span><br><span class="line">d6=&#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;lijiu&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:<span class="number">22</span>,<span class="string">&#x27;country&#x27;</span>:<span class="string">&#x27;China&#x27;</span>&#125;</span><br><span class="line">lst=[d1,d2,d3,d4,d5,d6]</span><br><span class="line"></span><br><span class="line"><span class="comment">#通过country进行分组：</span></span><br><span class="line"></span><br><span class="line">lst.sort(key=itemgetter(<span class="string">&#x27;country&#x27;</span>)) <span class="comment">#需要先排序，然后才能groupby。lst排序后自身被改变</span></span><br><span class="line">lstg = groupby(lst,itemgetter(<span class="string">&#x27;country&#x27;</span>)) </span><br><span class="line"><span class="comment">#lstg = groupby(lst,key=lambda x:x[&#x27;country&#x27;]) 等同于使用itemgetter()</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key,group <span class="keyword">in</span> lstg:</span><br><span class="line">    <span class="keyword">for</span> g <span class="keyword">in</span> group: <span class="comment">#group是一个迭代器，包含了所有的分组列表</span></span><br><span class="line">        <span class="keyword">print</span> key,g</span><br><span class="line">返回：</span><br><span class="line">China &#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;China&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">20</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;zhangsan&#x27;</span>&#125;</span><br><span class="line">China &#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;China&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">22</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;lijiu&#x27;</span>&#125;</span><br><span class="line">JP &#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;JP&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">22</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;lisi&#x27;</span>&#125;</span><br><span class="line">USA &#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;USA&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">19</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;wangwu&#x27;</span>&#125;</span><br><span class="line">USA &#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;USA&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">22</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;zhaoliu&#x27;</span>&#125;</span><br><span class="line">USA &#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;USA&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">22</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;pengqi&#x27;</span>&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> [key <span class="keyword">for</span> key,group <span class="keyword">in</span> lstg] <span class="comment">#返回：[&#x27;China&#x27;, &#x27;JP&#x27;, &#x27;USA&#x27;]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> [(key,list(group)) <span class="keyword">for</span> key,group <span class="keyword">in</span> lstg]</span><br><span class="line"><span class="comment">#返回的list中包含着三个元组：</span></span><br><span class="line">[(<span class="string">&#x27;China&#x27;</span>, [&#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;China&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">20</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;zhangsan&#x27;</span>&#125;, &#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;China&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">22</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;lijiu&#x27;</span>&#125;]), (<span class="string">&#x27;JP&#x27;</span>, [&#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;JP&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">22</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;lisi&#x27;</span>&#125;]), (<span class="string">&#x27;USA&#x27;</span>, [&#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;USA&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">19</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;wangwu&#x27;</span>&#125;, &#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;USA&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">22</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;zhaoliu&#x27;</span>&#125;, &#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;USA&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">22</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;pengqi&#x27;</span>&#125;])]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> dict([(key,list(group)) <span class="keyword">for</span> key,group <span class="keyword">in</span> lstg])</span><br><span class="line"><span class="comment">#返回的是一个字典：</span></span><br><span class="line">&#123;<span class="string">&#x27;JP&#x27;</span>: [&#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;JP&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">22</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;lisi&#x27;</span>&#125;], <span class="string">&#x27;China&#x27;</span>: [&#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;China&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">20</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;zhangsan&#x27;</span>&#125;, &#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;China&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">22</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;lijiu&#x27;</span>&#125;], <span class="string">&#x27;USA&#x27;</span>: [&#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;USA&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">19</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;wangwu&#x27;</span>&#125;, &#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;USA&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">22</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;zhaoliu&#x27;</span>&#125;, &#123;<span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;USA&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">22</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;pengqi&#x27;</span>&#125;]&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> dict([(key,len(list(group))) <span class="keyword">for</span> key,group <span class="keyword">in</span> lstg])</span><br><span class="line"><span class="comment">#返回每个分组的个数：</span></span><br><span class="line">&#123;<span class="string">&#x27;JP&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;China&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;USA&#x27;</span>: <span class="number">3</span>&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>Python</category>
+        <category>python</category>
       </categories>
       <tags>
         <tag>python</tag>
@@ -115,7 +115,7 @@
   </entry>
   <entry>
     <title>Python日期的加减等操作</title>
-    <url>/Python/python-date-addition-and-subtraction-other-operations.html</url>
+    <url>/python/python-date-addition-and-subtraction-other-operations.html</url>
     <content><![CDATA[<h1 id="1-日期输出格式化"><a href="#1-日期输出格式化" class="headerlink" title="1. 日期输出格式化"></a>1. 日期输出格式化</h1><p>所有日期、时间的api都在datetime模块内。</p>
 <a id="more"></a>
 
@@ -143,7 +143,7 @@
 
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"> <span class="comment">#coding=utf-8</span></span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line">now=datetime.datetime.now()</span><br><span class="line"><span class="keyword">print</span> now</span><br><span class="line"><span class="comment">#将日期转化为字符串 datetime =&gt; string</span></span><br><span class="line"><span class="keyword">print</span> now.strftime(<span class="string">&#x27;%Y-%m-%d %H:%M:%S&#x27;</span>)</span><br><span class="line"></span><br><span class="line">t_str = <span class="string">&#x27;2012-03-05 16:26:23&#x27;</span></span><br><span class="line"><span class="comment">#将字符串转换为日期 string =&gt; datetime</span></span><br><span class="line">d=datetime.datetime.strptime(t_str,<span class="string">&#x27;%Y-%m-%d %H:%M:%S&#x27;</span>)</span><br><span class="line"><span class="keyword">print</span> d</span><br><span class="line"></span><br><span class="line"><span class="comment">#在datetime模块中有timedelta类，这个类的对象用于表示一个时间间隔，比如两个日#期或者时间的差别。</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">#计算两个日期的间隔</span></span><br><span class="line">d1 = datetime.datetime.strptime(<span class="string">&#x27;2012-03-05 17:41:20&#x27;</span>, <span class="string">&#x27;%Y-%m-%d %H:%M:%S&#x27;</span>)</span><br><span class="line">d2 = datetime.datetime.strptime(<span class="string">&#x27;2012-03-02 17:41:20&#x27;</span>, <span class="string">&#x27;%Y-%m-%d %H:%M:%S&#x27;</span>)</span><br><span class="line">delta = d1 - d2</span><br><span class="line"><span class="keyword">print</span> delta.days</span><br><span class="line"><span class="keyword">print</span> delta</span><br><span class="line"></span><br><span class="line"><span class="comment">#今天的n天后的日期。</span></span><br><span class="line">now=datetime.datetime.now()</span><br><span class="line">delta=datetime.timedelta(days=<span class="number">3</span>)</span><br><span class="line">n_days=now+delta</span><br><span class="line"><span class="keyword">print</span> n_days.strftime(<span class="string">&#x27;%Y-%m-%d %H:%M:%S&#x27;</span>)</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>Python</category>
+        <category>python</category>
       </categories>
       <tags>
         <tag>python</tag>
@@ -151,7 +151,7 @@
   </entry>
   <entry>
     <title>Python的url解析库--urlparse</title>
-    <url>/Python/pythons-url-parsing-libraryurlparse.html</url>
+    <url>/python/pythons-url-parsing-libraryurlparse.html</url>
     <content><![CDATA[<h1 id="一、urlparse解析url的query并构建字典"><a href="#一、urlparse解析url的query并构建字典" class="headerlink" title="一、urlparse解析url的query并构建字典"></a>一、urlparse解析url的query并构建字典</h1><p>下面的方法主要的功能：</p>
 <p>解析url的各个部分，并能够获取url的query部分，并把query部分构建成dict。</p>
 <a id="more"></a>
@@ -182,7 +182,7 @@
 </blockquote>
 ]]></content>
       <categories>
-        <category>Python</category>
+        <category>python</category>
       </categories>
       <tags>
         <tag>python</tag>
@@ -191,7 +191,7 @@
   </entry>
   <entry>
     <title>在Ubuntu 18.04系统上安装Python 3.8的两种方法</title>
-    <url>/Linux/two-ways-to-install-python-38-on-ubuntu-1804-system.html</url>
+    <url>/%E6%9C%8D%E5%8A%A1%E5%99%A8/python/two-ways-to-install-python-38-on-ubuntu-1804-system.html</url>
     <content><![CDATA[<p>本文介绍在Ubuntu 18.04/16.04系统上安装Python 3.8的两种不同方法，第一个选择是从Deadsnakes PPA安装deb软件包，第二个选择是从源代码构建，当前Python 3.8在Ubuntu的默认存储库中不可用。相同的步骤适用于Ubuntu 16.04和任何基于Ubuntu的发行版，包括Kubuntu、Linux Mint和Elementary OS，其他发行版请参考在Fedora 29系统中安装Python 3.8 alpha的方法。Python 3.8是Python语言的最新主要版本，它包括许多新功能，例如赋值表达式、仅位置参数、f字符串支持等等，参考Python 3.8.0发布，已提供Python-3.8.0.tgz下载，附更新功能。</p>
 <a id="more"></a>
 
@@ -256,8 +256,8 @@
 <p>至此，你已在Ubuntu 18.04计算机上安装了Python 3.8，然后可以开始开发Python 3项目了。</p>
 ]]></content>
       <categories>
-        <category>Python</category>
-        <category>Linux</category>
+        <category>服务器</category>
+        <category>python</category>
       </categories>
       <tags>
         <tag>python</tag>
@@ -266,7 +266,7 @@
   </entry>
   <entry>
     <title>supervisor安装配置使用</title>
-    <url>/Linux/supervisor-installation-configuration-use.html</url>
+    <url>/%E6%9C%8D%E5%8A%A1%E5%99%A8/supervisor-installation-configuration-use.html</url>
     <content><![CDATA[<h1 id="1-supervisor-简介"><a href="#1-supervisor-简介" class="headerlink" title="1.supervisor 简介"></a>1.supervisor 简介</h1><h2 id="1-1-官网"><a href="#1-1-官网" class="headerlink" title="1.1 官网"></a>1.1 官网</h2><p><a href="http://supervisord.org/">supervisor</a> 官网</p>
 <a id="more"></a>
 
@@ -288,7 +288,7 @@
 <p>说明 <code>unix</code> 系统进程信号</p>
 <figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">kill <span class="number">-1</span> <span class="comment">//终端挂起或控制进程终止。当用户退出Shell时，由该进程启动的所有进程都会收到这个信号，默认动作为终止进程。</span></span><br><span class="line">kill <span class="number">-2</span> <span class="comment">//键盘中断。当用户按下组合键时，用户终端向正在运行中的由该终端启动的程序发出此信号。默认动作为终止进程。</span></span><br><span class="line">kill <span class="number">-3</span> <span class="comment">//键盘退出键被按下。当用户按下或组合键时，用户终端向正在运行中的由该终端启动的程序发出此信号。默认动作为退出程序。</span></span><br><span class="line">kill <span class="number">-8</span> <span class="comment">//发生致命的运算错误时发出。不仅包括浮点运算错误，还包括溢出及除数为0等所有的算法错误。默认动作为终止进程并产生core文件。</span></span><br><span class="line">kill <span class="number">-9</span> <span class="comment">//无条件终止进程。进程接收到该信号会立即终止，不进行清理和暂存工作。该信号不能被忽略、处理和阻塞，它向系统管理员提供了可以杀死任何进程的方法。</span></span><br><span class="line">kill <span class="number">-14</span> <span class="comment">//定时器超时，默认动作为终止进程。</span></span><br><span class="line">kill <span class="number">-15</span> <span class="comment">//程序结束信号，可以由 kill 命令产生。与SIGKILL不同的是，SIGTERM 信号可以被阻塞和终止，以便程序在退出前可以保存工作或清理临时文件等。</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>Linux</category>
+        <category>服务器</category>
       </categories>
       <tags>
         <tag>linux</tag>
@@ -297,7 +297,7 @@
   </entry>
   <entry>
     <title>使用uWSGI和Nginx部署Django项目</title>
-    <url>/Nginx/use-uwsgi-and-nginx-to-deploy-a-django-project.html</url>
+    <url>/%E6%9C%8D%E5%8A%A1%E5%99%A8/use-uwsgi-and-nginx-to-deploy-a-django-project.html</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文只介绍部署。<br>首先需要有一个已经可用的 Django 项目。<br>操作环境 Ubuntu。</p>
 <a id="more"></a>
 
@@ -381,7 +381,7 @@
 </ul>
 ]]></content>
       <categories>
-        <category>Nginx</category>
+        <category>服务器</category>
       </categories>
       <tags>
         <tag>nginx</tag>
@@ -391,7 +391,7 @@
   </entry>
   <entry>
     <title>利用gulp对Hexo博客压缩并一键之部署</title>
-    <url>/Hexo/use-gulp-to-compress-hexo-blog-and-deploy-with-one-click.html</url>
+    <url>/%E5%89%8D%E7%AB%AF/use-gulp-to-compress-hexo-blog-and-deploy-with-one-click.html</url>
     <content><![CDATA[<h1 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h1><p>压缩页面无非就是减小页面大小加快博客访问时间</p>
 <a id="more"></a>
 
@@ -406,7 +406,7 @@
 <p>然后在部署的时候只需要运行</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm run push</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>Hexo</category>
+        <category>前端</category>
       </categories>
       <tags>
         <tag>hexo</tag>
@@ -414,7 +414,7 @@
   </entry>
   <entry>
     <title>本博客服务器所有配置</title>
-    <url>/Linux/all-configurations-of-this-blog-server.html</url>
+    <url>/%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%89%8D%E7%AB%AF/all-configurations-of-this-blog-server.html</url>
     <content><![CDATA[<blockquote>
 <p>之前的博客种种原因下线了，最终还是打算重新建立博客，记录一些东西，帮助自己的同时，也希望能帮助到他人。</p>
 </blockquote>
@@ -501,7 +501,8 @@
 <p>如果要开机自动启动 Nginx，请执行以下命令：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">update-rc.d -f nginx defaults</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>Linux</category>
+        <category>服务器</category>
+        <category>前端</category>
       </categories>
       <tags>
         <tag>linux</tag>
@@ -510,7 +511,7 @@
   </entry>
   <entry>
     <title>用Django实现Github Webhook</title>
-    <url>/Python/implement-github-webhook-with-django.html</url>
+    <url>/python/implement-github-webhook-with-django.html</url>
     <content><![CDATA[<blockquote>
 <p>Webhooks 用中文翻译即网络钩子，以 GitHub 为例，当你向 Github 向发送 push 或 pull 等请求事件时，会触发指定的 URL，一般是向 URL 发送 POST 请求，我们收到 POST 请求就可以根据不同的事件进行相应的处理。</p>
 </blockquote>
@@ -594,7 +595,7 @@
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo d</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Python</category>
+        <category>python</category>
       </categories>
       <tags>
         <tag>python</tag>
@@ -604,7 +605,7 @@
   </entry>
   <entry>
     <title>通过acme.sh申请Let&#39;s</title>
-    <url>/mysite/apply-for-lets-through-acmesh.html</url>
+    <url>/%E6%9C%8D%E5%8A%A1%E5%99%A8/apply-for-lets-through-acmesh.html</url>
     <content><![CDATA[<p>Let’s Encrypt 已经可以申请通配符证书了，详细通过 acme.sh 申请 Let’s Encrypt 证书的请移步《Linux 下使用 acme.sh 申请和管理 Let’s Encrypt 证书》，我是已经有了 Let’s Encrypt 证书的情况下删除证书重新申请通配符证书的，不过方法都大同小异。在这次申请 Let’s Encrypt 通配符证书的时候也遇到一些问题，现在将申请的过程及问题解决办法记录下来分享给大家，以便大家参考。</p>
 <a id="more"></a>
 
@@ -632,7 +633,7 @@
 <p>总结<br>我申请 Let’s Encrypt 通配符证书所遇到的问题不知道是个案还是什么，不过本文所列举的问题及解决办法都是真实发生的，目前我的懿古今和 boke112 导航已经使用上了 Let’s Encrypt 通配符证书，运行一切良好。如果你在申请 Let’s Encrypt 通配符证书也遇到相类似的问题，你可以试着按照我的办法去解决看看。申请 Let’s Encrypt 证书（非通配符证书）不会遇到证书链不完整的情况，也不需要人工合成证书。</p>
 ]]></content>
       <categories>
-        <category>建站相关</category>
+        <category>服务器</category>
       </categories>
       <tags>
         <tag>linux</tag>

@@ -18,8 +18,8 @@
   
   <entry>
     <title>Python日期的加减等操作</title>
-    <link href="https://tangjiuyang.com/Python/python-date-addition-and-subtraction-other-operations.html"/>
-    <id>https://tangjiuyang.com/Python/python-date-addition-and-subtraction-other-operations.html</id>
+    <link href="https://tangjiuyang.com/python/python-date-addition-and-subtraction-other-operations.html"/>
+    <id>https://tangjiuyang.com/python/python-date-addition-and-subtraction-other-operations.html</id>
     <published>2020-01-12T17:46:06.000Z</published>
     <updated>2020-01-12T17:46:06.000Z</updated>
     
@@ -30,7 +30,7 @@
     
     
     
-    <category term="Python" scheme="https://tangjiuyang.com/categories/Python/"/>
+    <category term="python" scheme="https://tangjiuyang.com/categories/python/"/>
     
     
     <category term="python" scheme="https://tangjiuyang.com/tags/python/"/>
@@ -39,8 +39,8 @@
   
   <entry>
     <title>Python的url解析库--urlparse</title>
-    <link href="https://tangjiuyang.com/Python/pythons-url-parsing-libraryurlparse.html"/>
-    <id>https://tangjiuyang.com/Python/pythons-url-parsing-libraryurlparse.html</id>
+    <link href="https://tangjiuyang.com/python/pythons-url-parsing-libraryurlparse.html"/>
+    <id>https://tangjiuyang.com/python/pythons-url-parsing-libraryurlparse.html</id>
     <published>2020-01-12T17:40:42.000Z</published>
     <updated>2020-01-12T17:40:42.000Z</updated>
     
@@ -52,7 +52,7 @@
     
     
     
-    <category term="Python" scheme="https://tangjiuyang.com/categories/Python/"/>
+    <category term="python" scheme="https://tangjiuyang.com/categories/python/"/>
     
     
     <category term="python" scheme="https://tangjiuyang.com/tags/python/"/>
@@ -63,8 +63,8 @@
   
   <entry>
     <title>Python中的分组函数（groupby、itertools）</title>
-    <link href="https://tangjiuyang.com/Python/grouping-functions-in-python-groupby-itertools.html"/>
-    <id>https://tangjiuyang.com/Python/grouping-functions-in-python-groupby-itertools.html</id>
+    <link href="https://tangjiuyang.com/python/grouping-functions-in-python-groupby-itertools.html"/>
+    <id>https://tangjiuyang.com/python/grouping-functions-in-python-groupby-itertools.html</id>
     <published>2020-01-12T17:37:37.000Z</published>
     <updated>2020-01-12T17:37:37.000Z</updated>
     
@@ -80,7 +80,7 @@
     
     
     
-    <category term="Python" scheme="https://tangjiuyang.com/categories/Python/"/>
+    <category term="python" scheme="https://tangjiuyang.com/categories/python/"/>
     
     
     <category term="python" scheme="https://tangjiuyang.com/tags/python/"/>
@@ -95,8 +95,8 @@
   
   <entry>
     <title>使用uWSGI和Nginx部署Django项目</title>
-    <link href="https://tangjiuyang.com/Nginx/use-uwsgi-and-nginx-to-deploy-a-django-project.html"/>
-    <id>https://tangjiuyang.com/Nginx/use-uwsgi-and-nginx-to-deploy-a-django-project.html</id>
+    <link href="https://tangjiuyang.com/%E6%9C%8D%E5%8A%A1%E5%99%A8/use-uwsgi-and-nginx-to-deploy-a-django-project.html"/>
+    <id>https://tangjiuyang.com/%E6%9C%8D%E5%8A%A1%E5%99%A8/use-uwsgi-and-nginx-to-deploy-a-django-project.html</id>
     <published>2020-01-06T06:45:40.000Z</published>
     <updated>2020-01-06T06:45:40.000Z</updated>
     
@@ -107,7 +107,7 @@
     
     
     
-    <category term="Nginx" scheme="https://tangjiuyang.com/categories/Nginx/"/>
+    <category term="服务器" scheme="https://tangjiuyang.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
     <category term="nginx" scheme="https://tangjiuyang.com/tags/nginx/"/>
@@ -120,8 +120,8 @@
   
   <entry>
     <title>supervisor安装配置使用</title>
-    <link href="https://tangjiuyang.com/Linux/supervisor-installation-configuration-use.html"/>
-    <id>https://tangjiuyang.com/Linux/supervisor-installation-configuration-use.html</id>
+    <link href="https://tangjiuyang.com/%E6%9C%8D%E5%8A%A1%E5%99%A8/supervisor-installation-configuration-use.html"/>
+    <id>https://tangjiuyang.com/%E6%9C%8D%E5%8A%A1%E5%99%A8/supervisor-installation-configuration-use.html</id>
     <published>2020-01-01T15:20:11.000Z</published>
     <updated>2020-01-01T15:20:11.000Z</updated>
     
@@ -132,7 +132,7 @@
     
     
     
-    <category term="Linux" scheme="https://tangjiuyang.com/categories/Linux/"/>
+    <category term="服务器" scheme="https://tangjiuyang.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
     <category term="linux" scheme="https://tangjiuyang.com/tags/linux/"/>
@@ -170,8 +170,8 @@
   
   <entry>
     <title>Hexo增加Addthis分享功能</title>
-    <link href="https://tangjiuyang.com/Hexo/hexo-adds-addthis-sharing-function.html"/>
-    <id>https://tangjiuyang.com/Hexo/hexo-adds-addthis-sharing-function.html</id>
+    <link href="https://tangjiuyang.com/%E5%89%8D%E7%AB%AF/hexo-adds-addthis-sharing-function.html"/>
+    <id>https://tangjiuyang.com/%E5%89%8D%E7%AB%AF/hexo-adds-addthis-sharing-function.html</id>
     <published>2019-12-30T15:12:26.000Z</published>
     <updated>2019-12-30T15:12:26.000Z</updated>
     
@@ -190,7 +190,7 @@
     
     
     
-    <category term="Hexo" scheme="https://tangjiuyang.com/categories/Hexo/"/>
+    <category term="前端" scheme="https://tangjiuyang.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
     <category term="hexo" scheme="https://tangjiuyang.com/tags/hexo/"/>
@@ -203,8 +203,8 @@
   
   <entry>
     <title>Hexo博客NexT主题开启文章目录和调整样式</title>
-    <link href="https://tangjiuyang.com/Hexo/hexo-blog-next-theme-opens-article-catalog-and-adjust-style.html"/>
-    <id>https://tangjiuyang.com/Hexo/hexo-blog-next-theme-opens-article-catalog-and-adjust-style.html</id>
+    <link href="https://tangjiuyang.com/%E5%89%8D%E7%AB%AF/hexo-blog-next-theme-opens-article-catalog-and-adjust-style.html"/>
+    <id>https://tangjiuyang.com/%E5%89%8D%E7%AB%AF/hexo-blog-next-theme-opens-article-catalog-and-adjust-style.html</id>
     <published>2019-12-30T11:33:28.000Z</published>
     <updated>2019-12-30T11:33:28.000Z</updated>
     
@@ -215,7 +215,7 @@
     
     
     
-    <category term="Hexo" scheme="https://tangjiuyang.com/categories/Hexo/"/>
+    <category term="前端" scheme="https://tangjiuyang.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
     <category term="hexo" scheme="https://tangjiuyang.com/tags/hexo/"/>
@@ -224,8 +224,8 @@
   
   <entry>
     <title>本博客服务器所有配置</title>
-    <link href="https://tangjiuyang.com/Linux/all-configurations-of-this-blog-server.html"/>
-    <id>https://tangjiuyang.com/Linux/all-configurations-of-this-blog-server.html</id>
+    <link href="https://tangjiuyang.com/%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%89%8D%E7%AB%AF/all-configurations-of-this-blog-server.html"/>
+    <id>https://tangjiuyang.com/%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%89%8D%E7%AB%AF/all-configurations-of-this-blog-server.html</id>
     <published>2019-12-30T11:18:49.000Z</published>
     <updated>2019-12-30T11:18:49.000Z</updated>
     
@@ -238,7 +238,9 @@
     
     
     
-    <category term="Linux" scheme="https://tangjiuyang.com/categories/Linux/"/>
+    <category term="服务器" scheme="https://tangjiuyang.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    <category term="前端" scheme="https://tangjiuyang.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%89%8D%E7%AB%AF/"/>
     
     
     <category term="linux" scheme="https://tangjiuyang.com/tags/linux/"/>
@@ -249,8 +251,8 @@
   
   <entry>
     <title>在Ubuntu 18.04系统上安装Python 3.8的两种方法</title>
-    <link href="https://tangjiuyang.com/Linux/two-ways-to-install-python-38-on-ubuntu-1804-system.html"/>
-    <id>https://tangjiuyang.com/Linux/two-ways-to-install-python-38-on-ubuntu-1804-system.html</id>
+    <link href="https://tangjiuyang.com/%E6%9C%8D%E5%8A%A1%E5%99%A8/python/two-ways-to-install-python-38-on-ubuntu-1804-system.html"/>
+    <id>https://tangjiuyang.com/%E6%9C%8D%E5%8A%A1%E5%99%A8/python/two-ways-to-install-python-38-on-ubuntu-1804-system.html</id>
     <published>2019-12-30T11:17:11.000Z</published>
     <updated>2019-12-30T11:17:11.000Z</updated>
     
@@ -261,9 +263,9 @@
     
     
     
-    <category term="Python" scheme="https://tangjiuyang.com/categories/Python/"/>
+    <category term="服务器" scheme="https://tangjiuyang.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
-    <category term="Linux" scheme="https://tangjiuyang.com/categories/Linux/"/>
+    <category term="python" scheme="https://tangjiuyang.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/python/"/>
     
     
     <category term="python" scheme="https://tangjiuyang.com/tags/python/"/>
@@ -274,8 +276,8 @@
   
   <entry>
     <title>利用gulp对Hexo博客压缩并一键之部署</title>
-    <link href="https://tangjiuyang.com/Hexo/use-gulp-to-compress-hexo-blog-and-deploy-with-one-click.html"/>
-    <id>https://tangjiuyang.com/Hexo/use-gulp-to-compress-hexo-blog-and-deploy-with-one-click.html</id>
+    <link href="https://tangjiuyang.com/%E5%89%8D%E7%AB%AF/use-gulp-to-compress-hexo-blog-and-deploy-with-one-click.html"/>
+    <id>https://tangjiuyang.com/%E5%89%8D%E7%AB%AF/use-gulp-to-compress-hexo-blog-and-deploy-with-one-click.html</id>
     <published>2019-12-30T08:32:18.000Z</published>
     <updated>2019-12-30T08:32:18.000Z</updated>
     
@@ -286,7 +288,7 @@
     
     
     
-    <category term="Hexo" scheme="https://tangjiuyang.com/categories/Hexo/"/>
+    <category term="前端" scheme="https://tangjiuyang.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
     <category term="hexo" scheme="https://tangjiuyang.com/tags/hexo/"/>
@@ -295,8 +297,8 @@
   
   <entry>
     <title>通过acme.sh申请Let&#39;s</title>
-    <link href="https://tangjiuyang.com/mysite/apply-for-lets-through-acmesh.html"/>
-    <id>https://tangjiuyang.com/mysite/apply-for-lets-through-acmesh.html</id>
+    <link href="https://tangjiuyang.com/%E6%9C%8D%E5%8A%A1%E5%99%A8/apply-for-lets-through-acmesh.html"/>
+    <id>https://tangjiuyang.com/%E6%9C%8D%E5%8A%A1%E5%99%A8/apply-for-lets-through-acmesh.html</id>
     <published>2019-12-29T18:44:05.000Z</published>
     <updated>2019-12-29T18:44:05.000Z</updated>
     
@@ -307,7 +309,7 @@
     
     
     
-    <category term="建站相关" scheme="https://tangjiuyang.com/categories/mysite/"/>
+    <category term="服务器" scheme="https://tangjiuyang.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
     <category term="linux" scheme="https://tangjiuyang.com/tags/linux/"/>
@@ -322,8 +324,8 @@
   
   <entry>
     <title>Hexo，添加标题翻译插件</title>
-    <link href="https://tangjiuyang.com/Hexo/hexo-add-title-translation-plugin.html"/>
-    <id>https://tangjiuyang.com/Hexo/hexo-add-title-translation-plugin.html</id>
+    <link href="https://tangjiuyang.com/%E5%89%8D%E7%AB%AF/hexo-add-title-translation-plugin.html"/>
+    <id>https://tangjiuyang.com/%E5%89%8D%E7%AB%AF/hexo-add-title-translation-plugin.html</id>
     <published>2019-12-29T18:20:26.000Z</published>
     <updated>2019-12-29T18:20:26.000Z</updated>
     
@@ -334,7 +336,7 @@
     
     
     
-    <category term="Hexo" scheme="https://tangjiuyang.com/categories/Hexo/"/>
+    <category term="前端" scheme="https://tangjiuyang.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
     <category term="hexo" scheme="https://tangjiuyang.com/tags/hexo/"/>
@@ -343,8 +345,8 @@
   
   <entry>
     <title>Pycharm 远端同步设置（SSH Interpreter）</title>
-    <link href="https://tangjiuyang.com/Python/pycharm-remote-synchronization-settings-ssh-interpreter.html"/>
-    <id>https://tangjiuyang.com/Python/pycharm-remote-synchronization-settings-ssh-interpreter.html</id>
+    <link href="https://tangjiuyang.com/python/pycharm-remote-synchronization-settings-ssh-interpreter.html"/>
+    <id>https://tangjiuyang.com/python/pycharm-remote-synchronization-settings-ssh-interpreter.html</id>
     <published>2019-12-29T17:38:20.000Z</published>
     <updated>2019-12-29T17:38:20.000Z</updated>
     
@@ -355,7 +357,7 @@
     
     
     
-    <category term="Python" scheme="https://tangjiuyang.com/categories/Python/"/>
+    <category term="python" scheme="https://tangjiuyang.com/categories/python/"/>
     
     
     <category term="python" scheme="https://tangjiuyang.com/tags/python/"/>
@@ -366,8 +368,8 @@
   
   <entry>
     <title>用Django实现Github Webhook</title>
-    <link href="https://tangjiuyang.com/Python/implement-github-webhook-with-django.html"/>
-    <id>https://tangjiuyang.com/Python/implement-github-webhook-with-django.html</id>
+    <link href="https://tangjiuyang.com/python/implement-github-webhook-with-django.html"/>
+    <id>https://tangjiuyang.com/python/implement-github-webhook-with-django.html</id>
     <published>2019-12-28T16:25:49.000Z</published>
     <updated>2019-12-28T16:25:49.000Z</updated>
     
@@ -380,7 +382,7 @@
     
     
     
-    <category term="Python" scheme="https://tangjiuyang.com/categories/Python/"/>
+    <category term="python" scheme="https://tangjiuyang.com/categories/python/"/>
     
     
     <category term="python" scheme="https://tangjiuyang.com/tags/python/"/>
