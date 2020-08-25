@@ -6,7 +6,7 @@ tags:
 - hexo
 - 写作技巧
 categories:
-- Hexo
+- 前端
 ---
 
 本文介绍 Hexo 博客的写作技巧。
@@ -238,38 +238,6 @@ note:
   border_radius: 3  # 圆角半径
   light_bg_offset: 0  # 默认背景减淡效果，以百分比计算
 ```
-
-## label 标签
-通过 label 标签可以为文字添加背景色，语法如下：
-
-```
-{% label [class]@text  %}
-```
-
-支持的 class 种类包括 `default` `primary` `success` `info` `warning` `danger`，默认使用 `default` 作为缺省。
-
-使用示例如下：
-```
-I heard the echo, {% label default@from the valleys and the heart %}
-Open to the lonely soul of {% label info@sickle harvesting %}
-Repeat outrightly, but also repeat the well-being of
-Eventually {% label warning@swaying in the desert oasis %}
-{% label success@I believe %} I am
-{% label primary@Born as the bright summer flowers %}
-Do not withered undefeated fiery demon rule
-Heart rate and breathing to bear {% label danger@the load of the cumbersome %}
-```
-
-I heard the echo, {% label default@from the valleys and the heart %}
-Open to the lonely soul of {% label info@sickle harvesting %}
-Repeat outrightly, but also repeat the well-being of
-Eventually {% label warning@swaying in the desert oasis %}
-{% label success@I believe %} I am
-{% label primary@Born as the bright summer flowers %}
-Do not withered undefeated fiery demon rule
-Heart rate and breathing to bear {% label danger@the load of the cumbersome %}
-
-可在主题配置文件中设置 `label: false` 来取消 label 标签默认 CSS 样式。
 
 ## button 按钮
 通过 button 标签可以快速添加带有主题样式的按钮，语法如下：
