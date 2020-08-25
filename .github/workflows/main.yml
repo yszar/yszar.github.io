@@ -37,11 +37,13 @@ jobs:
       # build
       - name: Build
         run: |
+            npm i --global gulp-cli
             npm i hexo-cli
             npm install
             npx hexo clean
             npx hexo algolia
             npx hexo g
+            gulp
        # 部署到 GitHub Pages
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3

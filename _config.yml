@@ -78,7 +78,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## Use post's date for updated date unless set in front-matter
-updated_option: 'mtime'
+updated_option: 'date'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -137,6 +137,9 @@ translate_title:
   # baidu_appkey: '' # Your baidu_appkey
 sitemap:
   path: sitemap.xml
+  # template: ./sitemap_template.xml
+  tags: true
+  categories: true
 baidusitemap:
   path: baidusitemap.xml
 

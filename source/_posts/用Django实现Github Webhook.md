@@ -6,7 +6,7 @@ tags:
   - django
 categories:
   - Python
-translate_title: github-webhook-with-django
+translate_title: implement-github-webhook-with-django
 date: 2019-12-29 00:25:49
 ---
 > Webhooks 用中文翻译即网络钩子，以 GitHub 为例，当你向 Github 向发送 push 或 pull 等请求事件时，会触发指定的 URL，一般是向 URL 发送 POST 请求，我们收到 POST 请求就可以根据不同的事件进行相应的处理。

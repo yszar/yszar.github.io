@@ -98,7 +98,8 @@ avatar:
 index_img:
 
 # if the banner of page not setting, it will show the top_img
-default_top_img: https://oss.tangjiuyang.com/article_pic/IuWi8QbHvzjlOPw.jpg
+# default_top_img: https://oss.tangjiuyang.com/article_pic/IuWi8QbHvzjlOPw.jpg
+default_top_img: https://oss.tangjiuyang.com/article_pic/bg.jpg
 
 # the banner image of archive page
 archive_img:
@@ -128,7 +129,7 @@ cover:
   position: left
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
   default_cover:
-    - https://oss.tangjiuyang.com/article_picgkihqEjXxJ5UZ1C.jpg
+    - https://oss.tangjiuyang.com/article_pic/20200825205831.png
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
@@ -155,7 +156,7 @@ post_meta:
 
 # wordcount (字數統計)
 wordcount:
-  enable: false
+  enable: true
   post_wordcount: true
   min2read: true
   total_wordcount: true
@@ -251,7 +252,7 @@ comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Utterances/Facebook Comments
   use:
-  # - Valine
+    - Gitalk
   # - Disqus
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
@@ -284,12 +285,12 @@ livere:
 # gitalk
 # https://github.com/gitalk/gitalk
 gitalk:
-  client_id:
-  client_secret:
-  repo:
-  owner:
-  admin:
-  language: en # en, zh-CN, zh-TW, es-ES, fr, ru
+  client_id: c0ed2619ac4f20996f7e
+  client_secret: 3b970ff71563159194d5fe7d18e31948564508b7
+  repo: yszar.github.io
+  owner: yszar
+  admin: yszar
+  language: zh-CN # en, zh-CN, zh-TW, es-ES, fr, ru
   perPage: 10 # Pagination size, with maximum 100.
   distractionFreeMode: false # Facebook-like distraction free mode.
   pagerDirection: last # Comment sorting direction, available values are last and first.
@@ -463,7 +464,7 @@ yandex_site_verification:
 # The position of site info, eg: 300px/300em/300rem/10% (主頁標題距離頂部距離)
 index_site_info_top:
 # The height of top_img, eg: 300px/300em/300rem (主頁top_img高度)
-index_top_img_height:
+index_top_img_height: 350px
 
 # The user interface setting of category and tag page (category和tag頁的UI設置)
 # index - same as Homepage UI (index 值代表 UI將與首頁的UI一樣)
@@ -542,7 +543,7 @@ display_mode: light
 
 # Beautify (美化頁面顯示)
 beautify:
-  enable: false
+  enable: true
   field: post # site/post
   title-prefix-icon: '\f0c1'
   title-prefix-icon-color: '#F47466'
@@ -587,7 +588,7 @@ subtitle:
   sub:
 
 # Loading Animation (加載動畫)
-preloader: false
+preloader: true
 
 # aside (側邊欄)
 # --------------------------------------

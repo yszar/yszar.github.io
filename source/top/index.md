@@ -1,6 +1,6 @@
 ---
 title: 热门文章Top 10
-translate_title: top-10
+translate_title: popular-articles-top-10
 comments: false
 date: 2020-01-01 15:55:52
 ---

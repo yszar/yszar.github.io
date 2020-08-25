@@ -6,7 +6,7 @@ tags:
   - uwsgi
 categories:
   - Nginx
-translate_title: use-uwsgi-and-nginx-to-deploy-a-django-project
+translate_title: deploy-django-project-using-uwsgi-and-nginx
 date: 2020-01-06 14:45:40
 ---
 # 前言
