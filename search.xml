@@ -15,7 +15,7 @@
 <h1 id="修改主题配置文件"><a href="#修改主题配置文件" class="headerlink" title="修改主题配置文件"></a>修改主题配置文件</h1><p>主题配置文件位于<code>themes/next/_config.yml</code></p>
 <p>每行目录超长自动换行</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">toc:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span>  </span><br><span class="line">  <span class="attr">wrap:</span> <span class="literal">true</span> </span><br></pre></td></tr></table></figure>
-<p>四、结果图展示<br><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/ping-mu-kuai-zhao-20191230-xia-wu73414.png" alt="屏幕快照 2019-12-30 下午7.34.14"></p>
+<p>四、结果图展示<br><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/ping-mu-kuai-zhao-20191230-xia-wu73414.png" alt="屏幕快照 2019-12-30 下午7.34.14"></p>
 ]]></content>
       <categories>
         <category>前端</category>
@@ -34,14 +34,14 @@
 <span id="inline-green"> 主题配置文件 </span>
 <a id="download" href="https://git-scm.com/download/win"><i class="fa fa-download"></i><span> Download Now</span> </a>
 -->
-<p><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/15777188305096.jpg"></p>
+<p><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/15777188305096.jpg"></p>
 <p>我选择的是<a href="http://www.addthis.com/">AddThis</a>作为博客的第三方分享。AdThis是国外的第三方分享,使用方便,可以用google直接登录。能自定义分享样式</p>
 <a id="more"></a>
 
-<h2 id="注册AddThis，选择分享按钮："><a href="#注册AddThis，选择分享按钮：" class="headerlink" title="注册AddThis，选择分享按钮："></a>注册AddThis，选择分享按钮：</h2><p><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/15777188968790.jpg"></p>
-<h2 id="选择显示样式-Select-a-Tool-Type"><a href="#选择显示样式-Select-a-Tool-Type" class="headerlink" title="选择显示样式(Select a Tool Type)"></a>选择显示样式(Select a Tool Type)</h2><p>AddThis提供了7种显示样式,你可以更加左边菜单栏点击,右边会自动显示你选择的相应样式。值得注意的是。在其右上角可以切换PC和Phone显示<br><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/15777189277993.jpg"></p>
-<h2 id="点击Continue配置分享按钮"><a href="#点击Continue配置分享按钮" class="headerlink" title="点击Continue配置分享按钮"></a>点击Continue配置分享按钮</h2><p>注意：不同的风格样式,配置方式不同<br><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/15777189544810.jpg"></p>
-<h2 id="获取代码ID"><a href="#获取代码ID" class="headerlink" title="获取代码ID"></a>获取代码ID</h2><p>配置完成后 , 获取代码ID , 在js代码中获取<code>pubid</code>后面的ID<br><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/15777189978550.jpg"></p>
+<h2 id="注册AddThis，选择分享按钮："><a href="#注册AddThis，选择分享按钮：" class="headerlink" title="注册AddThis，选择分享按钮："></a>注册AddThis，选择分享按钮：</h2><p><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/15777188968790.jpg"></p>
+<h2 id="选择显示样式-Select-a-Tool-Type"><a href="#选择显示样式-Select-a-Tool-Type" class="headerlink" title="选择显示样式(Select a Tool Type)"></a>选择显示样式(Select a Tool Type)</h2><p>AddThis提供了7种显示样式,你可以更加左边菜单栏点击,右边会自动显示你选择的相应样式。值得注意的是。在其右上角可以切换PC和Phone显示<br><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/15777189277993.jpg"></p>
+<h2 id="点击Continue配置分享按钮"><a href="#点击Continue配置分享按钮" class="headerlink" title="点击Continue配置分享按钮"></a>点击Continue配置分享按钮</h2><p>注意：不同的风格样式,配置方式不同<br><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/15777189544810.jpg"></p>
+<h2 id="获取代码ID"><a href="#获取代码ID" class="headerlink" title="获取代码ID"></a>获取代码ID</h2><p>配置完成后 , 获取代码ID , 在js代码中获取<code>pubid</code>后面的ID<br><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/15777189978550.jpg"></p>
 <p>编辑主题配置文件, 找到关键字<code>add_this_id</code>, 添加<code>pubid</code></p>
 ]]></content>
       <categories>
@@ -84,10 +84,10 @@
   <entry>
     <title>Pycharm 远端同步设置（SSH Interpreter）</title>
     <url>/python/pycharm-remote-synchronization-settings-ssh-interpreter.html</url>
-    <content><![CDATA[<h2 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h2><p><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/sshinterpreter1.png" alt="SSHInterpreter1"></p>
+    <content><![CDATA[<h2 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h2><p><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/sshinterpreter1.png" alt="SSHInterpreter1"></p>
 <a id="more"></a>
 
-<h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><p>设置本地项目路径1，设置SSH编译器2，设置远端项目路径3（会自动与本地映射）<br><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/sshinterpreter2.png" alt="SSHInterpreter2"><br>interpreter 点击 “….”，选择<code>SSH interpreter</code><br><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/ssh4interpreter3.png" alt="SSHInterpreter3"><br><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/sshinterpreter4.png" alt="SSHInterpreter4"><br>最后设置一下 自动同步。<br><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/sshinterpreter5.png" alt="SSHInterpreter5"></p>
+<h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><p>设置本地项目路径1，设置SSH编译器2，设置远端项目路径3（会自动与本地映射）<br><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/sshinterpreter2.png" alt="SSHInterpreter2"><br>interpreter 点击 “….”，选择<code>SSH interpreter</code><br><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/ssh4interpreter3.png" alt="SSHInterpreter3"><br><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/sshinterpreter4.png" alt="SSHInterpreter4"><br>最后设置一下 自动同步。<br><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/sshinterpreter5.png" alt="SSHInterpreter5"></p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -435,15 +435,15 @@
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt install zsh-theme-powerlevel9k</span><br></pre></td></tr></table></figure>
 <p>装好之后执行以下命令在 Ubuntu 18.04 LTS 上启用 Powerlevel9k ZSH 主题：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo &quot;source /usr/share/powerlevel9k/powerlevel9k.zsh-theme&quot; &gt;&gt; ~/.zshrc </span><br></pre></td></tr></table></figure>
-<p><img src= "/img/loading.gif" data-lazy-src="media/15772914852653/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-12-26%20%E4%B8%8A%E5%8D%881.08.31.png" alt="Powerlevel9k样式"></p>
+<p><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="media/15772914852653/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-12-26%20%E4%B8%8A%E5%8D%881.08.31.png" alt="Powerlevel9k样式"></p>
 <h4 id="powerlevel9k配置"><a href="#powerlevel9k配置" class="headerlink" title="powerlevel9k配置"></a>powerlevel9k配置</h4><p>默认配置参考官方说明：<br><a href="https://github.com/bhilburn/powerlevel9k/wiki/Stylizing-Your-Prompt">https://github.com/bhilburn/powerlevel9k/wiki/Stylizing-Your-Prompt</a><br>官方推荐的各种用户配置（带各种截图）：<br><a href="https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config">https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config</a></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> ==== Theme Settings ====</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> PowerLevel9k</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 左侧栏目显示的要素（指定的关键字参考官网）</span></span><br><span class="line">POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs)</span><br><span class="line"><span class="meta">#</span><span class="bash"> 右侧栏目显示的要素</span></span><br><span class="line">POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time virtualenv)</span><br><span class="line"><span class="meta">#</span><span class="bash">新起一行显示命令 (推荐！极其方便）</span></span><br><span class="line">POWERLEVEL9K_PROMPT_ON_NEWLINE=true</span><br><span class="line"><span class="meta">#</span><span class="bash">右侧状态栏与命令在同一行</span></span><br><span class="line">POWERLEVEL9K_RPROMPT_ON_NEWLINE=true</span><br><span class="line"><span class="meta">#</span><span class="bash">缩短目录层级</span></span><br><span class="line">POWERLEVEL9K_SHORTEN_DIR_LENGTH=1</span><br><span class="line"><span class="meta">#</span><span class="bash">缩短目录策略：隐藏上层目录中间的字</span></span><br><span class="line"><span class="meta">#</span><span class="bash">POWERLEVEL9K_SHORTEN_STRATEGY=<span class="string">&quot;truncate_middle&quot;</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">添加连接上下连接箭头更方便查看</span></span><br><span class="line">POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=&quot;↱&quot;</span><br><span class="line">POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX=&quot;↳ &quot;</span><br><span class="line"><span class="meta">#</span><span class="bash"> 新的命令与上面的命令隔开一行</span></span><br><span class="line"><span class="meta">#</span><span class="bash">POWERLEVEL9K_PROMPT_ADD_NEWLINE=<span class="literal">true</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Git仓库状态的色彩指定</span></span><br><span class="line">POWERLEVEL9K_VCS_CLEAN_FOREGROUND=&#x27;blue&#x27;</span><br><span class="line">POWERLEVEL9K_VCS_CLEAN_BACKGROUND=&#x27;black&#x27;</span><br><span class="line">POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND=&#x27;yellow&#x27;</span><br><span class="line">POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND=&#x27;black&#x27;</span><br><span class="line">POWERLEVEL9K_VCS_MODIFIED_FOREGROUND=&#x27;red&#x27;</span><br><span class="line">POWERLEVEL9K_VCS_MODIFIED_BACKGROUND=&#x27;black&#x27;</span><br></pre></td></tr></table></figure>
 <h4 id="Python的Virtualenv和Pipenv虚拟环境显示问题"><a href="#Python的Virtualenv和Pipenv虚拟环境显示问题" class="headerlink" title="Python的Virtualenv和Pipenv虚拟环境显示问题"></a>Python的Virtualenv和Pipenv虚拟环境显示问题</h4><p>一般命令行里，进入虚拟环境的shell时会显示如(venv) ~$这样的。<br>但是安装这个主题后，默认是没有的。<br>你必须手动设置添加才行。</p>
 <p>方法是：<br>在<code>POWERLEVEL9K_LEFT_PROMPT_ELEMENTS</code>或者<code>POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS</code>中添加<code>virtualenv</code>要素，就能够显示了。<br>如：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs virtualenv)</span><br></pre></td></tr></table></figure>
-<p><img src= "/img/loading.gif" data-lazy-src="media/15772914852653/15772944514627.jpg"></p>
+<p><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="media/15772914852653/15772944514627.jpg"></p>
 <p>显示主机型号图标问题<br>像这种显示当前主机（如Mac）图标和Git图标的问题，是需要字体支持的。</p>
-<p><img src= "/img/loading.gif" data-lazy-src="media/15772914852653/15772946318224.jpg"></p>
+<p><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="media/15772914852653/15772946318224.jpg"></p>
 <p>默认是不开启的，必须要在~/.zshrc中指定使用这种方式显示：</p>
 <h4 id="字体设定-注意，字体设定必须放在主题之前）"><a href="#字体设定-注意，字体设定必须放在主题之前）" class="headerlink" title="字体设定 (注意，字体设定必须放在主题之前）"></a>字体设定 (注意，字体设定必须放在主题之前）</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">POWERLEVEL9K_MODE=&#x27;nerdfont-complete&#x27;</span><br></pre></td></tr></table></figure>
 <h4 id="主题设定"><a href="#主题设定" class="headerlink" title="主题设定"></a>主题设定</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ZSH_THEME=&quot;powerlevel9k/powerlevel9k&quot;</span><br></pre></td></tr></table></figure>
@@ -528,15 +528,15 @@
 <p>core/urls.py</p>
 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> path</span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> views</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">&#x27;webhook&#x27;</span>, views.webhook, name=<span class="string">&#x27;webhook&#x27;</span>),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 <p>在 Github 项目右侧的 <code>Settings</code> 中找到 <code>Webhooks</code>，填入你上面定义的外网链接，Secret 暂时留空，其他设置见下图，然后点击 Add Webhook。</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/15776407068706.jpg"></p>
+<p><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/15776407068706.jpg"></p>
 <p><code>core/views.py</code> 先写一个简单的小例子。</p>
 <p><code>csrf_exempt</code> 装饰器表示不需要 csrf 认证，我们这里使用的密钥认证，稍后再说。</p>
 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse</span><br><span class="line"><span class="keyword">from</span> django.views.decorators.csrf <span class="keyword">import</span> csrf_exempt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@csrf_exempt</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">webhook</span>(<span class="params">request</span>):</span></span><br><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">&#x27;pong&#x27;</span>)</span><br></pre></td></tr></table></figure>
 <p>将服务端在 VPS 上运行起来，这里推荐使用 Pycharm 的 SSH Interpreter 的，方便远程调试。<br><a href="http://localhost:4000/Python/pycharm-remote-synchronization-settings-ssh-interpreter.html">SSH Interpreter设置传送门</a><br>注意：需要将运行 IP 改成 <code>0.0.0.0</code>，同时要向 <code>settings.py</code> 中的 <code>ALLOWED_HOSTS</code> 列表添加你的 VPS 主机名。</p>
 <p>我们在 Github Webhook 上主动发送请求测试下，查看响应，得到的是预期的 <code>pong</code>。</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/15776426446826.jpg"></p>
+<p><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/15776426446826.jpg"></p>
 <h1 id="保证-Webhook的安全"><a href="#保证-Webhook的安全" class="headerlink" title="保证 Webhook的安全"></a>保证 Webhook的安全</h1><h2 id="IP-白名单"><a href="#IP-白名单" class="headerlink" title="IP 白名单"></a>IP 白名单</h2><p>此刻任何人在浏览器或者其他地方都可以直接访问该链接</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/15776426837621.jpg"></p>
+<p><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/15776426837621.jpg"></p>
 <p>然而我们只想接收来自 Github 的请求，其他的理都不想理，因此我们可以建立 Github 白名单，只允许白名单的 IP 访问。幸而 Github 已经提供了所有最新的服务器 IP。通过 <a href="https://api.github.com/meta">https://api.github.com/meta</a> 就可以查看到。</p>
 <p>要获取用户的 IP，可以从请求头下手。</p>
 <ul>
@@ -553,9 +553,9 @@
 
 
 <p>用 Github 测试成功</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/15776428863934.jpg"></p>
+<p><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/15776428863934.jpg"></p>
 <p>用浏览器测试，已经被阻止了</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/15776429000755.jpg"></p>
+<p><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/15776429000755.jpg"></p>
 <p>但是速度有点慢，因为每次访问都有从 API 去获取白名单，因此我将其放到 <code>settings.py</code> 中，只在每次启动时获取一次。</p>
 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line">IP_WHITELIST = requests.get(<span class="string">&#x27;https://api.github.com/meta&#x27;</span>).json()[<span class="string">&#x27;hooks&#x27;</span>]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -568,7 +568,7 @@
 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line">GITHUB_WEBHOOK_KEY = <span class="string">&#x27;9IPDq6yjYcBe7jyvgZfzQtAHfU3jF9DAixsEiACM4OlsrzIYzM&#x27;</span></span><br></pre></td></tr></table></figure>
 
 <p>将该密钥同时填写到 <code>Github Webhooks</code> 中，点击 Update webhook。</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/15776431184422.jpg"></p>
+<p><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/30/15776431184422.jpg"></p>
 <p>Github Webhook 将每次请求称为 Delivery，Delivery 的请求头格式如下：</p>
 <ul>
 <li>X-GitHub-Event 事件类型，例如 ping</li>
@@ -662,7 +662,7 @@
 <figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">themes\next\_config.yml</span><br><span class="line">menu:</span><br><span class="line">  home: / || home</span><br><span class="line">  about: /about/ || user</span><br><span class="line">+ tags: /tags/ || tags</span><br><span class="line">+ categories: /categories/ || th</span><br><span class="line">+ archives: /archives/ || archive</span><br></pre></td></tr></table></figure>
 
 <p>其中，<code>||</code> 之前的值表示菜单链接，之后的值表示所用的 <code>FontAwesome</code> 图标名称。</p>
-<p>刷新页面后即可看到页面内多了几项菜单。<br><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/31/ping-mu-kuai-zhao-20191231-xia-wu42528.png" alt="新增菜单入口"></p>
+<p>刷新页面后即可看到页面内多了几项菜单。<br><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/31/ping-mu-kuai-zhao-20191231-xia-wu42528.png" alt="新增菜单入口"></p>
 <p>此时点击 <strong>关于</strong>、<strong>标签</strong> 和 <strong>分类</strong> 都会跳转到 404 页面，原因是我们只开放了页面入口，却没有创造对应于链接的页面视图，此时就需要通过 <code>hexo new page &lt;title&gt;</code> 命令来新建页面。</p>
 <p>基于 <code>page</code> 布局的新建命令将会在 <code>source</code> 目录下新建一个 <code>&lt;title&gt;</code> 文件夹，并在该文件夹下创建一个 <code>index.md</code> 文件，编辑该文件即可修改页面内容。</p>
 <p>例如，通过 <code>hexo new page tags</code> 命令将会生成如下目录。</p>
@@ -675,7 +675,7 @@
             <p>Front-Matter 是文件最上方以 <code>---</code> 分隔的区域，用于指定本文件的各种参数值</p>
           </div>
 
-<p>在菜单中点击 标签 跳转到刚创建的标签页面。<br><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/31/15777815382148.jpg" alt="Hexo 标签页面"></p>
+<p>在菜单中点击 标签 跳转到刚创建的标签页面。<br><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/31/15777815382148.jpg" alt="Hexo 标签页面"></p>
 <p>同理可通过 <code>page</code> 布局生成 <strong>关于</strong> 和 <strong>分类</strong> 两个页面。</p>
 <h3 id="草稿（draft）"><a href="#草稿（draft）" class="headerlink" title="草稿（draft）"></a>草稿（draft）</h3><p><code>draft</code> 布局用于创建草稿，生成的文档存在于 <code>source\_drafts\</code> 目录中，默认配置下将不会把该目录下的文档渲染到网站中。</p>
 <p>通过以下命令将草稿发布为正式文章：</p>
@@ -835,7 +835,7 @@
 <li>图床是否提供了便捷的图形化管理工具用于图片的上传下载？</li>
 </ul>
 <p>如阿里云有 ossbrowser，腾讯云有 cosbrowser，七牛云有 QsunSync 等，但就本人使用体验来说，七牛云 QsunSync 的 UI 界面确实很拙劣，功能较为单一，而腾讯云 cosbrowser 的界面就相对美观优雅的多，并以 Windows 资源管理器的交互方式为用户提供资源的上传、下载和管理服务。</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/31/15777850616683.jpg" alt="腾讯云COS客户端界面截图"></p>
+<p><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/31/15777850616683.jpg" alt="腾讯云COS客户端界面截图"></p>
 <ul>
 <li>是否能够方便的插入到 Markdown 文档中？</li>
 </ul>
@@ -845,8 +845,8 @@
             <p>本站使用阿里云 OSS 提供对象存储服务。</p>
           </div>
 
-<h2 id="网易云音乐"><a href="#网易云音乐" class="headerlink" title="网易云音乐"></a>网易云音乐</h2><p>在网页版云音乐中找到歌曲，点击生成外链播放器：<br><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/31/15777851618716.jpg"><br><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/31/15777851535212.jpg" alt="获取歌曲外链"></p>
-<p>根据个人喜好选择播放器尺寸和播放模式：<br><img src= "/img/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/31/15777851865373.jpg" alt="获取插件代码"></p>
+<h2 id="网易云音乐"><a href="#网易云音乐" class="headerlink" title="网易云音乐"></a>网易云音乐</h2><p>在网页版云音乐中找到歌曲，点击生成外链播放器：<br><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/31/15777851618716.jpg"><br><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/31/15777851535212.jpg" alt="获取歌曲外链"></p>
+<p>根据个人喜好选择播放器尺寸和播放模式：<br><img src= "https://oss.tangjiuyang.com/article_pic/loading.gif" data-lazy-src="https://oss.tangjiuyang.com/2019/12/31/15777851865373.jpg" alt="获取插件代码"></p>
 <p>将获取到的 <code>iframe</code> 代码添加到页面中，默认样式如下：</p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1313385920&auto=1&height=66"></iframe>
 
