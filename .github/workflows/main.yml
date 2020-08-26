@@ -20,11 +20,18 @@ jobs:
           persist-credentials: false
           submodules: true
           # fetch-depth: 0
+      - uses: actions/cache@v1
+          with:
+            path: ~/.npm
+            key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+            restore-keys: |
+              ${{ runner.os }}-node-
 
       - name: Prepare Node env
         uses: actions/setup-node@v1
         with:
           node-version: "12.x"
+          registry-url: 'https://registry.npmjs.org'
       
           # - name: Set Env
         #     env:
@@ -41,9 +48,8 @@ jobs:
             npm i --global gulp-cli
             npm i hexo-cli
             npm install
-            npx hexo clean
             npx hexo algolia
-            npx hexo g
+            npx hexo g -f
             gulp
        # 部署到 GitHub Pages
       - name: Deploy
