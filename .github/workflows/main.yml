@@ -21,11 +21,11 @@ jobs:
           submodules: true
           # fetch-depth: 0
       - uses: actions/cache@v1
-          with:
-            path: ~/.npm
-            key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-            restore-keys: |
-              ${{ runner.os }}-node-
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Prepare Node env
         uses: actions/setup-node@v1
