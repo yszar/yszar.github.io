@@ -1,0 +1,5 @@
+
+User-agent:*
+Disallow:
+
+Sitemap: https://iamjy.com/sitemap.xml
