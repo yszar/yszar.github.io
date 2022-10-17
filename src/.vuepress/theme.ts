@@ -14,7 +14,7 @@ export default hopeTheme({
 
     logo: "/logo.png",
 
-    repo: "yszar/yszar",
+    repo: "yszar/yszar.github.io",
     // 自定义仓库链接文字。默认从 `repo` 中自动推断为
     // "GitHub" / "GitLab" / "Gitee" / "Bitbucket" 其中之一，或是 "Source"。
     repoLabel: "GitHub",
