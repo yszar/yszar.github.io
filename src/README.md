@@ -31,22 +31,22 @@ projects:
   - icon: /siteImage/HTML5.png
     name: 前端笔记
     desc: 三十天从入门到放弃。
-    link: https://iamjy.com/frontend/
+    link: https://iamjy.com/category/前端笔记/
 
   - icon: /siteImage/code.png
     name: 后端笔记
     desc: 没有编译，也就没有编译错误。
-    link: https://iamjy.com/backend/
+    link: https://iamjy.com/category/后端笔记/
 
   - icon: /siteImage/linux.png
     name: 运维笔记
     desc: 《删库跑路》最佳实践。
-    link: https://iamjy.com/ops/
+    link: https://iamjy.com/category/运维笔记/
 
   - icon: /siteImage/app.png
     name: 工具教程
     desc: 猿欲善其事必先利其器。
-    link: https://iamjy.com/software/
+    link: https://iamjy.com/category/工具教程/
 
 footer: 九阳全栈
 ---

@@ -2,10 +2,10 @@ import { navbar } from "vuepress-theme-hope";
 
 export const zhNavbar = navbar([
   "/",
-  { text: "前端笔记", icon: "html", link: "/frontend/" },
-  { text: "后端笔记", icon: "back-stage", link: "/backend/" },
-  { text: "运维笔记", icon: "linux", link: "/ops/" },
-  { text: "工具软件", icon: "software", link: "/software/" },
+  { text: "前端笔记", icon: "html", link: "/category/前端笔记/" },
+  { text: "后端笔记", icon: "back-stage", link: "/category/后端笔记/" },
+  { text: "运维笔记", icon: "linux", link: "/category/运维笔记/" },
+  { text: "工具软件", icon: "software", link: "/category/工具软件/" },
   // {
   //   text: "博文",
   //   icon: "edit",

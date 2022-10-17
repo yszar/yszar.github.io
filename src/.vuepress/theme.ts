@@ -231,59 +231,59 @@ export default hopeTheme({
             appendBase: true,
             update: "hint",
             apple: {
-                icon: "/assets/icon/apple-icon-152.png",
+                icon: "https://cloudbase-baas-1g2qg82f5ef557f8-1258306312.tcloudbaseapp.com/logo.png?imageMogr2/thumbnail/152x152!",
                 statusBarColor: "black",
             },
             msTile: {
-                image: "/assets/icon/ms-icon-144.png",
+                image: "https://cloudbase-baas-1g2qg82f5ef557f8-1258306312.tcloudbaseapp.com/logo.png?imageMogr2/thumbnail/144x144!",
                 color: "#ffffff",
             },
             manifest: {
                 icons: [
                     {
-                        src: "/assets/icon/chrome-mask-512.png",
+                        src: "https://cloudbase-baas-1g2qg82f5ef557f8-1258306312.tcloudbaseapp.com/logo.png?imageMogr2/thumbnail/512x512!",
                         sizes: "512x512",
                         purpose: "maskable",
                         type: "image/png",
                     },
                     {
-                        src: "/assets/icon/chrome-mask-192.png",
+                        src: "https://cloudbase-baas-1g2qg82f5ef557f8-1258306312.tcloudbaseapp.com/logo.png?imageMogr2/thumbnail/192x192!",
                         sizes: "192x192",
                         purpose: "maskable",
                         type: "image/png",
                     },
                     {
-                        src: "/assets/icon/chrome-512.png",
+                        src: "https://cloudbase-baas-1g2qg82f5ef557f8-1258306312.tcloudbaseapp.com/logo.png?imageMogr2/thumbnail/512x512!",
                         sizes: "512x512",
                         type: "image/png",
                     },
                     {
-                        src: "/assets/icon/chrome-192.png",
+                        src: "https://cloudbase-baas-1g2qg82f5ef557f8-1258306312.tcloudbaseapp.com/logo.png?imageMogr2/thumbnail/192x192!",
                         sizes: "192x192",
                         type: "image/png",
                     },
                 ],
-                shortcuts: [
-                    {
-                        name: "Demo",
-                        short_name: "Demo",
-                        url: "/demo/",
-                        icons: [
-                            {
-                                src: "/assets/icon/guide-maskable.png",
-                                sizes: "192x192",
-                                purpose: "maskable",
-                                type: "image/png",
-                            },
-                            {
-                                src: "/assets/icon/guide-monochrome.png",
-                                sizes: "192x192",
-                                purpose: "monochrome",
-                                type: "image/png",
-                            },
-                        ],
-                    },
-                ],
+                // shortcuts: [
+                //     {
+                //         name: "Demo",
+                //         short_name: "Demo",
+                //         url: "/demo/",
+                //         icons: [
+                //             {
+                //                 src: "/assets/icon/guide-maskable.png",
+                //                 sizes: "192x192",
+                //                 purpose: "maskable",
+                //                 type: "image/png",
+                //             },
+                //             {
+                //                 src: "/assets/icon/guide-monochrome.png",
+                //                 sizes: "192x192",
+                //                 purpose: "monochrome",
+                //                 type: "image/png",
+                //             },
+                //         ],
+                //     },
+                // ],
             },
         },
     },
