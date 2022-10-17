@@ -229,7 +229,7 @@ export default hopeTheme({
             cacheHTML: true,
             cachePic: true,
             appendBase: true,
-            update: "hint",
+            update: "available",
             apple: {
                 icon: "https://cloudbase-baas-1g2qg82f5ef557f8-1258306312.tcloudbaseapp.com/logo.png?imageMogr2/thumbnail/152x152!",
                 statusBarColor: "black",
