@@ -38,7 +38,7 @@ export default hopeTheme({
     docsDir: "src",
 
     // 页面显示信息
-    pageInfo: ["Author", "Original", "Date", "Category", "Tag", "Word", "ReadingTime", "PageView"],
+    pageInfo: ["Author", "Original", "Date", "Category", "Tag", "Word", "ReadingTime"],
 
     blog: {
         medias: {
@@ -77,7 +77,7 @@ export default hopeTheme({
             // ],
         },
         // 文章列表显示信息
-        articleInfo: ["Author", "Original", "Date", "PageView", "Category", "Tag", "Word", "ReadingTime"],
+        articleInfo: ["Author", "Original", "Date", "Category", "Word", "ReadingTime"],
     },
 
     locales: {
@@ -229,6 +229,7 @@ export default hopeTheme({
             cacheHTML: true,
             cachePic: true,
             appendBase: true,
+            update: "hint",
             apple: {
                 icon: "/assets/icon/apple-icon-152.png",
                 statusBarColor: "black",

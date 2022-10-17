@@ -2,12 +2,13 @@
 title:         "为 WSL2 一键设置代理"
 icon:          "iconfont"
 isOriginal:    true
-date:          ${DATE} ${TIME}
+date:          2022-10-17
 category:      "工具软件"
 tag:           
 - "工具软件"
 - "WSL2"
 - "代理"
+star:          true
 ---
 
 在 WSL2 环境中 clone 一个很大的 git 项目，不走代理速度很慢，所以研究了一下怎么让 WSL2 走 Windows 的代理客户端。
